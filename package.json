@@ -1,0 +1,22 @@
+{
+  "name": "hdffa-site",
+  "version": "1.0.0",
+  "description": "This site is a companion piece to HDFFA's [existing website](https://www.hdffa.org/). It permits users to search and filter partners of HDFFA using a Google Maps API as well as a searchable list.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abell95/hdffa-site.git"
+  },
+  "author": "Andrew Bell, Florentina Ilie, Maxx Kozec",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abell95/hdffa-site/issues"
+  },
+  "homepage": "https://github.com/abell95/hdffa-site#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
