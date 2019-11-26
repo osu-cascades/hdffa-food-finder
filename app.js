@@ -7,7 +7,8 @@ var partners = require('./partners.js');
 app.use(cors({
 	credentials: true,
 }));
-app.use('/partners', things);
+
+app.use('/partners', partners);
 
 // app.get('/', (req, res) => {
 //     res.sendFile(__dirname + '/src/index.html');
