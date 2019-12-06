@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/abell95/hdffa-site#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "csv2geojson": "^5.1.1",
     "express": "^4.17.1",
     "mapbox": "^1.0.0-beta10",

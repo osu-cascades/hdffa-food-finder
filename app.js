@@ -9,10 +9,11 @@ app.use(cors({
 }));
 
 app.use('/partners', partners);
+app.use(express.static('root.github.io'))
 
-// app.get('/', (req, res) => {
-//     res.sendFile(__dirname + '/src/index.html');
-// })
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/src/index.html');
+})
 
 app.listen(port, () => {
     console.log(`app running on port ${port}`)
