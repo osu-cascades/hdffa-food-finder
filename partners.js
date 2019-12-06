@@ -1,6 +1,10 @@
 var express = require('express');
-
+const fs = require('fs');
 var router = express.Router();
+const request = require('request');
+const bodyParser = require('body-parser');
+
+router.use(bodyParser.json())
 
 // var csv2geojson = require('csv2geojson');
 
@@ -57,7 +61,24 @@ var geojson = [{
 }]
 
 router.get('/', function(req, res){
-	res.send(JSON.stringify(geojson));
+  const data = fs.readFileSync('./geodata.geojson');
+  res.send(data);
+});
+
+router.post('/location', (req, res) => {
+  const url = req.body.url;
+  request.get(url, (err, response, body) => {
+    if (err) {
+      res.status(400).send("ERROR!")
+    } else {
+      if (response.status === 200) {
+        console.log(body);
+        res.send(body);
+      } else {
+        console.log(body);
+      }
+    }
+  })
 });
 
 router.post('/', function(req, res){

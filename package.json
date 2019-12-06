@@ -17,11 +17,13 @@
   },
   "homepage": "https://github.com/abell95/hdffa-site#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "csv2geojson": "^5.1.1",
     "express": "^4.17.1",
     "mapbox": "^1.0.0-beta10",
-    "mapbox-gl": "^1.5.0"
+    "mapbox-gl": "^1.5.0",
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.1"
