@@ -1,0 +1,86 @@
+
+
+<!-------------------After Partner Post Area------------------------->
+<br>
+<div class="text-center bg-light text-dark">
+    <h3>Partners</h3>
+</div>
+
+<hr>
+<br>
+
+<div class="row container-fluid bg-3">
+    <div class="col-sm-12" id="partners">
+
+    </div>
+</div>
+
+<br>
+<script>
+    //********************Retrieve and Display Data from Firebase**************************************
+    var user = firebase.auth().currentUser;
+    var dbPartners = firebase.database().ref().child("Partners").orderByChild("uid").equalTo(user.uid);
+
+    dbPartners.on("value", function(partners)
+    {
+        if(partners.exists())
+        {
+            var partnersHtml = "";
+
+            partners.forEach(function(singlePartner)
+            {
+                counter = counter + 1;
+
+                partnersHtml += "<div class='jumbotron bg-light text-dark border border-dark'>";
+                        partnersHtml += "<div> <img width='1000px' height='550px' src='";
+                            partnersHtml += singlePartner.val().image;
+                        partnersHtml += "'/> </div> <br>";
+
+                        partnersHtml += "<div class='row'>";
+                            partnersHtml += "<div class='col-sm-5'> <p style='color:grey;'>"
+                                         + "Published by: " + singlePartner.val().userName
+                                         + "</p> </div>"  + 
+
+                                         "<div class='col-sm-3'> <p style='color:grey;'>"
+                                         + "Time: " + singlePartner.val().time
+                                         + "</p> </div>"  +
+
+                                         "<div class='col-sm-4'> <p style='color:grey; margin-left: 75px;'>"
+                                         + "Date: " + singlePartner.val().date
+                                         + "</p> </div>"
+                                         ;
+                        partnersHtml += "</div> <br>";
+
+                        partnersHtml += "<div style='text-align: justify; color: black;'>";
+                            partnersHtml += singlePartner.val().desc;
+                        partnersHtml += "</div> <br>";
+
+                        partnersHtml += "<div class='form-group' style='text-align: justify; color: black;'>";
+                            partnersHtml += "<button class='form-control btn btn-light bg-dark text-white' onclick=deletepartnerRecord('"+singlePartner.key+"')>Delete this Partner</button>";
+                        partnersHtml += "</div> <br>";
+
+                partnersHtml += "</div>";
+            });
+            $("#partners").html(partnersHtml);
+        }
+    });
+
+
+    function deletepartnerRecord(key)
+    {
+        var deleteRef = firebase.database().ref().child("Partners").child(key);
+
+        return deleteRef.remove()
+        .then(function()
+        {
+            console.log("Removed Successfully.");
+        })
+        .catch(function()
+        {
+            console.log("Error Occured.")
+        });
+    }
+
+    //********************Ends Here -- Retrieve and Display Data from Firebase**************************************
+</script>
+<!---------------------Validation and uploading of Post Partners Ends here------------------------->

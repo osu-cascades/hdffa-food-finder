@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <title>Partner Details</title>
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">            
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                
+                
+                <!-- MATERIAL DESIGN ICONIC FONT -->
+            <link rel="stylesheet" href="design_files/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+                    
+                    <!-- STYLE CSS -->
+            <link rel="stylesheet" href="design_files/css/style.css">
+
+
+            <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-database.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-storage.js"></script>
+    </head>
+
+    <body>
+        <div class="wrapper" style="background-image: url('design_files/images/RadicleRoots_kids3.jpg')">
+            
+            <div class="inner">
+                    <div class="image-holder">
+                        <img src="design_files/images/HDFFA-9491.jpg">
+                    </div>
+
+                    <form action="">
+                            <h3>Partner Details</h3>
+                            <div class="form-group">
+                                <input id="businessName"  type="text" placeholder="Business Name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input id="firstName"  type="text" placeholder="First Name" class="form-control">
+                                <input id="secondName"  type="text" placeholder="Second Name" class="form-control">
+                            </div>
+                            <div class="form-wrapper">
+                                    <input id="phone"  type="number" placeholder="Phone" class="form-control">
+                                    <i class="zmdi zmdi-tablet-mac"></i>
+                            </div>
+                            <div class="form-wrapper">
+                                <input id="email"  type="email" placeholder="Email" class="form-control">
+                                <i class="zmdi zmdi-tablet-mac"></i>
+                            </div>
+                            <div class="form-wrapper">
+                                <input id="website"  type="url" placeholder="Website" class="form-control">
+                                <i class="zmdi zmdi-tablet-mac"></i>
+                            </div>
+                            <!-- <div class="form-wrapper">
+                                    <select name="" id="gender" class="form-control">
+                                        <option value="" disabled selected>Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Others">Others</option>
+                                    </select> 
+                                    <i class="zmdi zmdi-caret-down" style="font-size: 17px;"></i>
+                             </div> -->
+                            <div class="form-wrapper">
+                                    <input id="address"  type="text" placeholder="Address" class="form-control">
+                                    <i class="zmdi zmdi-pin"></i>
+                            </div>
+                            <div class="form-wrapper">
+                                <select name="" id="city" class="form-control">
+                                    <option value="" disabled selected>City</option>
+                                    <option value="Bend">Bend</option>
+                                    <option value="Redmond">Redmond</option>
+                                    <option value="Sisters">Sisters</option>
+                                    <option value="Sunriver">Sunriver</option>
+                                    <option value="Culver">Culver</option>
+                                    <option value="La Pine">La Pine</option>
+                                    <option value="Prineville">Prineville</option>
+                                    <option value="Madras">Madras</option>
+                                </select> 
+                                <i class="zmdi zmdi-caret-down" style="font-size: 17px;"></i>
+                            </div>
+                            <div class="form-wrapper">
+                                <input id="state"  type="text" placeholder="State" class="form-control">
+                                <i class="zmdi zmdi-pin"></i>
+                            </div>
+                            <div class="form-wrapper">
+                                <input id="facebook"  type="text" placeholder="Facebook" class="form-control">
+                                <i class="zmdi zmdi-account-box-mail"></i>
+                            </div>
+                            <div class="form-wrapper">
+                                    <input id="profile"  type="url" placeholder="Producer Profile" class="form-control">
+                                    <i class="zmdi zmdi-account-box-mail"></i>
+                            </div>
+                            <div class="form-wrapper">
+                                <input id="description"  type="text" placeholder="Description" class="form-control">
+                                <i class="zmdi zmdi-account-box-mail"></i>
+                            </div>
+                            <div class="form-wrapper">
+                                <input id="hours"  type="text" placeholder="Hours" class="form-control">
+                                <i class="zmdi zmdi-account-box-mail"></i>
+                            </div>
+                            <div class="form-wrapper">
+                                <input id="oferings"  type="text" placeholder="Farm Oferings" class="form-control">
+                                <i class="zmdi zmdi-account-box-mail"></i>
+                            </div>
+                            <!-- <div class="form-wrapper">
+                                <select name="" id="oferings" class="form-control">
+                                    <option value="" disabled selected>Farm Oferings</option>
+                                    <option value="Vegetables">Vegetables</option>
+                                    <option value="Fruits">Fruits</option>
+                                    <option value="Plants">Plants</option>
+                                    <option value="Flowers">Flowers</option>
+                                    <option value="Herbs">Herbs</option>
+                                    <option value="Eggs">Eggs</option>
+                                    <option value="Meat">Meat</option>
+                                    <option value="Whole Meat">Whole Meat</option>
+                                    <option value="Quarter Meat">Quarter Meat</option>
+                                    <option value="Half Meat">Half Meat</option>
+                                    <option value="Poultry">Poultry</option>
+                                    <option value="Value Added Products">Value Added Products</option>
+                                </select> 
+                                <i class="zmdi zmdi-caret-down" style="font-size: 17px;"></i>
+                            </div> -->
+
+                            <div class="form-group container-login100-form-btn">
+                                <button id="btn-update" type="button">
+                                    Update & Set
+                                    <i class="zmdi zmdi-arrow-right"></i>
+                                </button>
+                            </div>
+                        </form>
+            </div>
+
+        </div>
+
+        <script src="index.js"></script>
+        <script>
+            firebase.auth().onAuthStateChanged(function(user)
+            {
+                if(user)
+                {
+                    var userID = firebase.auth().currentUser.uid;
+
+                    firebase.database().ref('Users/' + userID).once('value').then(function(snapshot)
+                    {
+                        if(snapshot.val())
+                        {
+                            window.location.href = "MainPage.html";
+                        }
+                    });  
+                }
+            });
+        </script>
+
+    </body>
+</html>
