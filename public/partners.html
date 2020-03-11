@@ -18,8 +18,9 @@
 <br>
 <script>
     //********************Retrieve and Display Data from Firebase**************************************
+
     var user = firebase.auth().currentUser;
-    var dbPartners = firebase.database().ref().child("Partners").orderByChild("uid").equalTo(user.uid);
+    var dbPartners = firebase.database().ref().child("Partners").orderByChild("businessName");
 
     dbPartners.on("value", function(partners)
     {
@@ -32,6 +33,9 @@
                 counter = counter + 1;
 
                 partnersHtml += "<div class='jumbotron bg-light text-dark border border-dark'>";
+                        partnersHtml += "<h1 style='text-align: justify; color: black;'>";
+                            partnersHtml += singlePartner.val().businessName;
+                        partnersHtml += "</h1> <br>";
                         partnersHtml += "<div> <img width='1000px' height='550px' src='";
                             partnersHtml += singlePartner.val().image;
                         partnersHtml += "'/> </div> <br>";
@@ -58,6 +62,9 @@
                         partnersHtml += "<div class='form-group' style='text-align: justify; color: black;'>";
                             partnersHtml += "<button class='form-control btn btn-light bg-dark text-white' onclick=deletepartnerRecord('"+singlePartner.key+"')>Delete this Partner</button>";
                         partnersHtml += "</div> <br>";
+                        partnersHtml += "<div class='form-group' style='text-align: justify; color: black;'>";
+                            partnersHtml += "<button class='form-control btn btn-light bg-dark text-white' onclick=editpartnerRecord('"+singlePartner.key+"')>Edit this Partner</button>";
+                        partnersHtml += "</div> <br>";
 
                 partnersHtml += "</div>";
             });
@@ -74,6 +81,22 @@
         .then(function()
         {
             console.log("Removed Successfully.");
+        })
+        .catch(function()
+        {
+            console.log("Error Occured.")
+        });
+    }
+
+    function editpartnerRecord(key)
+    {
+        var editRef = firebase.database().ref().child("Partners").child(key);
+
+        return editRef.edit()
+        //onclick="switchView('partners.html')"
+        .then(function()
+        {
+            console.log("Edited Successfully.");
         })
         .catch(function()
         {
