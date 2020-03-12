@@ -1,99 +1,34 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyBYFHMX776jGWk9Lm_n0jwUgVlS6yGcz8s",
-    authDomain: "hdffa-32061.firebaseapp.com",
-    databaseURL: "https://hdffa-32061.firebaseio.com",
-    projectId: "hdffa-32061",
-    storageBucket: "hdffa-32061.appspot.com",
-    messagingSenderId: "665361323798",
-    appId: "1:665361323798:web:624289fcdc98b759fd2237",
-    measurementId: "G-SVQ0HSEZ5T"
-  };
+    apiKey: "AIzaSyD9d2WiBXKnszB7BOmaYpnkvbaJrVGtYa8",
+    authDomain: "hdffa-app.firebaseapp.com",
+    databaseURL: "https://hdffa-app.firebaseio.com",
+    projectId: "hdffa-app",
+    storageBucket: "hdffa-app.appspot.com",
+    messagingSenderId: "301209200300",
+    appId: "1:301209200300:web:2c705453275ee922cc2109",
+    measurementId: "G-4Q5LG2V1FF"
+};
+
+var partners = require('./partners.js');
 
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
 
 //   firebase.auth.Auth.Persistence.LOCAL;
 
 
-  $("#btn-login").click(function()
-  {
-      var email = $("#email").val();
-      var password = $("#password").val();
+$("#btn-login").click(function()
+{
+    var email = $("#email").val();
+    var password = $("#password").val();
 
-      if(email != ""  &&  password != "")
-      {
-          var result = firebase.auth().signInWithEmailAndPassword(email, password); 
+    if(email != ""  &&  password != "")
+    {
+        var result = firebase.auth().signInWithEmailAndPassword(email, password); 
 
-          result.catch(function(error)
-          {
-              var errorCode = error.code;
-              var errorMessage = error.message;
-
-              console.log(errorCode);
-              onsole.log(errorMessage);
-
-              window.alert("Message : " + errorMessage);
-          });
-      }
-      else
-      {
-          window.alert("Form is incomplete. Please fill out all fields.");
-      }
-  });
-
-
-
-
-  $("#btn-signup").click(function()
-  {
-      var email = $("#email").val();
-      var password = $("#password").val();
-      var cPassword = $("#confirmPassword").val();
-
-      if(email != ""  &&  password != ""  &&  cPassword != "")
-      {
-          if(password == cPassword)
-          {
-            var result = firebase.auth().createUserWithEmailAndPassword(email, password); 
-
-            result.catch(function(error)
-            {
-                var errorCode = error.code;
-                var errorMessage = error.message;
-  
-                console.log(errorCode);
-                onsole.log(errorMessage);
-  
-                window.alert("Message : " + errorMessage);
-            });
-          }
-          else
-          {
-            window.alert("Password do not match with the Confirm Password.");
-          }
-      }
-      else
-      {
-          window.alert("Form is incomplete. Please fill out all fields.");
-      }
-  });
-
-
-
-  $("#btn-resetPassword").click(function()
-  {
-     var auth = firebase.auth();
-     var email = $("#email").val();
-
-     if(email != "")
-     {
-         auth.sendPasswordResetEmail(email).then(function()
-         {
-            window.alert("Email has been sent to you, Please check and verify.");
-         })
-         .catch(function(error)
-         {
+        result.catch(function(error)
+        {
             var errorCode = error.code;
             var errorMessage = error.message;
 
@@ -101,26 +36,93 @@ const firebaseConfig = {
             onsole.log(errorMessage);
 
             window.alert("Message : " + errorMessage);
-         });
-     }
-     else
-     {
+        });
+    }
+    else
+    {
+        window.alert("Form is incomplete. Please fill out all fields.");
+    }
+});
+
+
+
+
+$("#btn-signup").click(function()
+{
+    var email = $("#email").val();
+    var password = $("#password").val();
+    var cPassword = $("#confirmPassword").val();
+
+    if(email != ""  &&  password != ""  &&  cPassword != "")
+    {
+        if(password == cPassword)
+        {
+            var result = firebase.auth().createUserWithEmailAndPassword(email, password); 
+
+            result.catch(function(error)
+            {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+
+                console.log(errorCode);
+                console.log(errorMessage);
+
+                window.alert("Message : " + errorMessage);
+            });
+        }
+        else
+        {
+            window.alert("Password do not match with the Confirm Password.");
+        }
+        }
+        else
+        {
+            window.alert("Form is incomplete. Please fill out all fields.");
+        }
+});
+
+
+
+$("#btn-resetPassword").click(function()
+{
+    var auth = firebase.auth();
+    var email = $("#email").val();
+
+    if(email != "")
+    {
+        auth.sendPasswordResetEmail(email).then(function()
+        {
+            window.alert("Email has been sent to you, Please check and verify.");
+        })
+        .catch(function(error)
+        {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+
+            console.log(errorCode);
+            onsole.log(errorMessage);
+
+            window.alert("Message : " + errorMessage);
+        });
+    }
+    else
+    {
         window.alert("Please write your email first.");
-     }
-  });
+    }
+});
 
 
 
-  $("#btn-logout").click(function()
-  {
-     firebase.auth().signOut();
-  });
+$("#btn-logout").click(function()
+{
+    firebase.auth().signOut();
+});
 
 
 
 
-  $("#btn-update").click(function()
-  {
+$("#btn-update").click(function()
+{
     var phone = $("#phone").val();
     var address = $("#address").val();
     var bio = $("#bio").val();
@@ -166,7 +168,7 @@ const firebaseConfig = {
     {
         window.alert("Form is incomplete. Please fill out all fields.");
     }
-  });
+});
 
 
 function switchView(view)
@@ -179,3 +181,4 @@ function switchView(view)
         $("#container").html(data);
     });
 }
+

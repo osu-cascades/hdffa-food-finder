@@ -1,0 +1,1910 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "2 Sisters Ranch",
+        "First Name": "Renee",
+        "Last Name": "Bouma",
+        "Email": "2SistersRanchWagyu@gmail.com",
+        "Address": "777 NW Wall St # 200",
+        "City ": "Bend",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 797-3255 ",
+        "Website": "2sistersranch.com ",
+        "Facebook Page": "2Sisters Ranch LLC",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/2sisters-ranch_hdffa-producer-profile-1.pdf",
+        "Farm Description": "100% Full Blood Wagyu Beef. We use sustainable grazing practices on our ranch in Tumalo. Our animals are grass-fed, raised with no hormones and no antibiotics (unless needed for health reasons). We are committed to maintaining a stress free, healthy environment for our herd. We are a small family run business with a limited supply of the best meat available anywhere in the country. We use an Animal Welfare Approved Facility to maintain our commitment to gentle animal husbandry.",
+        "Farm Hours": "",
+        "What We Offer": "Eggs|Meat & Poultry|Value Added Products|Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "Direct to consumer|Other"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.315700,
+          44.057940
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "4 Acre Farm",
+        "First Name": "Agustin",
+        "Last Name": "Olea",
+        "Email": "agustin.olea65@gmail.com",
+        "Address": "4508 SW Eureka Ln.",
+        "City ": "Madras",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 610-4403",
+        "Website": "",
+        "Facebook Page": "FourAcreFarm",
+        "Producer Profile": "",
+        "Farm Description": "We grow vegetables using organic methods. Our water comes from Opal Springs, a community water supply that has won awards for the water quality and taste.  We also have free range chickens for quality brown eggs.",
+        "Farm Hours": "Mon/Wed/Fri, 9am-5pm, or by appt.",
+        "What We Offer": "Vegetables|Eggs|Herbs, Flowers, Plants",
+        "Where Products Are Sold": "CSA||Farmers Market||On-farm/U-Pick/Roadside Stand||Direct to consumer"
+      },
+      "geometry": {         
+        "coordinates": [                    
+          -121.220530,
+          44.578610
+        ],         
+        "type": "Point"       
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Amy's Lavender",
+        "First Name": "Allen",
+        "Last Name": "Yoder",
+        "Email": "amyslavender1@gmail.com",
+        "Address": "1600 A Ave.",
+        "City ": "Terrebonne",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 410-7722",
+        "Website": "amyslavender.com",
+        "Facebook Page": "Amy's Lavender & Garden Produce",
+        "Producer Profile": "",
+        "Farm Description": "We grow, produce, and sell lavender products, including essential oil, hydrosol, lavender soap,  sachets, body butter, dried & fresh bouquets, lavender plants, and more, as well as tomato plants, tomatoes, and other vegetables.  You can find our lavender products online at amyslavender.com.",
+        "Farm Hours": "Farm Visits & Sales: Jun-Sept, Mon & Fri, 3pm-6pm; Sat, 4:30pm-6:30pm\n\n\n\nSee website for farmers market schedule",
+        "What We Offer": "Vegetables||Value Added Products||Herbs, Flowers, Plants",
+        "Where Products Are Sold": "Farmers Market|On-farm/U-Pick/Roadside Stand|Direct to consumer|Other"
+      },
+      "geometry": {         
+        "coordinates": [                    
+          -121.186050,
+          44.349120
+        ],         
+        "type": "Point"       
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Bluestone Natural Farms",
+        "First Name": "Michael & Onda",
+        "Last Name": "Hueners",
+        "Email": "ondah56@gmail.com",
+        "Address": "12555 SW Hwy 126",
+        "City ": "Powell Butte",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 610-4339",
+        "Website": "BluestoneNaturalFarms.com",
+        "Facebook Page": "BluestoneNaturalFarms",
+        "Producer Profile": "",
+        "Farm Description": "We are a family run farm that thrives on educating the public about sustainable living. We welcome farm visits.  We offer pork,  beef, eggs, chicks, goat milk/soap, plants,  vegetables, jams, relish, pickled beets, jewelry, quilts and crafts.  We are also an event venue!",
+        "Farm Hours": "Year round.  Variable hours best to call and verify someone will be availabe to assist you.",
+        "What We Offer": "Vegetables||Eggs|Meat & Poultry|Dairy||Value Added Products|Herbs, Flowers, Plants|Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "Farmers Market|On-farm/U-Pick/Roadside Stand|Direct to consumer"
+      },
+      "geometry": {         
+        "coordinates": [                    
+          -121.004880,
+          44.247860
+        ],         
+        "type": "Point"       
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Boundless Farmstead",
+        "First Name": "Megan and David",
+        "Last Name": "",
+        "Email": "info@boundlessfarmstead.com",
+        "Address": "25360 Walker Rd.",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(503) 883-1758",
+        "Website": "boundlessfarmstead.com",
+        "Facebook Page": "boundlessfarmstead",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/08/boundless-farmstead_hdffa-producer-partner.pdf",
+        "Farm Description": "Dedicated to the earth, to our community, and to growing the best damn food we can. We use sustainable practices to grow chemical-free vegetables, poultry, and eggs.",
+        "Farm Hours": "Please call or visit website for information",
+        "What We Offer": "Vegetables|Eggs|Meat & Poultry|Value Added Products|Herbs, Flowers, Plants",
+        "Where Products Are Sold": "CSA|Farmers Market|Retailer/Grocer|Restaurant|Direct to consumer"
+      },
+      "geometry": {         
+        "coordinates": [                    
+          -121.05949,
+          44.06403	
+        ],         
+        "type": "Point"       
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Casad Family Farms, LLC",
+        "First Name": "Chris",
+        "Last Name": "Casad",
+        "Email": "casadfamilyfarms2017@gmail.com",
+        "Address": "2595 NW Elm Ln.",
+        "City ": "Madras",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 815-6483",
+        "Website": "casadfamilyfarms.com",
+        "Facebook Page": "",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/casad-family-farms_hdffa-producer-profile.pdf",
+        "Farm Description": "Family Farm growing USDA Certified Organic crops including potatoes, onions, beets, carrots, garlic, winter squash and corn. We also raise farmstead grass feed beef and hogs  raised with hay and grains grown on farm.",
+        "Farm Hours": "",
+        "What We Offer": "Vegetables|Meat & Poultry||Value Added Products|Herbs, Flowers, Plants|Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "Farmers Market|Retailer/Grocer|Restaurant"
+      },
+      "geometry": {         
+        "coordinates": [                    
+          -121.18702,
+          44.6934
+        ],         
+        "type": "Point"       
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Cascade Lavender",
+        "First Name": "Holly",
+        "Last Name": "Pearson",
+        "Email": "cascadelavenderfarm@gmail.com",
+        "Address": "5000 SW Feather Dr.",
+        "City ": "Madras",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 546-9390",
+        "Website": "cascadelavender.com",
+        "Facebook Page": "",
+        "Producer Profile": "",
+        "Farm Description": "Located in the heart of Central Oregon's agricultural belt, Cascade Lavender is blessed with an incredible panorama of pastoral fields and peaks of the Cascade Mountains. We have around 4,000 lavender plants and over 100 different plant varieties. We sell fresh and dried lavender, lavender oil, sprays, lotions, soaps and more!",
+        "Farm Hours": "Memorial Weekend-Mid August, Thu-Sat, 10am-5pm; Sun, 12pm-4pm; Other times by appt. Closed July 4th.",
+        "What We Offer": "Herbs, Flowers, Plants",
+        "Where Products Are Sold": "Farmers Market|Retailer/Grocer|Direct to consumer"
+      },
+      "geometry": {
+         "coordinates": [
+            -121.2293, 
+            44.56943
+          ],        
+          "type": "Point"
+       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Cascade Mountain Pastures",
+        "First Name": "Karen",
+        "Last Name": "Swaner",
+        "Email": "karaneswaner@yahoo.com",
+        "Address": "18130 Hwy 126",
+        "City ": "Sisters",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 213-6406",
+        "Website": "",
+        "Facebook Page": "",
+        "Producer Profile": "",
+        "Farm Description": "Grass-fed lamb raised without antibiotics available year round. Free range eggs, goat and beef available at the ranch.",
+        "Farm Hours": "Ranch visits and sales by appt.",
+        "What We Offer": "Eggs|Meat & Poultry",
+        "Where Products Are Sold": "Farmers Market|On-farm/U-Pick/Roadside Stan||Retailer/Grocer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.42538,
+          44.29143
+        ],        
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Cathy's Beaks and Snouts",
+        "First Name": "Cathy",
+        "Last Name": "Fall",
+        "Email": "cathyafall@gmail.com",
+        "Address": "2663 NE Sunset View Ln.",
+        "City ": "Prineville",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 410-2594",
+        "Website": "",
+        "Facebook Page": "cathysbeaksandsnouts",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/cathys-beaks-and-snouts_hdffa-producer-profile.pdf",
+        "Farm Description": "We raise Berkshire hogs, Broad Breasted Bronze turkeys,  and grass-fed beef.  Animals are free range with no antibiotics.  We strive to let our birds and animals live their best life!",
+        "Farm Hours": "Mon-Sun, 8am-5pm",
+        "What We Offer": "Eggs|Meat & Poultry",
+        "Where Products Are Sold": "On-farm/U-Pick/Roadside Stand|Retailer/Grocer"
+      },
+      "geometry": {
+        "coordinates": [
+          -120.79411,
+          44.32457	
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Central Oregon Ostrich",
+        "First Name": "Michael",
+        "Last Name": "Lehman",
+        "Email": "Michael@centraloregonostrich.com",
+        "Address": "7600 SW Quarry Ave.",
+        "City ": "Redmond",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 923-5076",
+        "Website": "CentralOregonOstrich.com",
+        "Facebook Page": "Centraloregonostrich",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/central-oregon-ostrich_hdffa-producer-profile.pdf",
+        "Farm Description": "Ostrich is a red meat, high in iron, naturally low in saturated fat and, compared to ground beef, contains 50% less fat per serving. Our ostrich yearlings are finished on brewer�s grains from local breweries.",
+        "Farm Hours": "by appt.",
+        "What We Offer": "Meat & Poultry",
+        "Where Products Are Sold": "Farmers Market|Retailer/Grocer|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.26056,
+          44.21059
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Central Oregon Seed Exchange",
+        "First Name": "Spring Alaska",
+        "Last Name": "Olson",
+        "Email": "coseedexchange@gmail.com",
+        "Address": "65060 Hwy 20",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 647-9604",
+        "Website": "seedexchange.weebly.com",
+        "Facebook Page": "Central Oregon Seed Exchange",
+        "Producer Profile": "",
+        "Farm Description": "COSE is a network dedicated to strengthening our awareness and access to locally grown flower and vegetable seed in Central Oregon.  COSE offers free seeds to non-profits, schools, farms and landowners.",
+        "Farm Hours": "Open year round",
+        "What We Offer": "Herbs, Flowers, Plants",
+        "Where Products Are Sold": "CSA|Institution or School|On-farm/U-Pick/Roadside Stand|Retailer/Grocer|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.36092,
+          44.16173	
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Central Oregon Veterans Ranch",
+        "First Name": "Orion",
+        "Last Name": "Carriger",
+        "Email": "OrionC@covranch.org",
+        "Address": "65920 61st St.",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 706-9062",
+        "Website": "covranch.org",
+        "Facebook Page": "",
+        "Producer Profile": "",
+        "Farm Description": "Veteran outreach local non-profit farm offering seasonal produce including lettuce, greenhouse cherry  tomatoes, micro greens, basil. You can purchase produce at the ranch or find our produce at local restaurants, Central Oregon Locavore, and Newport Market.",
+        "Farm Hours": "Mon/Thu/Fri, 9am-4pm",
+        "What We Offer": "Vegetables / fruit||Herbs, Flowers, Plants",
+        "Where Products Are Sold": "On-farm/U-Pick/Roadside Stand|Retailer/Grocer|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.2435,
+          44.19347
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Central Oregon Wagyu",
+        "First Name": "David & Roberta ",
+        "Last Name": "York",
+        "Email": "dyc@bendcable.com",
+        "Address": "7500 SW Canal Blvd.",
+        "City ": "Redmond",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 280-7781",
+        "Website": "centraloregonwagyu.com",
+        "Facebook Page": "",
+        "Producer Profile": "",
+        "Farm Description": "All grass-fed, and grass finished Wagyu beef. No hormones, no antibiotics. We deliver to Bend and Redmond for orders over $50. Farm fresh eggs and pork in limited supply. Find out more product and farm info on our website.",
+        "Farm Hours": "",
+        "What We Offer": "Meat and/or Poultry ",
+        "Where Products Are Sold": "On-farm/U-Pick/Roadside Stand"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.24952,
+          44.20673
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Clover Canyon Farm",
+        "First Name": "Josie",
+        "Last Name": "Keyes",
+        "Email": "clovercanyonfarms@gmail.com ",
+        "Address": "Fir Street Park",
+        "City ": "Sisters",
+        "State": "OR",
+        "": "",
+        "Phone": "(503) 780-8350",
+        "Website": "",
+        "Facebook Page": "Instagram:  @clover_canyon_farm ",
+        "Producer Profile": "",
+        "Farm Description": "Clover Canyon Farm is a women-owned micro-farm growing produce, poultry, and eggs. We have a passion for producing fresh, chemical-free, delicious food for our family and community. Our happy and healthy poultry is free range, non-GMO fed, and no antibiotics.  We are a no-till/low-till farm and take great care to tend to our High Desert soil via composting and biodynamic practices.",
+        "Farm Hours": "May-Oct, Wed & Sun, 11am-3pm",
+        "What We Offer": "Vegetables|Eggs|Meat & Poultry",
+        "Where Products Are Sold": "CSA|Farmers Market|Restaurant"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.54877,
+          44.2931
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Crooked River Bison Ranch",
+        "First Name": "Erik",
+        "Last Name": "Monge",
+        "Email": "erik@crookedriverbison.com",
+        "Address": "185 NE 10th St",
+        "City ": "Prineville",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 903-2861",
+        "Website": "crookedriverbison.com",
+        "Facebook Page": "crookedriverbison",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/crooked-river-bison-ranch_hdffa-producer-profile.pdf",
+        "Farm Description": "The extra care we put into our grass-fed ranching practices ensures the bison meat on your dinner plate is of the highest quality. We adhere to our strictly-defined ranching standards so you can enjoy the tastiest, most flavorful bison meat available.",
+        "Farm Hours": "Open daily 9am-5pm for retail meat sales. Please call for an appt.",
+        "What We Offer": "Meat & Poultry",
+        "Where Products Are Sold": "CSA|Farmers Market|On-farm/U-Pick/Roadside Stand|Retailer/Grocer|Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -120.84675,
+          44.30898	
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Crown C Farms, LLC",
+        "First Name": "Jim",
+        "Last Name": "Crocker",
+        "Email": "jim_crocker@hotmail.com",
+        "Address": "2609 Odem Ave.",
+        "City ": "Terrebonne",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 480-9070",
+        "Website": "crowncllc.com",
+        "Facebook Page": "",
+        "Producer Profile": "",
+        "Farm Description": "Crown C Farms LLC is a specialty vegetable farm.  We grow squash, peppers, potatoes, cucumbers, tomatoes and other crops. We provide direct sales to grocery stores, produce stands and wholesalers.  Our farmstand is open on the weekends.  Crown C Farms is also the sole provider of Sunchoke for the Iler Crossing Topinambur Spirit.",
+        "Farm Hours": "Stand open Sat- Sun, 11am-4pm during growing season (usually starts late June)",
+        "What We Offer": "Vegetables|Eggs",
+        "Where Products Are Sold": "Institution or School|On-farm/U-Pick/Roadside Stand|Retailer/Grocer|Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.19682,
+          44.34166
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Crump Ranch",
+        "First Name": "Ed",
+        "Last Name": "Stabb",
+        "Email": "edsredmond@gmail.com",
+        "Address": "2940 NW 74th St.",
+        "City ": "Redmond",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 280-1895",
+        "Website": "stabbranches.com",
+        "Facebook Page": "",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/crump-ranch_hdffa-producer-profile.pdf",
+        "Farm Description": "We offer free range, grass-fed Angus beef.",
+        "Farm Hours": "Mon-Sun, 7am-7pm",
+        "What We Offer": "Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "On-farm/U-Pick/Roadside Stand|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.25751,
+          44.31128
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "DD Ranch, LLC",
+        "First Name": "Linda",
+        "Last Name": "Anspach",
+        "Email": "linda@ddranch.net",
+        "Address": "3836 NE Smith Rock Way",
+        "City ": "Terrebonne",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 548-1432",
+        "Website": "ddranch.net",
+        "Facebook Page": "TheDDRanch",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/dd-ranch_hdffa-producer-profile.pdf",
+        "Farm Description": "Grass-fed beef, grass-fed lamb, heritage pork, raw local honey, eggs, rhubarb, petting zoo, play areas. Fall pumpkin patch, field trips, parties and weddings.",
+        "Farm Hours": "Please call ahead to schedule a visit, we aim to be available!",
+        "What We Offer": "Eggs|Meat & Poultry|Value Added Products",
+        "Where Products Are Sold": "CSA|Farmers Market|On-farm/U-Pick/Roadside Stand|Retailer/Grocer|Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.12248,
+          44.34886
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Deschutes Gourmet Mushrooms",
+        "First Name": "Robert",
+        "Last Name": "Glenney",
+        "Email": "rbglenney@gmail.com",
+        "Address": "446 SW 7th St",
+        "City ": "Redmond",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 408-5206",
+        "Website": "",
+        "Facebook Page": "",
+        "Producer Profile": "",
+        "Farm Description": "Deschutes Gourmet Mushrooms is dedicated to using environmentally friendly and sustainable practices to cultivate the finest gourmet mushrooms in Central Oregon. Located on 2 1/2 acres between Redmond and Bend along the Deschutes River, these delicate caps and stems are kept in pristine condition on their short journey from farm to table. These flavorful and nutritionally packed mushrooms are available year-round.",
+        "Farm Hours": "Call for delivery",
+        "What We Offer": "Vegetables",
+        "Where Products Are Sold": "Restaurant"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.17535,
+          44.2727
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Dome Grown Produce",
+        "First Name": "Amanda",
+        "Last Name": "Benkert",
+        "Email": "amanda@domegrown.org",
+        "Address": "7858 SW 61st St.",
+        "City ": "Redmond",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 678-3064",
+        "Website": "domegrown.org",
+        "Facebook Page": "DomeGrown",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/dome-grown-produce_hdffa-producer-profile.pdf",
+        "Farm Description": "Small market farm growing seasonable vegetables, and medicinal and edible herbs and flowers for farmers markets.",
+        "Farm Hours": "May-Nov, hours vary",
+        "What We Offer": "Vegetables|Herbs, Flowers, Plants",
+        "Where Products Are Sold": "Farmers Market|Retailer/Grocer|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.2435,
+          44.2017
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Double F Ranch",
+        "First Name": "Katia",
+        "Last Name": "Steckly",
+        "Email": "katia@doublefranch.com",
+        "Address": "45404 Shaniko-Fossil Hwy",
+        "City ": "Antelope",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 489-3212",
+        "Website": "doublefranch.com",
+        "Facebook Page": "DoubleFRanchMeatCSA",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/double-f-ranch_hdffa-producer-profile.pdf",
+        "Farm Description": "Fifth-generation ranch offering year-round, pastured meat CSA with grass-finished beef and lamb (optional), pastured pork and poultry, and free-range eggs. Homegrown corn and soy-free feed. Farmstead soaps and wool products.",
+        "Farm Hours": "Monthly deliveries to Bend",
+        "What We Offer": "Eggs|Meat & Poultry|Value Added Products",
+        "Where Products Are Sold": "CSA"
+      },
+      "geometry": {
+        "coordinates": [
+          -120.72229,
+          44.90993
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Fields Farm",
+        "First Name": "Debbie",
+        "Last Name": "Fields",
+        "Email": "fieldsfarmdeschutes@gmail.com",
+        "Address": "61915 Pettigrew Rd.",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 382-8059",
+        "Website": "fields.farm",
+        "Facebook Page": "Fields Farm-Bend, Oregon",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/fields-farm_hdffa-producer-profile.pdf",
+        "Farm Description": "Fields Farm is a small sustainable farm on the east side of Bend. We have been farming  with  no chemical pesticides or fertilizers for 30 years. Composting is a large part of our farm and the fields are covered every year. There is a Farmstand open to the public, a CSA and we sell at the downtown Bend farmers market.",
+        "Farm Hours": "Farmstand: Thu-Sat, during daylight hours; Downtown Farmers Market: Wed, 2pm-6pm",
+        "What We Offer": "Vegetables|Value Added Products|Herbs, Flowers, Plants",
+        "Where Products Are Sold": "CSA|Farmers Market|On-farm/U-Pick/Roadside Stand"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.26866,
+          44.04836
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Freedom Rock Farms",
+        "First Name": "Julie",
+        "Last Name": "Reber",
+        "Email": "julie@juliereber.com",
+        "Address": "22225 Bear Creek Rd.",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(415) 609-3677",
+        "Website": "freedomrockfarms.com",
+        "Facebook Page": "freedom rock farms",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/freedom-rock-farms_hdffa-producer-profile.pdf",
+        "Farm Description": "We pride ourselves on raising completely antibiotic and hormone-free meat. Our animals have unlimited access to fresh air and exercise. You can taste the happiness.",
+        "Farm Hours": "We work 7 days a week!",
+        "What We Offer": "Meat & Poultry",
+        "Where Products Are Sold": "On-farm/U-Pick/Roadside Stand|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.21099,
+          44.05117
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Freshfields Farm",
+        "First Name": "Donna",
+        "Last Name": "Lemieux-Brehm",
+        "Email": "freshfieldsfarmbend@gmail.com",
+        "Address": "19189 Dayton Rd.",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(503) 970-9852",
+        "Website": "freshfieldsfarmbend.com",
+        "Facebook Page": "Freshfields farm",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/freshfields-farm_hdffa-producer-profile.pdf",
+        "Farm Description": "We are a small farm that specializes in pasture-fed, free range eggs and pesticide free vegetables, herbs and flowers.  We also have a CSA program for 8 weeks this summer and occational culinary classes from Donna, a trained pastry chef. Grass-fed lamb and beef available. We are also a farmstay with a private wing for lodging. Guests have access to our animals and chickens as well as exploring our garden. ",
+        "Farm Hours": "See website for more details.  We usually open the stand starting in late June.  Our eggs are always available (24-7) in a fridge near our driveway as well as on our farm stand.",
+        "What We Offer": "Vegetables|Eggs|Meat & Poultry|Herbs, Flowers, Plants|Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "CSA||On-farm/U-Pick/Roadside Stand"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.36657,
+          44.17375
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Golden Eagle Organics ",
+        "First Name": "Brian",
+        "Last Name": "Lepore",
+        "Email": "brian@goldeneagleorganics.com",
+        "Address": "62900 Eagle Rd.",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 214-5467",
+        "Website": "goldeneagleorganics.com",
+        "Facebook Page": "goldeneagleorganic",
+        "Producer Profile": "",
+        "Farm Description": "Organically raised, Animal Welfare Approved, Certified Grass-fed lamb and goat meat. We grow Organic produce and berries too.",
+        "Farm Hours": "by appt.",
+        "What We Offer": "Vegetables|Eggs|Meat & Poultry",
+        "Where Products Are Sold": "Farmers Market|On-farm/U-Pick/Roadside Stand|Retailer/Grocer||Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.25368,
+          44.08438
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Gorilla Greens, LLC",
+        "First Name": "Chris",
+        "Last Name": "Stahn",
+        "Email": "chris@gorillagreens.farm",
+        "Address": "777 NW Wall St # 200",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 250-0900",
+        "Website": "gorillagreens.farm",
+        "Facebook Page": "GorillaGreens",
+        "Producer Profile": "",
+        "Farm Description": "We grow nutritious microgreens and wheatgrass indoors. We harvest weekly to provide fresh, flavorful and colorful produce and deliver directly to our customers� homes or place of employment.",
+        "Farm Hours": "Mon-Sat, 10am-4pm",
+        "What We Offer": "Vegetables",
+        "Where Products Are Sold": "Farmers Market|Restaurant|Direct to consumer|Other"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.31544,
+          44.05777
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "HolmesStead Ranch",
+        "First Name": "Michael ",
+        "Last Name": "Holmes",
+        "Email": "holmessteadranch@gmail.com",
+        "Address": "24075 E Hwy 20",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(541)-322-6992",
+        "Website": "holmessteadranch.com",
+        "Facebook Page": "",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/holmesstead-ranch_hdffa-producer-profile.pdf",
+        "Farm Description": "We are a small family run farm/ranch located east of Bend. We raise wholesome goat, pork, chickens and turkeys we can proudly say we do not use any antibiotics or growth hormones. We grow a variety of fresh vegetables in season.",
+        "Farm Hours": "Mon-Fri, after 5pm; Sat-Sun, all day",
+        "What We Offer": "Vegetables / fruit||Eggs|Meat & Poultry",
+        "Where Products Are Sold": "On-farm/U-Pick/Roadside Stand|Retailer/Grocer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.11936,
+          44.00281
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Holy Cow ",
+        "First Name": "Jared",
+        "Last Name": "Vogt",
+        "Email": "Vogtme@gmail.com",
+        "Address": "Fir Street Park",
+        "City ": "Sisters",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(503) 949-9719",
+        "Website": "",
+        "Facebook Page": "",
+        "Producer Profile": "",
+        "Farm Description": "We're a new small-scale, non-profit that grew from the desire to feed our own families good, honest beef. Our mission is to provide locally raised, grass-fed and finished beef that does good locally and globally. Beef shares include 1/4, 1/2, and whole options.",
+        "Farm Hours": "",
+        "What We Offer": "Meat & Poultry",
+        "Where Products Are Sold": "Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.54877,
+          44.2931
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Home Farm Foods",
+        "First Name": "Cameron",
+        "Last Name": "Gunther",
+        "Email": "info@homefarmfoods.co",
+        "Address": "7085 SW Kent Ln.",
+        "City ": "Culver",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 279-3057",
+        "Website": "homefarmfoods.co",
+        "Facebook Page": "",
+        "Producer Profile": "",
+        "Farm Description": "Home Farm Foods has certified Animal Welfare Approved laying hens, grass-fed and finished beef, and pastured pork that work in harmony to leave the land better than before. We sell our products at farmers markets, direct to consumers, and wholesale to restaurants.",
+        "Farm Hours": "Farm visit upon request. Online Order always open.",
+        "What We Offer": "Eggs|Meat & Poultry",
+        "Where Products Are Sold": "CSA|Farmers Market|On-farm/U-Pick/Roadside Stand|Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.27152,
+          44.49095
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Home Hedge and Charm",
+        "First Name": "Lanigan",
+        "Last Name": "Vitaceae",
+        "Email": "homehedgeandcharm@gmail.com",
+        "Address": "Fir Street Park",
+        "City ": "Sisters",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 904-5498",
+        "Website": "homehedgeandcharm.com",
+        "Facebook Page": "",
+        "Producer Profile": "",
+        "Farm Description": "We grow, produce, and sell herbs (including medicinal), berries, cut flowers, salad greens, baby carrots, and other vegetables. Plants are available for sale as well. We also produce hydrosols, sachets, soap, and other related products. Our products are sold online as well at�homehedgeandcharm.com",
+        "Farm Hours": "",
+        "What We Offer": " Herbs, Flowers, Plants | Value-Added Products",
+        "Where Products Are Sold": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -121.54877,
+          44.2931
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Hope Springs Dairy",
+        "First Name": "Lysa",
+        "Last Name": "Severson",
+        "Email": "info@hopespringsdairy.com",
+        "Address": "23040 Alfalfa Market Rd.",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 241-6183",
+        "Website": "hopespringsdairy.com",
+        "Facebook Page": "hopespringsdairy",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/hope-springs-dairy_hdffa-producer-profile.pdf",
+        "Farm Description": "We offer a raw milk herdshare from pasture raised cows. We also offer awesome heritage breed pork. Come check out the farm and bring the kids to see the calves.",
+        "Farm Hours": "by appt.",
+        "What We Offer": "Dairy|Value Added Products|Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.17024,
+          44.06618
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "In Cahoots Heirloom Apple Collaborative",
+        "First Name": "",
+        "Last Name": "",
+        "Email": "incahootsheirloomapples@gmail.com",
+        "Address": "8080 11th St",
+        "City ": "Terrebonne",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 504-1700",
+        "Website": "",
+        "Facebook Page": "In-Cahoots-Heirloom-Apple-Collaborative",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/in-cahoots-heirloom-apple-collaborative_hdffa-producer-profile.pdf",
+        "Farm Description": "In Cahoots Heirloom Apple Orchard Collaborative includes orchards located throughout Central Oregon.  We have a variety of heritage and rare heirloom apples.  Our local apples are used to make cider, craft beer, graf, apple brandy, and mixed fermentation beverages.",
+        "Farm Hours": "by appt. ",
+        "What We Offer": "Vegetables",
+        "Where Products Are Sold": "Restaurant||Other"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.17797,
+          44.34991
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "L & S Farm and Garden",
+        "First Name": "Linda",
+        "Last Name": "Stephenson",
+        "Email": "Linda@lsgardens.com",
+        "Address": "4243 NW Gerke Rd.",
+        "City ": "Prineville",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 408-2295",
+        "Website": "lsgardens.com",
+        "Facebook Page": "L and S Gardens",
+        "Producer Profile": "",
+        "Farm Description": "Everything rhubarb-jams, jellies, salsas, BBQ sauce, processed in our commercial kitchen on site from rhubarb grown on our farm. Breeders of Babydoll Southdown miniature sheep.",
+        "Farm Hours": "Visit our Facebook page: L and S Gardens for seasonal hours",
+        "What We Offer": "Vegetables / fruit|Eggs|Herbs, Flowers, Plants",
+        "Where Products Are Sold": "Farmers Market|On-farm/U-Pick/Roadside Stand|Retailer/Grocer|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -120.89885,
+          44.37745
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Larkin Valley Ranch",
+        "First Name": "Jeff & Julie",
+        "Last Name": "Larkin",
+        "Email": "juliecharley@me.com",
+        "Address": "446 SW 7th St",
+        "City ": "Redmond",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 420-0879",
+        "Website": "larkinvalleyranch.com",
+        "Facebook Page": "#NAME?",
+        "Producer Profile": "",
+        "Farm Description": "We are a 3rd generation run Central Oregon Ranch raising quality beef direct to you from our Angus Cross beef cattle herd. Our cattle are grass fed & finished without antibiotics, hormones or steroids.  You can taste the quality in our meat as we practice stress free  ranching.",
+        "Farm Hours": "Ranch visits by appointment only please!  But you sure are welcome to visit!",
+        "What We Offer": "Meat & Poultry",
+        "Where Products Are Sold": "Farmers Market|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.17535,
+          44.2727
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Mahonia Gardens",
+        "First Name": "Benji",
+        "Last Name": "Nagel",
+        "Email": "mahoniagardens@gmail.com",
+        "Address": "Fir Street Park",
+        "City ": "Sisters",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 420-8684",
+        "Website": "mahoniagardens.com",
+        "Facebook Page": "Mahonia Gardens",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/mahonia-gardens_hdffa-producer-profile.pdf",
+        "Farm Description": "Vegetables and herbs of exceptional quality grown in Sisters, Oregon. We use only organic practices and emphasize biodiversity on our farm. CSA farm subscriptions available June through October.",
+        "Farm Hours": "",
+        "What We Offer": "Vegetables|Herbs, Flowers, Plants",
+        "Where Products Are Sold": "CSA|Farmers Market|Retailer/Grocer||Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.54877,
+          44.2931
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Maragas Winery",
+        "First Name": "Doug",
+        "Last Name": "Maragas",
+        "Email": "info@maragaswinery.com",
+        "Address": "15523 SW Hwy 97",
+        "City ": "Culver",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 546-5464",
+        "Website": "maragaswinery.com",
+        "Facebook Page": "",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/maragas-winery_hdffa-producer-profile.pdf",
+        "Farm Description": "Maragas Winery pioneered traditional European wine grape growing in Central Oregon. With winemaking accolades from New York to San Francisco, visit us just 25 miles north of Bend to taste our wines and tour our winery. Join our Wine Club.",
+        "Farm Hours": "In season: Daily, 11am-5pm; Off season, closed Tue  ",
+        "What We Offer": "Vegetables / fruit",
+        "Where Products Are Sold": "On-farm/U-Pick/Roadside Stand|Retailer/Grocer|Restaurant"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.1989,
+          44.41046
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Mecca Grade Estate Malt",
+        "First Name": "Seth ",
+        "Last Name": "Klann",
+        "Email": "malt@meccagrade.com",
+        "Address": "9619 NW Columbia Dr.",
+        "City ": "Madras",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 526-8152",
+        "Website": "meccagrade.com",
+        "Facebook Page": "",
+        "Producer Profile": "",
+        "Farm Description": "Mecca Grade is an estate malthouse located on 1,000 irrigated acres in the beautiful Central Oregon High Desert. Our 8th generation Oregon farming family grows and malts all of our own specialty grain on-site; selling directly to local breweries and distilleries.",
+        "Farm Hours": "Mon-Fri, 9am-5pm",
+        "What We Offer": "",
+        "Where Products Are Sold": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -121.17187,
+          44.77868
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Milican Valley Beef Inc",
+        "First Name": "Melissa ",
+        "Last Name": "Magee",
+        "Email": "mdavis@bendbroadband.com",
+        "Address": "21085 Knott Rd.",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 390-8831",
+        "Website": "millicanvalleybeef.com",
+        "Facebook Page": "",
+        "Producer Profile": "",
+        "Farm Description": "Millican Valley Beef has been raising Angus/Limousin cattle since 1996. We raise all grass-fed beef locally in Central Oregon. Our cattle are bred, born and raised at our ranch. We offer healthy beef options to both local restaurants and families.",
+        "Farm Hours": "Mon-Fri, 8am-5pm; Sat, 9am-4pm",
+        "What We Offer": "Meat & Poultry",
+        "Where Products Are Sold": "Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.26909,
+          44.00797
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Paradise Produce",
+        "First Name": "Terri",
+        "Last Name": "Buck",
+        "Email": "paradiseproduce2012@yahoo.com",
+        "Address": "6651 N Adams Dr.",
+        "City ": "Madras",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 350-0468",
+        "Website": "",
+        "Facebook Page": "Paradise Produce",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/paradise-produce_hdffa-producer-profile.pdf",
+        "Farm Description": "We have a large selection of garden fresh vegetables, picked daily.  Our on-site store is self-serve, honor system.  We also offer cage-free eggs, local raw honey, vegetable starts and bedding flowers.  You can also find us at Madras Saturday Market.",
+        "Farm Hours": "May-Oct, Mon-Sun, 7am-7pm; For plants: May-Jun, Tue-Sat, 10am-5pm or by appt.",
+        "What We Offer": "Vegetables|Eggs|Value Added Products||Herbs, Flowers, Plants",
+        "Where Products Are Sold": "CSA|Farmers Market|On-farm/U-Pick/Roadside Stand|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.13289,
+          44.73222
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Piggy Back Ranch",
+        "First Name": "Hilary ",
+        "Last Name": "Smith",
+        "Email": "info@piggybackranch.com",
+        "Address": "777 NW Wall St # 200",
+        "City ": "Bend ",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 480-7467",
+        "Website": "piggybackranch.com",
+        "Facebook Page": "",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/piggyback-ranch_hdffa-producer-profile.pdf",
+        "Farm Description": "Piggy Back Ranch is a 54 acre farm selling pasture raised, heritage pork. Sign up for our monthly pork CSA! We also sell chicken, whole and half hog, breed stock and feeder pigs upon request.",
+        "Farm Hours": "Visit website",
+        "What We Offer": "Meat & Poultry|Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.31544,
+          44.05777
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Pine Mountain Ranch",
+        "First Name": "Loretta",
+        "Last Name": "Spahmer",
+        "Email": "info@pmrbuffalo.com",
+        "Address": "23585 East Hwy 20",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 312-0185",
+        "Website": "pmrbuffalo.com",
+        "Facebook Page": "",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/pine-mountain-ranch_hdffa-producer-profile.pdf",
+        "Farm Description": "We are a sustainable pastured livestock ranch raising buffalo, yak, and beef. We source Rocky Mountain Elk from local ranches.",
+        "Farm Hours": "Fri, 11am-3pm; and by appt.",
+        "What We Offer": "Meat & Poultry|Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "Farmers Market|On-farm/U-Pick/Roadside Stand|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.14499,
+          44.03139
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Pioneer Ranch",
+        "First Name": "Evan",
+        "Last Name": "Moran",
+        "Email": "Edmoran1216@hotmaul.com",
+        "Address": "777 NW Wall St # 200",
+        "City ": "Bend",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(559) 681-1310",
+        "Website": "Pioneerranch.com",
+        "Facebook Page": "Pioneer ranch ",
+        "Producer Profile": "",
+        "Farm Description": "We raise local beef and pork.  Our animals are raised on pasture and fed local beer and distillery byproducts, so we keep it all local.  We use no hormones or antibiotics.  We focus on flavor, using an extended finishing period to maximize marbling and tenderness.",
+        "Farm Hours": "Mon-Fri, 9am-5pm",
+        "What We Offer": "Meat & Poultry|Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "Farmers Market|Retailer/Grocer|Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.31544,
+          44.05777
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Plainview Gardens, LLC",
+        "First Name": "Gayle",
+        "Last Name": "Hoagland",
+        "Email": "gaylehoagland@aol.com",
+        "Address": "18344 Fryrear Ranch Rd.",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 410-2026",
+        "Website": "plainviewgardens.com",
+        "Facebook Page": "plainviewgardens",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/08/plainview-gardens_hdffa-producer-partner.pdf",
+        "Farm Description": "Plainview Gardens grows and sells herb, vegetable and flower plants grown using organic methods from organic seed whenever possible.  No pesticides, fungicides or neonicontinoids are ever used.  Our plants are bee friendly.  In 2019 we are offering a Plant CSA where you can order all the starter plants for your garden, whatever its size. Our plants are also for sale at CO Locavore and by appt. at the greenhouse.  Delivery is available.",
+        "Farm Hours": "by appt.",
+        "What We Offer": "Herbs, Flowers, Plants",
+        "Where Products Are Sold": "CSA|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.41558,
+          44.2297
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Prineville Lavender",
+        "First Name": "Kristi",
+        "Last Name": "Hiaasen",
+        "Email": "prinevillelavender@gmail.com",
+        "Address": "483 NE Short Ln.",
+        "City ": "Prineville",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 447-6217",
+        "Website": "",
+        "Facebook Page": "",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/prineville-lavender_hdffa-producer-profile.pdf",
+        "Farm Description": "Fresh lavender, fresh vegetables, lavender essential oil, dried lavender bouquets, handmade sachets, dream pillows, neckwraps and other lavender gifts.",
+        "Farm Hours": "by appt.",
+        "What We Offer": "Vegetables|Herbs, Flowers, Plants",
+        "Where Products Are Sold": "Farmers Market|On-farm/U-Pick/Roadside Stand|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -120.76636,
+          44.30484
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Rainshadow Organics",
+        "First Name": "Sarahlee",
+        "Last Name": "Lawrence",
+        "Email": "info@rainshadoworganics.com",
+        "Address": "71290 Holmes Rd.",
+        "City ": "Sisters",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 977-6746",
+        "Website": "rainshadoworganics.com",
+        "Facebook Page": "rainshadoworganics",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/08/rainshadow-organics_hdffa-producer-partner.pdf",
+        "Farm Description": "Your year-round connection to our meats, grains, and veggies.  Rainshadow Organics is located 15 miles Northeast of Sisters, Oregon where we have farmed and gardened for over 25 years. We have a full-diet farm with dozens of varieties of certified organic vegetables, herbs, berries, flowers, and grains on 80 acres. This includes whole wheat berries and fresh, stone-ground flour. We also offer pasture-raised, non-gmo fed pork, chicken, eggs, turkeys, and beef.",
+        "Farm Hours": "May-Oct, Wed-Sat, 12pm-5pm; Nov-Apr, Sat, 11am-3pm",
+        "What We Offer": "Vegetables|Eggs|Meat & Poultry||Dairy|Value Added Products|Herbs, Flowers, Plants|Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "CSA|Farmers Market|Institution or School|On-farm/U-Pick/Roadside Stand|Retailer/Grocer|Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.34862,
+          44.37442
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Remuda Ranch",
+        "First Name": "Nancy",
+        "Last Name": "Klatt",
+        "Email": "jnremuda@gmail.com",
+        "Address": "14449 SW Hwy 97",
+        "City ": "Culver",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 546-6778",
+        "Website": "",
+        "Facebook Page": "Remuda Ranch",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/remuda-ranch_hdffa-producer-profile.pdf",
+        "Farm Description": "We are a small family ranch in Jefferson County, raising Piedmontese and Piedmontese crossbred cattle. We operate as a cow-calf business but also sell quality locker beef seasonally in the Fall each year.",
+        "Farm Hours": "Year round, Mon-Sun, 8am-8pm",
+        "What We Offer": "Meat & Poultry",
+        "Where Products Are Sold": "On-farm/U-Pick/Roadside Stand|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.19917,
+          44.4315
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Rickety Bridge Ranch",
+        "First Name": "Cuyla",
+        "Last Name": "Dudley",
+        "Email": "cuyla.dudley@gmail.com",
+        "Address": "5680 Southwest Quarry Ave.",
+        "City ": "Redmond",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 280-1505",
+        "Website": "ricketybridgeranch.com",
+        "Facebook Page": "Rickety Bridge Ranch",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/08/rickety-bridge-ranch_hdffa-producer-partner.pdf",
+        "Farm Description": "Grass-fed, pasture raised beef without hormones or antibiotics. Piedmontese and Angus-cross available from the farm and Central Oregon Locavore.",
+        "Farm Hours": "by appt. ",
+        "What We Offer": "Meat & Poultry|Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "Farmers Market|On-farm/U-Pick/Roadside Stand|Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.23597,
+          44.21058
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Rooper Ranch",
+        "First Name": "Amy",
+        "Last Name": "Hensley",
+        "Email": "rooperranch@gmail.com",
+        "Address": "1150 NE Yucca Ave.",
+        "City ": "Redmond ",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 815-7334",
+        "Website": "rooperranch.com",
+        "Facebook Page": "Rooper Ranch",
+        "Producer Profile": "",
+        "Farm Description": "We are a small farm located in Redmond, OR and grow seasonal vegetables without the use of chemicals to ensure the highest quality produce for our community.",
+        "Farm Hours": "Apr-Nov",
+        "What We Offer": "Vegetables|Herbs, Flowers, Plants",
+        "Where Products Are Sold": "Farmers Market|Retailer/Grocer|Restaurant"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.15451,
+          44.3127
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Sakari Farms, LLC",
+        "First Name": "Spring Alaska",
+        "Last Name": "Olson",
+        "Email": "sakarifarms@gmail.com",
+        "Address": "65060 Hwy 20",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 647-9604",
+        "Website": "sakarifarms.weebly.com",
+        "Facebook Page": "Sakari Farms",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/sakari-farms_111518_02.pdf",
+        "Farm Description": "Sakari Farms is a Native American tribal food farm located in Tumalo, Oregon.  We grow healthy flowers, vegetables and seed, value added food products, and CSA shares. Sakari Farms specializes in agricultural research, farm to school education, consulting and wholesale to Deschutes County residents.",
+        "Farm Hours": "Year round",
+        "What We Offer": "Vegetables|Eggs|Value Added Products|Herbs, Flowers, Plants",
+        "Where Products Are Sold": "CSA|Institution or School|On-farm/U-Pick/Roadside Stand|Retailer/Grocer|Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.36092,
+          44.16173
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Scronce Farm Company",
+        "First Name": "Karl",
+        "Last Name": "Scronce",
+        "Email": "karl.scronce@gmail.com",
+        "Address": "21800 Paloma Dr.",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 281-2053",
+        "Website": "",
+        "Facebook Page": "",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/scronce-farm-co._hdffa-producer-profile.pdf",
+        "Farm Description": "Beef, vegetables, strawberries, raspberries available.",
+        "Farm Hours": "by appt.",
+        "What We Offer": "Vegetables|Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.23344,
+          44.0778
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Seed to Table Farm",
+        "First Name": "Audrey",
+        "Last Name": "Tehan",
+        "Email": "audrey@seedtotablesisters.org",
+        "Address": "998 E Black Butte Ave.",
+        "City ": "Sisters",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 480-9039",
+        "Website": "seedtotableoregon.org",
+        "Facebook Page": "",
+        "Producer Profile": "",
+        "Farm Description": "Seed to Table is a non-profit education farm dedicated to increasing the health and wellness of the Central Oregon community. Purchase affordable produce, join us for family events and learn about opportunities to be involved in the local food system.",
+        "Farm Hours": "",
+        "What We Offer": "Vegetables",
+        "Where Products Are Sold": "CSA||Farmers Market|Institution or School|Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.53677,
+          44.29456
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Sharp & Lighthorse Superior Grass Beef ",
+        "First Name": "Sky",
+        "Last Name": "Sharp",
+        "Email": "warponysaddles@gmail.com",
+        "Address": "446 SW 7th St",
+        "City ": "Redmond",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(520) 471-7090",
+        "Website": "slgrassbeef.com",
+        "Facebook Page": "Instagram: slgrassbeef",
+        "Producer Profile": "",
+        "Farm Description": "Superior Grass Beef strives to produce a superior-quality meat that honors the whole animal, the soil, and the holistic nature of life. The primary purpose of our responsible stewardship is to consider all aspects of food production and the effects on long-term sustainability.",
+        "Farm Hours": "by appt.",
+        "What We Offer": "Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "CSA|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.17535,
+          44.2727	
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Splitting Aces Livestock",
+        "First Name": "Jenna ",
+        "Last Name": "Pike ",
+        "Email": "splittingaceslivestock@gmail.com",
+        "Address": "Fir Street Park",
+        "City ": "Sisters ",
+        "State": "OR",
+        "": "",
+        "Phone": "(520) 275-0260",
+        "Website": "aceslivestock.com",
+        "Facebook Page": "",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/splitting-aces-livestock_hdffa-producer-profile.pdf",
+        "Farm Description": "Providing healthy quality beef, chicken, pork and eggs.",
+        "Farm Hours": "",
+        "What We Offer": "Eggs|Meat & Poultry|Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "CSA|On-farm/U-Pick/Roadside Stand|Retailer/Grocer|Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.54877,
+          44.2931
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Stone Circle Farms",
+        "First Name": "Tim",
+        "Last Name": "Larkin",
+        "Email": "stonecirclefarms@gmail.com",
+        "Address": "4700 W Antler Ave.",
+        "City ": "Redmond",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 728-1895",
+        "Website": "",
+        "Facebook Page": "",
+        "Producer Profile": "",
+        "Farm Description": "Our pasture raised pork live their lives on grass and don�t receive any antibiotics or GMO feeds.  We do not use any chemical fertilizer or pesticides anywhere on our farm.",
+        "Farm Hours": "",
+        "What We Offer": "Meat & Poultry|Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "Farmers Market|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.22458,
+          44.27648	
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Sungrounded Farm",
+        "First Name": "Ashley and Caleb",
+        "Last Name": "Petersen",
+        "Email": "sungrounded@gmail.com",
+        "Address": "211 NE Wilcox Ave.",
+        "City ": "Terrebonne",
+        "State": "OR",
+        "": "",
+        "Phone": "(970) 409-8331",
+        "Website": "sungrounded.com",
+        "Facebook Page": "sungroundedfarm",
+        "Producer Profile": "",
+        "Farm Description": "We are a market farm dedicated to our soil, community and environment.  We grow our produce using organic practices and emphasize soil health for strong plants and nutritious food.  We especially focus on growing greens including salad mixes and head lettuce!",
+        "Farm Hours": "",
+        "What We Offer": "Vegetables|Eggs",
+        "Where Products Are Sold": "CSA|Farmers Market|Restaurant"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.16635,
+          44.35605
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Swan's Farm & Flower",
+        "First Name": "Danae",
+        "Last Name": "Swan",
+        "Email": "danaesbouquets@gmail.com",
+        "Address": "777 NW Wall St # 200",
+        "City ": "Bend",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 420-7866",
+        "Website": "",
+        "Facebook Page": "swansfarmandflower",
+        "Producer Profile": "",
+        "Farm Description": "Central Oregon cut flower and produce farm specializing in cut flowers, market bouquets, and floral arrangements.",
+        "Farm Hours": "Jun-Sept, Tue-Sat, 10am-6pm",
+        "What We Offer": "Herbs, Flowers, Plants",
+        "Where Products Are Sold": "Farmers Market|On-farm/U-Pick/Roadside Stand|Direct to consumer|Other"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.31544,
+          44.05777
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "T Bone Hay and Cattle",
+        "First Name": "Marilyn",
+        "Last Name": "Kasch",
+        "Email": "tbonehayandcattle@yahoo.com",
+        "Address": "200 1st Ave",
+        "City ": "Culver",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 771-9445",
+        "Website": "",
+        "Facebook Page": "",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/t-bone-hay-and-cattle_hdffa-producer-profile.pdf",
+        "Farm Description": "We raise natural grass-fed Anges Beef that are born, raised and grazed here on our ranch in Culver and available on a 1/2 or 1/4 order basis. We also have eggs from free range chickens. Meat processed in USDA Certified Facility.",
+        "Farm Hours": "Call for availability and pick up times",
+        "What We Offer": "Meat & Poultry",
+        "Where Products Are Sold": "On-farm/U-Pick/Roadside Stand|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.21001,
+          44.52763	
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Tender Greens",
+        "First Name": "Jessica",
+        "Last Name": " Wilkinson",
+        "Email": "Jeswilkinson82@gmail.com",
+        "Address": "777 NW Wall St # 200",
+        "City ": "Bend",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 280-7223",
+        "Website": "tgbend.com",
+        "Facebook Page": "Tender Greens",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/tender-greens_hdffa-producer-profile.pdf",
+        "Farm Description": "Microgreens and edible flowers available at retail locations and at area restaurants.",
+        "Farm Hours": "",
+        "What We Offer": "Vegetables",
+        "Where Products Are Sold": "CSA|Retailer/Grocer|Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.31544,
+          44.05777
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Thomas Orchards",
+        "First Name": "Jeff ",
+        "Last Name": "Thomas",
+        "Email": "jrthomas9797@gmail.com",
+        "Address": "496 River Front Dr,",
+        "City ": "Monument",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 934-2870",
+        "Website": "",
+        "Facebook Page": "facebook @Thomas Orchards",
+        "Producer Profile": "",
+        "Farm Description": "We grow a variety of fruits which includes cherries, apricots, peaches, nectarines, plums, pears and apples. We also produce dried fruits, jams, spreads, syrups and apple sauce. All of our products along with other fresh produce is available at our fruit stand. Come and purchase the fruit we have picked and packed or you can come and pick your own! ",
+        "Farm Hours": "Seasonal fruit stand: mid Jun-Oct, Mon-Sun, 8am-6pm",
+        "What We Offer": "Vegetables / fruit",
+        "Where Products Are Sold": "Farmers Market|Institution or School|On-farm/U-Pick/Roadside Stand|Retailer/Grocer|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -119.41669,
+          44.82271
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Tumalo Chicken Ranch",
+        "First Name": "Glenn",
+        "Last Name": "Millar",
+        "Email": "tumalochickenranch@gmail.com",
+        "Address": "19555 Pinehurst Rd.",
+        "City ": "Bend",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 668-6078",
+        "Website": "tumalochickenranch.com",
+        "Facebook Page": "TumaloChickenRanch",
+        "Producer Profile": "",
+        "Farm Description": "We are growing specialty crops in Tumalo: sunchokes, carrots, onions, pumpkins, beets and kale, as well as raising free ranging, Oregon- sourced Rhode Island Red and Barred Rock chickens to provide farm fresh eggs.",
+        "Farm Hours": "",
+        "What We Offer": "Vegetables|Eggs|Meat & Poultry|Herbs, Flowers, Plants",
+        "Where Products Are Sold": "On-farm/U-Pick/Roadside Stand|Retailer/Grocer|Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.34437,
+          44.15999
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Tumalo Family Farm",
+        "First Name": "Robert",
+        "Last Name": "Camel",
+        "Email": "lemacrb@gmail.com",
+        "Address": "777 NW Wall St # 200",
+        "City ": "Bend",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 815-2477",
+        "Website": "",
+        "Facebook Page": "",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/tuamlo-family-farm_hdffa-producer-profile.pdf",
+        "Farm Description": "Fresh ginger and turmeric generally available year around. Cucumbers, some lipstick bell peppers and basil during winter and early spring. Custom growing available.",
+        "Farm Hours": "Wholesale only",
+        "What We Offer": "Vegetables",
+        "Where Products Are Sold": "Retailer/Grocer|Other"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.31544,
+          44.05777
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Vaquero Valley Ranch  and Cattle Co.",
+        "First Name": "Ron",
+        "Last Name": "Miller",
+        "Email": "vvrccbeef@gmail.com",
+        "Address": "777 NW Wall St # 200",
+        "City ": "Bend",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 350-2520",
+        "Website": "Bendbeef.com",
+        "Facebook Page": "Vaquero valley ranch and cattle company ",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/08/vaquero-valley-ranch_hdffa-producer-partner.pdf",
+        "Farm Description": "Vaquero Valley Ranch  takes pride in offering a truly grass fed and soley grass finished beef.  Our ranching practices focus on our respect for the land and our livestock's welfare  by creating a sustainable environment fueled by our commitment.  No pesticides.  No commercial fertilizers. No grain. No antibiotics. And no hormones.",
+        "Farm Hours": "24/7, also by appt.",
+        "What We Offer": "Meat & Poultry",
+        "Where Products Are Sold": "CSA|Farmers Market|On-farm/U-Pick/Roadside Stand|Retailer/Grocer|Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.31544,
+          44.05777
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Volcano Veggies, LLC",
+        "First Name": "James",
+        "Last Name": "sbarra",
+        "Email": "info@volcanoveggies.com",
+        "Address": "777 NW Wall St # 200",
+        "City ": "Bend",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 728-3355",
+        "Website": "volcanoveggies.com",
+        "Facebook Page": "volcanoveggies",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/volcano-veggies_hdffa-producer-profile.pdf",
+        "Farm Description": "Volcano Veggies is a cutting edge vertical farm that uses 99% less water to grow greens, herbs, fish & mushrooms.  As a certified organic aquaponic farm, we grow food all year long and sell at grocery stores, restaurants and direct to consumer.",
+        "Farm Hours": "by appt. ",
+        "What We Offer": "Vegetables|Meat & Poultry|Value Added Products|Herbs, Flowers, Plants|Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "CSA|Farmers Market|On-farm/U-Pick/Roadside Stand|Retailer/Grocer|Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.31544,
+          44.05777
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "White Diamond Ranch",
+        "First Name": "Ann",
+        "Last Name": "Snyder",
+        "Email": "annsnyder@rconnects.com",
+        "Address": "6803 NE Ash St",
+        "City ": "Ashwood",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(541) 489-3239",
+        "Website": "",
+        "Facebook Page": "",
+        "Producer Profile": "",
+        "Farm Description": "We sell nearly all common cuts of lamb and several varieties of sausage at several local outlets and (June-Sept) and at the ranch.",
+        "Farm Hours": "Please call ahead if coming to the ranch.",
+        "What We Offer": "Meat & Poultry|Quarter, Half, Whole Meat",
+        "Where Products Are Sold": "Retailer/Grocer|Restaurant|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -120.754475,
+          44.734036
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Windy Acres Dairy Farm",
+        "First Name": "Billie",
+        "Last Name": "Johnaon",
+        "Email": "windyacres26@gmail.com",
+        "Address": "3320 NW Stahancyck Ln.",
+        "City ": "Prineville",
+        "State": "OR",
+        "": "",
+        "Phone": "(541) 447-5389",
+        "Website": "windyacresdairy.com",
+        "Facebook Page": "Windy Acres Dairy Farm",
+        "Producer Profile": "https://hdffa.org/wp-content/uploads/2018/11/windy-acres-dairy_hdffa-producer-profile.pdf",
+        "Farm Description": "A Grade A dairy farm and cheese facility with raw products including meats, cheese, and a herd share for all your dairy needs. Raised for my eating and yours!",
+        "Farm Hours": "Year round, 6:30am-8pm, drop sites in Medford, Ashland, Portland, Bend, Redmond, and at the farm.",
+        "What We Offer": "",
+        "Where Products Are Sold": ""
+      },
+      "geometry": {
+        "coordinates": [
+          -120.88912,
+          44.34837
+        ],
+        "type": "Point"
+      }
+
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Farm/Business Name": "Zajac Farms",
+        "First Name": "Tyler",
+        "Last Name": "Zajac",
+        "Email": "tylerzajac@gmail.com",
+        "Address": "777 NW Wall St # 200",
+        "City ": "Bend",
+        "State": "OR",
+        "": "Please Note this is not the farm's physical address",
+        "Phone": "(724) 968-9202",
+        "Website": "",
+        "Facebook Page": "instagram@zajacfarms",
+        "Producer Profile": "",
+        "Farm Description": "Small scale, diversified vegetable farm specializing in greens production. All grown using agroecological and sustainable practices. Farm tours and delicious greens.",
+        "Farm Hours": "by appt.",
+        "What We Offer": "Vegetables / fruit|Value Added Products",
+        "Where Products Are Sold": "Farmers Market|Retailer/Grocer|Direct to consumer"
+      },
+      "geometry": {
+        "coordinates": [
+          -121.31544,
+          44.05777
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}
