@@ -9,8 +9,6 @@ const firebaseConfig = {
     measurementId: "G-4Q5LG2V1FF"
 };
 
-var partners = require('./partners.js');
-
   // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
