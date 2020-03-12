@@ -172,6 +172,8 @@
         var city = $("#city").val();
         var state = $("#state").val();
         var oferings = $("#oferings").val();
+        var longitude = $("#longitude").val();
+        var latitude = $("#latitude").val();
         var picture = $("#main-image").prop("files")[0];
 
         if(!desc)
@@ -261,6 +263,8 @@
                             "address": address,
                             "city": city,
                             "state": state,
+                            "longitude": longitude,
+                            "latitude": latitude,
                             "phone": phone,
                             "email": email,
                             "website": website,
@@ -339,7 +343,8 @@
                         partnersHtml += "</div> <br>";
                         partnersHtml += "<div style='text-align: justify; color: black;'>";
                             partnersHtml += singlePartner.val().bName;
-                        partnersHtml += "</div> <br>";partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        partnersHtml += "</div> <br>";
+                        partnersHtml += "<div style='text-align: justify; color: black;'>";
                             partnersHtml += singlePartner.val().fName;
                         partnersHtml += "</div> <br>";
                         partnersHtml += "<div style='text-align: justify; color: black;'>";
@@ -353,6 +358,12 @@
                         partnersHtml += "</div> <br>";
                         partnersHtml += "<div style='text-align: justify; color: black;'>";
                             partnersHtml += singlePartner.val().state;
+                        partnersHtml += "</div> <br>";
+                        partnersHtml += "<div style='text-align: justify; color: black;'>";
+                            partnersHtml += singlePartner.val().latitude;
+                        partnersHtml += "</div> <br>";
+                        partnersHtml += "<div style='text-align: justify; color: black;'>";
+                            partnersHtml += singlePartner.val().longitude;
                         partnersHtml += "</div> <br>";
                         partnersHtml += "<div style='text-align: justify; color: black;'>";
                             partnersHtml += singlePartner.val().phone;
