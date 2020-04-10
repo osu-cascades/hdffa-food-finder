@@ -76,7 +76,7 @@
     function deletepartnerRecord(key)
     {
         var deleteRef = firebase.database().ref().child("Partners").child(key);
-
+        console.log(key)
         return deleteRef.remove()
         .then(function()
         {
