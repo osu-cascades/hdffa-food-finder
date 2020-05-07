@@ -1,16 +1,6 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyD9d2WiBXKnszB7BOmaYpnkvbaJrVGtYa8",
-    authDomain: "hdffa-app.firebaseapp.com",
-    databaseURL: "https://hdffa-app.firebaseio.com",
-    projectId: "hdffa-app",
-    storageBucket: "hdffa-app.appspot.com",
-    messagingSenderId: "301209200300",
-    appId: "1:301209200300:web:2c705453275ee922cc2109",
-    measurementId: "G-4Q5LG2V1FF"
-};
+
 
   // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
 
 
 //   firebase.auth.Auth.Persistence.LOCAL;
@@ -132,7 +122,7 @@ $("#btn-update").click(function()
     var userID = firebase.auth().currentUser.uid;
     var usersRef = rootRef.child(userID);
 
-    if(fName!="" && sName!="" && phone!="" && gender!="" && bio!="" && address!="")
+    if(fName!="" && sName!="")
     {
         var userData = 
         {
