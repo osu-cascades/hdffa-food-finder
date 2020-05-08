@@ -110,7 +110,7 @@
 <br><br><br>
 
 <div class="text-center bg-light text-dark">
-    <h3>All New Partners</h3>
+    <h3>Partners</h3>
 </div>
 
 <hr>
@@ -394,14 +394,15 @@
                         //                  + "</p> </div>"
                         //                  ;
                         // partnersHtml += "</div> <br>";
-                        partnersHtml += "<a style='text-align: justify; color: black;'>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
                             // partnersHtml += singlePartner.val()['Farm or Business Name'];
-                            partnersHtml += singlePartner.key;
-                        partnersHtml += "</a> <br>";
-                        // partnersHtml += "<a data-toggle="modal" href="#myModal" class="button">";
-                        //     // partnersHtml += singlePartner.val()['Farm or Business Name'];
-                        //     partnersHtml += singlePartner.key;
-                        // partnersHtml += "</a> <br>";
+                            // partnersHtml += singlePartner.key;
+                        // partnersHtml += "</div> <br>";
+                        partnersHtml += "<div style='text-align: justify; color: black;'>";
+                            partnersHtml += "<a class='form-control btn btn-light bg-light text-black' onclick=changeTo("+singlePartner.val()+")>";
+                                partnersHtml += singlePartner.key;
+                            partnersHtml += "</a> <br>";
+                        partnersHtml += "</div> <br>";
                         // partnersHtml += "<div style='text-align: justify; color: black;'>";
                         //     partnersHtml += singlePartner.val().firstName;
                         // partnersHtml += "</div> <br>";
@@ -455,6 +456,10 @@
             $("#partners").html(partnersHtml);
         }
     });
+    function changeTo(web){
+        localStorage.setItem('web', web);
+        switchView('editPartner.html');
+    }
     //********************Ends Here -- Retrieve and Display Data from Firebase**************************************
 </script>
 <!---------------------Validation and uploading of Post Partners Ends here------------------------->
