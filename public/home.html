@@ -183,11 +183,6 @@
             return;
         }
 
-        // if(picture == null)
-        // {
-        //     $("#main-image").addClass("is-invalid");
-        //     return;
-        // }
         if(picture != null){
             if($.inArray(picture["type"], validImagetypes)<0)
             {
@@ -199,12 +194,20 @@
 
         //*************************Upload and Save to Firebase Storage and Firebase Database************************
         var databaseRef = firebase.database().ref().child("Partners");
+        var user = firebase.auth().currentUser;
         // var userName = "";
-        //var imageUrl = "";
-        // var fileCompleteName = "";
+        var imageUrl = "";
+        var fileCompleteName = "";
 
-        // databaseRef.once("value").then(function(snapshot)
-        // {
+        var time = new Date();
+
+        var options = 
+        {
+            weekday: "long",
+            month: "long",
+            day: "2-digit",
+            year: "numeric",
+        };
         function postImage(snapshot){
             var name = picture["name"];
             var dateStr = new Date().getTime();
@@ -229,79 +232,7 @@
                 {
 
                 },
-                function complete()
-                {
-                    var user = firebase.auth().currentUser;
-                    var userName;
-                    firebase.database().ref('Users/' + user.uid).once('value').then(function(snapshot)
-                    {
-                        var fName = (snapshot.val() && snapshot.val().firstName);
-                        var sName = (snapshot.val() && snapshot.val().secondName);
-
-                        userName = fName + " " + sName;
-                    });
-
-                    uploadTask.snapshot.ref.getDownloadURL().then(function(downloadUrl)
-                    {   
-                        imageUrl = downloadUrl;
-                        var time = new Date();
-
-                        var options = 
-                        {
-                            weekday: "long",
-                            month: "long",
-                            day: "2-digit",
-                            year: "numeric",
-                        };
-
-                        var partnerData = 
-                        {
-                            "Image": downloadUrl,
-                            "Name": fileCompleteName,
-                            "Description": desc,
-                            "Uid": user.uid,
-                            "Counter": 5000 - counter,
-                            "User Name": userName,
-                            "Time": time.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}),
-                            "Date": time.toLocaleDateString('en-US', options),
-                            "Farm or Business Name": bName,
-                            "First Name": fName,
-                            "Second Name": sName,
-                            "Street Address": address,
-                            "City": city,
-                            "State": state,
-                            "Zip": zip,
-                            "Longitude": longitude,
-                            "Latitude": latitude,
-                            "Phone": phone,
-                            "Email": email,
-                            "Website": website,
-                            "Category": cat,
-                            "Search": search,
-                            "Hours of Operation: Date and times ": hours,
-                            // "oferings": oferings,
-                        };
-
-                        var newPartnerRef = databaseRef.child(bName);
-
-                        newPartnerRef.set(partnerData, function(err)
-                        {
-                            if(err)
-                            {
-                                $("#result").attr("class", "alert alert-danger");
-                                $("#result").html(err.message);
-                            }
-                            else
-                            {
-                                $("#result").attr("class", "alert alert-success");
-                                $("#result").html("partner has been uploaded successfully.");
-
-                                window.open("", "_self");
-                            }
-
-                        });
-                    });
-                }
+                
             );
         };
         databaseRef.once("value").then(function(snapshot){
@@ -310,30 +241,10 @@
                 postImage(snapshot);
             }
             else {
-                var user = firebase.auth().currentUser;
-                // var userName;
-                // firebase.database().ref('Users/' + user.uid).once('value').then(function(snapshot)
-                // {
-                //     var fName = (snapshot.val() && snapshot.val().firstName);
-                //     var sName = (snapshot.val() && snapshot.val().secondName);
-
-                //     userName = fName + " " + sName;
-                // });
-                var time = new Date();
-                // getUserName(snapshot);
-
-                var options = 
-                {
-                    weekday: "long",
-                    month: "long",
-                    day: "2-digit",
-                    year: "numeric",
-                };
-
                 var partnerData = 
                 {
-                    // "Image": imageUrl,
-                    // "Name": fileCompleteName,
+                    "Image": imageUrl,
+                    "Name": fileCompleteName,
                     "Description": desc,
                     "Uid": user.uid,
                     "Counter": 5000 - counter,
@@ -387,22 +298,72 @@
         $("#upload-progress").html("Completed");
     }
 
-    // function  getUserName(snapshot)
-    // {
-    //     var user = firebase.auth().currentUser;
-    //     var userName;
-    //     firebase.database().ref('Users/' + user.uid).once('value').then(function(snapshot)
-    //     {
-    //         var fName = (snapshot.val() && snapshot.val().firstName);
-    //         var sName = (snapshot.val() && snapshot.val().secondName);
+    function complete()
+    {
+        var userName;
+        firebase.database().ref('Users/' + user.uid).once('value').then(function(snapshot)
+        {
+            var fName = (snapshot.val() && snapshot.val().firstName);
+            var sName = (snapshot.val() && snapshot.val().secondName);
 
-    //         userName = fName + " " + sName;
-    //     });
-    // }
+            userName = fName + " " + sName;
+        });
 
+        uploadTask.snapshot.ref.getDownloadURL().then(function(downloadUrl)
+        {   
+            imageUrl = downloadUrl;
+
+            var partnerData = 
+            {
+                "Image": imageUrl,
+                "Name": fileCompleteName,
+                "Description": desc,
+                "Uid": user.uid,
+                "Counter": 5000 - counter,
+                "User Name": userName,
+                "Time": time.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}),
+                "Date": time.toLocaleDateString('en-US', options),
+                "Farm or Business Name": bName,
+                "First Name": fName,
+                "Second Name": sName,
+                "Street Address": address,
+                "City": city,
+                "State": state,
+                "Zip": zip,
+                "Longitude": longitude,
+                "Latitude": latitude,
+                "Phone": phone,
+                "Email": email,
+                "Website": website,
+                "Category": cat,
+                "Search": search,
+                "Hours of Operation: Date and times ": hours,
+                // "oferings": oferings,
+            };
+
+            var newPartnerRef = databaseRef.child(bName);
+
+            newPartnerRef.set(partnerData, function(err)
+            {
+                if(err)
+                {
+                    $("#result").attr("class", "alert alert-danger");
+                    $("#result").html(err.message);
+                }
+                else
+                {
+                    $("#result").attr("class", "alert alert-success");
+                    $("#result").html("partner has been uploaded successfully.");
+
+                    window.open("", "_self");
+                }
+
+            });
+        });
+    }
 
     //********************Retrieve and Display Data from Firebase**************************************
-    var dbPartners = firebase.database().ref().child("Partners").orderByChild("businessName");
+    var dbPartners = firebase.database().ref().child("Partners").orderByChild("Farm or Business Name");
 
     dbPartners.on("value", function(partners)
     {
@@ -414,7 +375,7 @@
             {
                 counter = counter + 1;
 
-                partnersHtml += "<div class='jumbotron bg-light text-dark border border-dark'>";
+                // partnersHtml += "<div class='jumbotron bg-light text-dark border border-dark'>";
                         // partnersHtml += "<div> <img width='1000px' height='550px' src='";
                         //     partnersHtml += singlePartner.val().image;
                         // partnersHtml += "'/> </div> <br>";
@@ -433,9 +394,14 @@
                         //                  + "</p> </div>"
                         //                  ;
                         // partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().businessName;
-                        partnersHtml += "</div> <br>";
+                        partnersHtml += "<a style='text-align: justify; color: black;'>";
+                            // partnersHtml += singlePartner.val()['Farm or Business Name'];
+                            partnersHtml += singlePartner.key;
+                        partnersHtml += "</a> <br>";
+                        // partnersHtml += "<a data-toggle="modal" href="#myModal" class="button">";
+                        //     // partnersHtml += singlePartner.val()['Farm or Business Name'];
+                        //     partnersHtml += singlePartner.key;
+                        // partnersHtml += "</a> <br>";
                         // partnersHtml += "<div style='text-align: justify; color: black;'>";
                         //     partnersHtml += singlePartner.val().firstName;
                         // partnersHtml += "</div> <br>";
@@ -446,7 +412,7 @@
                         //     partnersHtml += singlePartner.val().address;
                         // partnersHtml += "</div> <br>";
                         // partnersHtml += "<div style='text-align: justify; color: black;'>";
-                        //     partnersHtml += singlePartner.val().city;
+                        //     partnersHtml += singlePartner.val()['City'];
                         // partnersHtml += "</div> <br>";
                         // partnersHtml += "<div style='text-align: justify; color: black;'>";
                         //     partnersHtml += singlePartner.val().state;
@@ -458,7 +424,7 @@
                         //     partnersHtml += singlePartner.val().latitude;
                         // partnersHtml += "</div> <br>";
                         // partnersHtml += "<div style='text-align: justify; color: black;'>";
-                        //     partnersHtml += singlePartner.val().longitude;
+                        //     partnersHtml += singlePartner.val()['Longitude'];
                         // partnersHtml += "</div> <br>";
                         // partnersHtml += "<div style='text-align: justify; color: black;'>";
                         //     partnersHtml += singlePartner.val().phone;
@@ -478,13 +444,13 @@
                         // partnersHtml += "<div style='text-align: justify; color: black;'>";
                         //     partnersHtml += singlePartner.val().hours;
                         // partnersHtml += "</div> <br>";
-                        // // partnersHtml += "<div style='text-align: justify; color: black;'>";
-                        // //     partnersHtml += singlePartner.val().oferings;
-                        // // partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().oferings;
+                        // partnersHtml += "</div> <br>";
                         // partnersHtml += "<div style='text-align: justify; color: black;'>";
                         //     partnersHtml += singlePartner.val().desc;
                         // partnersHtml += "</div> <br>";
-                partnersHtml += "</div>";
+                // partnersHtml += "</div>";
             });
             $("#partners").html(partnersHtml);
         }
