@@ -199,167 +199,184 @@
 
         //*************************Upload and Save to Firebase Storage and Firebase Database************************
         var databaseRef = firebase.database().ref().child("Partners");
-        // var userName = getUserName()
+        // var userName = "";
+        var imageUrl = "";
+        var fileCompleteName = "";
 
-    //     databaseRef.once("value").then(function(snapshot)
-    //     {
-//             var name = picture["name"];
-//             var dateStr = new Date().getTime();
-//             var fileCompleteName = name + "_" + dateStr;
+        // databaseRef.once("value").then(function(snapshot)
+        // {
+        function postImage(snapshot){
+            var name = picture["name"];
+            var dateStr = new Date().getTime();
+            fileCompleteName = name + "_" + dateStr;
 
-    //         var storageRef = firebase.storage().ref("Partner Images");
-    //         var partnerStorageRef = storageRef.child(fileCompleteName);
+            var storageRef = firebase.storage().ref("Partner Images");
+            var partnerStorageRef = storageRef.child(fileCompleteName);
 
-    //         var uploadTask = partnerStorageRef.put(picture);
+            var uploadTask = partnerStorageRef.put(picture);
 
 
-    //         uploadTask.on("state_changed",
+            uploadTask.on("state_changed",
                 
-    //             function progress(snapshot)
-    //             {
-    //                 var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                function progress(snapshot)
+                {
+                    var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
 
-    //                 $("#upload-progress").html(Math.round(percentage) + "%");
-    //                 $("#upload-progress").attr("style", "width:" + percentage + "%");    
-    //             },
-    //             function error(err)
-    //             {
+                    $("#upload-progress").html(Math.round(percentage) + "%");
+                    $("#upload-progress").attr("style", "width:" + percentage + "%");    
+                },
+                function error(err)
+                {
 
-    //             },
-    //             function complete()
-    //             {
-    //                 var user = firebase.auth().currentUser;
-    //                 var userName;
-    //                 firebase.database().ref('Users/' + user.uid).once('value').then(function(snapshot)
-    //                 {
-    //                     var fName = (snapshot.val() && snapshot.val().firstName);
-    //                     var sName = (snapshot.val() && snapshot.val().secondName);
+                },
+                function complete()
+                {
+                    var user = firebase.auth().currentUser;
+                    var userName;
+                    firebase.database().ref('Users/' + user.uid).once('value').then(function(snapshot)
+                    {
+                        var fName = (snapshot.val() && snapshot.val().firstName);
+                        var sName = (snapshot.val() && snapshot.val().secondName);
 
-    //                     userName = fName + " " + sName;
-    //                 });
+                        userName = fName + " " + sName;
+                    });
 
-    //                 uploadTask.snapshot.ref.getDownloadURL().then(function(downloadUrl)
-    //                 {
-    //                     var time = new Date();
+                    uploadTask.snapshot.ref.getDownloadURL().then(function(downloadUrl)
+                    {   
+                        imageUrl = downloadUrl;
+                        var time = new Date();
 
-    //                     var options = 
-    //                     {
-    //                         weekday: "long",
-    //                         month: "long",
-    //                         day: "2-digit",
-    //                         year: "numeric",
-    //                     };
+                        var options = 
+                        {
+                            weekday: "long",
+                            month: "long",
+                            day: "2-digit",
+                            year: "numeric",
+                        };
 
-    //                     var partnerData = 
-    //                     {
-    //                         "Image": downloadUrl,
-    //                         "Name": fileCompleteName,
-    //                         "Description": desc,
-    //                         "Uid": user.uid,
-    //                         "Counter": 5000 - counter,
-    //                         "User Name": userName,
-    //                         "Time": time.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}),
-    //                         "Date": time.toLocaleDateString('en-US', options),
-    //                         "Farm or Business Name": bName,
-    //                         "First Name": fName,
-    //                         "Second Name": sName,
-    //                         "Street Address": address,
-    //                         "City": city,
-    //                         "State": state,
-    //                         "Zip": zip,
-    //                         "Longitude": longitude,
-    //                         "Latitude": latitude,
-    //                         "Phone": phone,
-    //                         "Email": email,
-    //                         "Website": website,
-    //                         "Category": cat,
-    //                         "Search": search,
-    //                         "Hours of Operation: Date and times ": hours,
-    //                         // "oferings": oferings,
-    //                     };
+                        var partnerData = 
+                        {
+                            "Image": downloadUrl,
+                            "Name": fileCompleteName,
+                            "Description": desc,
+                            "Uid": user.uid,
+                            "Counter": 5000 - counter,
+                            "User Name": userName,
+                            "Time": time.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}),
+                            "Date": time.toLocaleDateString('en-US', options),
+                            "Farm or Business Name": bName,
+                            "First Name": fName,
+                            "Second Name": sName,
+                            "Street Address": address,
+                            "City": city,
+                            "State": state,
+                            "Zip": zip,
+                            "Longitude": longitude,
+                            "Latitude": latitude,
+                            "Phone": phone,
+                            "Email": email,
+                            "Website": website,
+                            "Category": cat,
+                            "Search": search,
+                            "Hours of Operation: Date and times ": hours,
+                            // "oferings": oferings,
+                        };
 
-    //                     var newPartnerRef = databaseRef.child(bName);
+                        var newPartnerRef = databaseRef.child(bName);
 
-    //                     newPartnerRef.set(partnerData, function(err)
-    //                     {
-    //                         if(err)
-    //                         {
-    //                             $("#result").attr("class", "alert alert-danger");
-    //                             $("#result").html(err.message);
-    //                         }
-    //                         else
-    //                         {
-    //                             $("#result").attr("class", "alert alert-success");
-    //                             $("#result").html("partner has been uploaded successfully.");
+                        newPartnerRef.set(partnerData, function(err)
+                        {
+                            if(err)
+                            {
+                                $("#result").attr("class", "alert alert-danger");
+                                $("#result").html(err.message);
+                            }
+                            else
+                            {
+                                $("#result").attr("class", "alert alert-success");
+                                $("#result").html("partner has been uploaded successfully.");
 
-    //                             window.open("", "_self");
-    //                         }
+                                window.open("", "_self");
+                            }
 
-    //                         resetForm();
-    //                     });
-    //                 });
-    //             }
-    //         );
-    //     });
-    // });
+                        });
+                    });
+                }
+            );
+        };
         databaseRef.once("value").then(function(snapshot){
-            var user = firebase.auth().currentUser;
-            var time = new Date();
-
-            var options = 
+            if(picture != null)
             {
-                weekday: "long",
-                month: "long",
-                day: "2-digit",
-                year: "numeric",
-            };
-
-            var partnerData = 
-            {
-                // "Image": downloadUrl,
-                // "Name": fileCompleteName,
-                "Description": desc,
-                "Uid": user.uid,
-                "Counter": 5000 - counter,
-                "User Name": userName,
-                "Time": time.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}),
-                "Date": time.toLocaleDateString('en-US', options),
-                "Farm or Business Name": bName,
-                "First Name": fName,
-                "Second Name": sName,
-                "Street Address": address,
-                "City": city,
-                "State": state,
-                "Zip": zip,
-                "Longitude": longitude,
-                "Latitude": latitude,
-                "Phone": phone,
-                "Email": email,
-                "Website": website,
-                "Category": cat,
-                "Search": search,
-                "Hours of Operation: Date and times ": hours,
-                // "oferings": oferings,
-            };
-            var newPartnerRef = databaseRef.child(bName);
-
-            newPartnerRef.set(partnerData, function(err)
-            {
-                if(err)
+                postImage(snapshot);
+            }
+            else {
+                var user = firebase.auth().currentUser;
+                var userName;
+                firebase.database().ref('Users/' + user.uid).once('value').then(function(snapshot)
                 {
-                    $("#result").attr("class", "alert alert-danger");
-                    $("#result").html(err.message);
-                }
-                else
+                    var fName = (snapshot.val() && snapshot.val().firstName);
+                    var sName = (snapshot.val() && snapshot.val().secondName);
+
+                    userName = fName + " " + sName;
+                });
+                var time = new Date();
+                // getUserName(snapshot);
+
+                var options = 
                 {
-                    $("#result").attr("class", "alert alert-success");
-                    $("#result").html("partner has been uploaded successfully.");
+                    weekday: "long",
+                    month: "long",
+                    day: "2-digit",
+                    year: "numeric",
+                };
 
-                    window.open("", "_self");
-                }
+                var partnerData = 
+                {
+                    "Image": imageUrl,
+                    "Name": fileCompleteName,
+                    "Description": desc,
+                    "Uid": user.uid,
+                    "Counter": 5000 - counter,
+                    "User Name": userName,
+                    "Time": time.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}),
+                    "Date": time.toLocaleDateString('en-US', options),
+                    "Farm or Business Name": bName,
+                    "First Name": fName,
+                    "Second Name": sName,
+                    "Street Address": address,
+                    "City": city,
+                    "State": state,
+                    "Zip": zip,
+                    "Longitude": longitude,
+                    "Latitude": latitude,
+                    "Phone": phone,
+                    "Email": email,
+                    "Website": website,
+                    "Category": cat,
+                    "Search": search,
+                    "Hours of Operation: Date and times ": hours,
+                    // "oferings": oferings,
+                };
+                var newPartnerRef = databaseRef.child(bName);
 
-                resetForm();
-            });
+                newPartnerRef.set(partnerData, function(err)
+                {
+                    if(err)
+                    {
+                        $("#result").attr("class", "alert alert-danger");
+                        $("#result").html(err.message);
+                    }
+                    else
+                    {
+                        $("#result").attr("class", "alert alert-success");
+                        $("#result").html("partner has been uploaded successfully.");
+
+                        window.open("", "_self");
+                    }
+
+                    resetForm();
+                });
+            }
         });
     });
 
@@ -370,10 +387,10 @@
         $("#upload-progress").html("Completed");
     }
 
-    function  getUserName()
+    function  getUserName(snapshot)
     {
         var user = firebase.auth().currentUser;
-        // var userName;
+        var userName;
         firebase.database().ref('Users/' + user.uid).once('value').then(function(snapshot)
         {
             var fName = (snapshot.val() && snapshot.val().firstName);
