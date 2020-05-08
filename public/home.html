@@ -68,10 +68,10 @@
                 <input id="hours"  type="text" placeholder="Hours" class="form-control">
                 <i class="zmdi zmdi-account-box-mail"></i>
             </div>
-            <div class="form-wrapper">
+            <!-- <div class="form-wrapper">
                 <input id="oferings"  type="text" placeholder="Farm Oferings" class="form-control">
                 <i class="zmdi zmdi-account-box-mail"></i>
-            </div>
+            </div> -->
             <div class="form-group">
                     <textarea type="text" rows="5" placeholder="Description..." class="form-control" id="main-desc"></textarea>
                 <div class="invalid-feedback">
@@ -129,6 +129,7 @@
 <script>
     var validImagetypes = ["image/gif", "image/jpeg", "image/png"];
     var counter=0;
+    var userName = "";
 
     $("#selected-image").hide();
 
@@ -163,141 +164,204 @@
         var email = $("#email").val();
         var website = $("#website").val();
         var hours = $("#hours").val();
-        var fbook = $("#facebook").val();
-        var profile = $("#profile").val();
+        var cat = $("#cat").val();
+        var search = $("#search").val();
         var bName = $("#businessName").val();
         var fName = $("#firstName").val();
         var sName = $("#secondName").val();
         var city = $("#city").val();
         var state = $("#state").val();
-        var oferings = $("#oferings").val();
+        var zip = $("#zip").val();
+        // var oferings = $("#oferings").val();
         var longitude = $("#longitude").val();
         var latitude = $("#latitude").val();
         var picture = $("#main-image").prop("files")[0];
 
-        if(!desc)
+        if(!bName)
         {
-            $("#main-desc").addClass("is-invalid");
+            $("#bName").addClass("is-invalid");
             return;
         }
 
-        if(picture == null)
-        {
-            $("#main-image").addClass("is-invalid");
-            return;
-        }
-
-        if($.inArray(picture["type"], validImagetypes)<0)
-        {
-            $("#main-image").addClass("is-invalid");
-            return;
+        // if(picture == null)
+        // {
+        //     $("#main-image").addClass("is-invalid");
+        //     return;
+        // }
+        if(picture != null){
+            if($.inArray(picture["type"], validImagetypes)<0)
+            {
+                $("#main-image").addClass("is-invalid");
+                return;
+            }
         }
 
 
         //*************************Upload and Save to Firebase Storage and Firebase Database************************
         var databaseRef = firebase.database().ref().child("Partners");
+        // var userName = getUserName()
 
-        databaseRef.once("value").then(function(snapshot)
-        {
-            var name = picture["name"];
-            var dateStr = new Date().getTime();
-            var fileCompleteName = name + "_" + dateStr;
+    //     databaseRef.once("value").then(function(snapshot)
+    //     {
+//             var name = picture["name"];
+//             var dateStr = new Date().getTime();
+//             var fileCompleteName = name + "_" + dateStr;
 
-            var storageRef = firebase.storage().ref("Partner Images");
-            var partnerStorageRef = storageRef.child(fileCompleteName);
+    //         var storageRef = firebase.storage().ref("Partner Images");
+    //         var partnerStorageRef = storageRef.child(fileCompleteName);
 
-            var uploadTask = partnerStorageRef.put(picture);
+    //         var uploadTask = partnerStorageRef.put(picture);
 
 
-            uploadTask.on("state_changed",
+    //         uploadTask.on("state_changed",
                 
-                function progress(snapshot)
+    //             function progress(snapshot)
+    //             {
+    //                 var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+
+    //                 $("#upload-progress").html(Math.round(percentage) + "%");
+    //                 $("#upload-progress").attr("style", "width:" + percentage + "%");    
+    //             },
+    //             function error(err)
+    //             {
+
+    //             },
+    //             function complete()
+    //             {
+    //                 var user = firebase.auth().currentUser;
+    //                 var userName;
+    //                 firebase.database().ref('Users/' + user.uid).once('value').then(function(snapshot)
+    //                 {
+    //                     var fName = (snapshot.val() && snapshot.val().firstName);
+    //                     var sName = (snapshot.val() && snapshot.val().secondName);
+
+    //                     userName = fName + " " + sName;
+    //                 });
+
+    //                 uploadTask.snapshot.ref.getDownloadURL().then(function(downloadUrl)
+    //                 {
+    //                     var time = new Date();
+
+    //                     var options = 
+    //                     {
+    //                         weekday: "long",
+    //                         month: "long",
+    //                         day: "2-digit",
+    //                         year: "numeric",
+    //                     };
+
+    //                     var partnerData = 
+    //                     {
+    //                         "Image": downloadUrl,
+    //                         "Name": fileCompleteName,
+    //                         "Description": desc,
+    //                         "Uid": user.uid,
+    //                         "Counter": 5000 - counter,
+    //                         "User Name": userName,
+    //                         "Time": time.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}),
+    //                         "Date": time.toLocaleDateString('en-US', options),
+    //                         "Farm or Business Name": bName,
+    //                         "First Name": fName,
+    //                         "Second Name": sName,
+    //                         "Street Address": address,
+    //                         "City": city,
+    //                         "State": state,
+    //                         "Zip": zip,
+    //                         "Longitude": longitude,
+    //                         "Latitude": latitude,
+    //                         "Phone": phone,
+    //                         "Email": email,
+    //                         "Website": website,
+    //                         "Category": cat,
+    //                         "Search": search,
+    //                         "Hours of Operation: Date and times ": hours,
+    //                         // "oferings": oferings,
+    //                     };
+
+    //                     var newPartnerRef = databaseRef.child(bName);
+
+    //                     newPartnerRef.set(partnerData, function(err)
+    //                     {
+    //                         if(err)
+    //                         {
+    //                             $("#result").attr("class", "alert alert-danger");
+    //                             $("#result").html(err.message);
+    //                         }
+    //                         else
+    //                         {
+    //                             $("#result").attr("class", "alert alert-success");
+    //                             $("#result").html("partner has been uploaded successfully.");
+
+    //                             window.open("", "_self");
+    //                         }
+
+    //                         resetForm();
+    //                     });
+    //                 });
+    //             }
+    //         );
+    //     });
+    // });
+        databaseRef.once("value").then(function(snapshot){
+            var user = firebase.auth().currentUser;
+            var time = new Date();
+
+            var options = 
+            {
+                weekday: "long",
+                month: "long",
+                day: "2-digit",
+                year: "numeric",
+            };
+
+            var partnerData = 
+            {
+                // "Image": downloadUrl,
+                // "Name": fileCompleteName,
+                "Description": desc,
+                "Uid": user.uid,
+                "Counter": 5000 - counter,
+                "User Name": userName,
+                "Time": time.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}),
+                "Date": time.toLocaleDateString('en-US', options),
+                "Farm or Business Name": bName,
+                "First Name": fName,
+                "Second Name": sName,
+                "Street Address": address,
+                "City": city,
+                "State": state,
+                "Zip": zip,
+                "Longitude": longitude,
+                "Latitude": latitude,
+                "Phone": phone,
+                "Email": email,
+                "Website": website,
+                "Category": cat,
+                "Search": search,
+                "Hours of Operation: Date and times ": hours,
+                // "oferings": oferings,
+            };
+            var newPartnerRef = databaseRef.child(bName);
+
+            newPartnerRef.set(partnerData, function(err)
+            {
+                if(err)
                 {
-                    var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-
-                    $("#upload-progress").html(Math.round(percentage) + "%");
-                    $("#upload-progress").attr("style", "width:" + percentage + "%");    
-                },
-                function error(err)
-                {
-
-                },
-                function complete()
-                {
-                    var user = firebase.auth().currentUser;
-                    var userName;
-                    firebase.database().ref('Users/' + user.uid).once('value').then(function(snapshot)
-                    {
-                        var fName = (snapshot.val() && snapshot.val().firstName);
-                        var sName = (snapshot.val() && snapshot.val().secondName);
-
-                        userName = fName + " " + sName;
-                    });
-
-                    uploadTask.snapshot.ref.getDownloadURL().then(function(downloadUrl)
-                    {
-                        var time = new Date();
-
-                        var options = 
-                        {
-                            weekday: "long",
-                            month: "long",
-                            day: "2-digit",
-                            year: "numeric",
-                        };
-
-                        var partnerData = 
-                        {
-                            "image": downloadUrl,
-                            "name": fileCompleteName,
-                            "desc": desc,
-                            "uid": user.uid,
-                            "counter": 5000 - counter,
-                            "userName": userName,
-                            "time": time.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}),
-                            "date": time.toLocaleDateString('en-US', options),
-                            "businessName": bName,
-                            "firstName": fName,
-                            "secondName": sName,
-                            "address": address,
-                            "city": city,
-                            "state": state,
-                            "longitude": longitude,
-                            "latitude": latitude,
-                            "phone": phone,
-                            "email": email,
-                            "website": website,
-                            "facebook": fbook,
-                            "profile": profile,
-                            "hours": hours,
-                            "oferings": oferings,
-                        };
-
-                        var newPartnerRef = databaseRef.child(bName);
-
-                        newPartnerRef.set(partnerData, function(err)
-                        {
-                            if(err)
-                            {
-                                $("#result").attr("class", "alert alert-danger");
-                                $("#result").html(err.message);
-                            }
-                            else
-                            {
-                                $("#result").attr("class", "alert alert-success");
-                                $("#result").html("partner has been uploaded successfully.");
-
-                                window.open("", "_self");
-                            }
-
-                            resetForm();
-                        });
-                    });
+                    $("#result").attr("class", "alert alert-danger");
+                    $("#result").html(err.message);
                 }
-            );
+                else
+                {
+                    $("#result").attr("class", "alert alert-success");
+                    $("#result").html("partner has been uploaded successfully.");
+
+                    window.open("", "_self");
+                }
+
+                resetForm();
+            });
         });
     });
-
 
     function resetForm()
     {
@@ -306,9 +370,22 @@
         $("#upload-progress").html("Completed");
     }
 
+    function  getUserName()
+    {
+        var user = firebase.auth().currentUser;
+        // var userName;
+        firebase.database().ref('Users/' + user.uid).once('value').then(function(snapshot)
+        {
+            var fName = (snapshot.val() && snapshot.val().firstName);
+            var sName = (snapshot.val() && snapshot.val().secondName);
+
+            userName = fName + " " + sName;
+        });
+    }
+
 
     //********************Retrieve and Display Data from Firebase**************************************
-    var dbPartners = firebase.database().ref().child("Partners").orderByChild("counter");
+    var dbPartners = firebase.database().ref().child("Partners").orderByChild("businessName");
 
     dbPartners.on("value", function(partners)
     {
@@ -358,6 +435,9 @@
                             partnersHtml += singlePartner.val().state;
                         partnersHtml += "</div> <br>";
                         partnersHtml += "<div style='text-align: justify; color: black;'>";
+                            partnersHtml += singlePartner.val().zip;
+                        partnersHtml += "</div> <br>";
+                        partnersHtml += "<div style='text-align: justify; color: black;'>";
                             partnersHtml += singlePartner.val().latitude;
                         partnersHtml += "</div> <br>";
                         partnersHtml += "<div style='text-align: justify; color: black;'>";
@@ -370,20 +450,20 @@
                             partnersHtml += singlePartner.val().email;
                         partnersHtml += "</div> <br>";
                         partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().fbook;
+                            partnersHtml += singlePartner.val().cat;
                         partnersHtml += "</div> <br>";
                         partnersHtml += "<div style='text-align: justify; color: black;'>";
                             partnersHtml += singlePartner.val().website;
                         partnersHtml += "</div> <br>";
                         partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().profile;
+                            partnersHtml += singlePartner.val().search;
                         partnersHtml += "</div> <br>";
                         partnersHtml += "<div style='text-align: justify; color: black;'>";
                             partnersHtml += singlePartner.val().hours;
                         partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().oferings;
-                        partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().oferings;
+                        // partnersHtml += "</div> <br>";
                         partnersHtml += "<div style='text-align: justify; color: black;'>";
                             partnersHtml += singlePartner.val().desc;
                         partnersHtml += "</div> <br>";
