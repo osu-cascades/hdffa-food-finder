@@ -200,8 +200,8 @@
         //*************************Upload and Save to Firebase Storage and Firebase Database************************
         var databaseRef = firebase.database().ref().child("Partners");
         // var userName = "";
-        var imageUrl = "";
-        var fileCompleteName = "";
+        //var imageUrl = "";
+        // var fileCompleteName = "";
 
         // databaseRef.once("value").then(function(snapshot)
         // {
@@ -311,14 +311,14 @@
             }
             else {
                 var user = firebase.auth().currentUser;
-                var userName;
-                firebase.database().ref('Users/' + user.uid).once('value').then(function(snapshot)
-                {
-                    var fName = (snapshot.val() && snapshot.val().firstName);
-                    var sName = (snapshot.val() && snapshot.val().secondName);
+                // var userName;
+                // firebase.database().ref('Users/' + user.uid).once('value').then(function(snapshot)
+                // {
+                //     var fName = (snapshot.val() && snapshot.val().firstName);
+                //     var sName = (snapshot.val() && snapshot.val().secondName);
 
-                    userName = fName + " " + sName;
-                });
+                //     userName = fName + " " + sName;
+                // });
                 var time = new Date();
                 // getUserName(snapshot);
 
@@ -332,8 +332,8 @@
 
                 var partnerData = 
                 {
-                    "Image": imageUrl,
-                    "Name": fileCompleteName,
+                    // "Image": imageUrl,
+                    // "Name": fileCompleteName,
                     "Description": desc,
                     "Uid": user.uid,
                     "Counter": 5000 - counter,
@@ -373,9 +373,9 @@
 
                         window.open("", "_self");
                     }
-
-                    resetForm();
                 });
+
+                resetForm();
             }
         });
     });
@@ -387,18 +387,18 @@
         $("#upload-progress").html("Completed");
     }
 
-    function  getUserName(snapshot)
-    {
-        var user = firebase.auth().currentUser;
-        var userName;
-        firebase.database().ref('Users/' + user.uid).once('value').then(function(snapshot)
-        {
-            var fName = (snapshot.val() && snapshot.val().firstName);
-            var sName = (snapshot.val() && snapshot.val().secondName);
+    // function  getUserName(snapshot)
+    // {
+    //     var user = firebase.auth().currentUser;
+    //     var userName;
+    //     firebase.database().ref('Users/' + user.uid).once('value').then(function(snapshot)
+    //     {
+    //         var fName = (snapshot.val() && snapshot.val().firstName);
+    //         var sName = (snapshot.val() && snapshot.val().secondName);
 
-            userName = fName + " " + sName;
-        });
-    }
+    //         userName = fName + " " + sName;
+    //     });
+    // }
 
 
     //********************Retrieve and Display Data from Firebase**************************************
@@ -415,75 +415,75 @@
                 counter = counter + 1;
 
                 partnersHtml += "<div class='jumbotron bg-light text-dark border border-dark'>";
-                        partnersHtml += "<div> <img width='1000px' height='550px' src='";
-                            partnersHtml += singlePartner.val().image;
-                        partnersHtml += "'/> </div> <br>";
+                        // partnersHtml += "<div> <img width='1000px' height='550px' src='";
+                        //     partnersHtml += singlePartner.val().image;
+                        // partnersHtml += "'/> </div> <br>";
 
-                        partnersHtml += "<div class='row'>";
-                            partnersHtml += "<div class='col-sm-5'> <p style='color:grey;'>"
-                                         + "Published by: " + singlePartner.val().userName
-                                         + "</p> </div>"  + 
+                        // partnersHtml += "<div class='row'>";
+                        //     partnersHtml += "<div class='col-sm-5'> <p style='color:grey;'>"
+                        //                  + "Published by: " + singlePartner.val().userName
+                        //                  + "</p> </div>"  + 
 
-                                         "<div class='col-sm-3'> <p style='color:grey;'>"
-                                         + "Time: " + singlePartner.val().time
-                                         + "</p> </div>"  +
+                        //                  "<div class='col-sm-3'> <p style='color:grey;'>"
+                        //                  + "Time: " + singlePartner.val().time
+                        //                  + "</p> </div>"  +
 
-                                         "<div class='col-sm-4'> <p style='color:grey; margin-left: 75px;'>"
-                                         + "Date: " + singlePartner.val().date
-                                         + "</p> </div>"
-                                         ;
-                        partnersHtml += "</div> <br>";
+                        //                  "<div class='col-sm-4'> <p style='color:grey; margin-left: 75px;'>"
+                        //                  + "Date: " + singlePartner.val().date
+                        //                  + "</p> </div>"
+                        //                  ;
+                        // partnersHtml += "</div> <br>";
                         partnersHtml += "<div style='text-align: justify; color: black;'>";
                             partnersHtml += singlePartner.val().businessName;
                         partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().firstName;
-                        partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().secondName;
-                        partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().address;
-                        partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().city;
-                        partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().state;
-                        partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().zip;
-                        partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().latitude;
-                        partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().longitude;
-                        partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().phone;
-                        partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().email;
-                        partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().cat;
-                        partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().website;
-                        partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().search;
-                        partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().hours;
-                        partnersHtml += "</div> <br>";
                         // partnersHtml += "<div style='text-align: justify; color: black;'>";
-                        //     partnersHtml += singlePartner.val().oferings;
+                        //     partnersHtml += singlePartner.val().firstName;
                         // partnersHtml += "</div> <br>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += singlePartner.val().desc;
-                        partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().secondName;
+                        // partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().address;
+                        // partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().city;
+                        // partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().state;
+                        // partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().zip;
+                        // partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().latitude;
+                        // partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().longitude;
+                        // partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().phone;
+                        // partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().email;
+                        // partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().cat;
+                        // partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().website;
+                        // partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().search;
+                        // partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().hours;
+                        // partnersHtml += "</div> <br>";
+                        // // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        // //     partnersHtml += singlePartner.val().oferings;
+                        // // partnersHtml += "</div> <br>";
+                        // partnersHtml += "<div style='text-align: justify; color: black;'>";
+                        //     partnersHtml += singlePartner.val().desc;
+                        // partnersHtml += "</div> <br>";
                 partnersHtml += "</div>";
             });
             $("#partners").html(partnersHtml);
