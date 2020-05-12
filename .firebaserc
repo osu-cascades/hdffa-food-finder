@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "hdffa-app"
+    "default": "hdffa-app",
+    "development": "hdffa-dev"
   }
 }
