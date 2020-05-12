@@ -10,6 +10,11 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mootools/1.6.0/mootools-core.min.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
 
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-storage.js"></script>
+
   <style>
     body {
       margin: 0;
@@ -61,7 +66,32 @@
     type='text/css' />
   <!-- </div> -->
   <div id='map'></div>
+  <script src="index.js"></script>
+  <script src="config.js"></script>
   <script>
+    const partnerMarkers = [];
+
+    class SearchControl {
+      onAdd(map) {
+          this._map = map;
+          this._container = document.createElement('div');
+          this._container.className = 'mapboxgl-ctrl';
+          const searchbar = document.createElement('input');
+          searchbar.placeholder = "Search for partners";
+          searchbar.style = "font-size: 1.5rem; font-weight: bold;"
+          searchbar.oninput = (e) => {
+            filterPartners(searchbar.value);
+          }
+          this._container.appendChild(searchbar);
+          return this._container;
+      }
+
+      onRemove() {
+          this._container.parentNode.removeChild(this._container);
+          this._map = undefined;
+      }
+    }
+
     mapboxgl.accessToken = 'pk.eyJ1IjoibDByZWxsZWkiLCJhIjoiY2syZ2h0YXhoMHZhdzNpdGd1c3E0azlobCJ9.KlpdomPse99D7VyPdExaLg';
     var map = new mapboxgl.Map({
       container: 'map', // container id
@@ -85,61 +115,62 @@
       accessToken: mapboxgl.accessToken
     }), 'top-left');
 
-    // map.addControl(new MapboxGeocoder({
-    // 	accessToken: mapboxgl.accessToken,
-    // 	mapboxgl: mapboxgl
-    // }), 'top-right');
-
-    const geocode = (address) => {
-      console.log(address);
-      const request = new XMLHttpRequest();
-      const url = `https://maps.googleapis.com/maps/api/geocode/json?address=` +
-        address.split(" ").join("+") + "&key=AIzaSyBvX5_5aJDlyKaXc_nj0PrpkjAHrpvQLFQ";
-      console.log(url);
-      request.open("POST", '/partners/location');
-      request.setRequestHeader('Access-Control-Allow-Origin', '*')
-      request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-      request.onload = () => {
-        if (request.status === 200 || request.status === 201) {
-          console.log(request.responseText);
-          return 1;
-        } else {
-          console.log(request.responseText);
-        }
-      }
-      request.send(JSON.stringify({url: url}));
-    }
+    map.addControl(new SearchControl(), 'bottom-left')
 
     function requestPartnerData() {
-      var jsonRequest = new Request.JSON({
-        url: 'http://localhost:3000/partners',
-        onSuccess: function (geojson) {
-          const data = geojson.features;
-          console.log("partnerdata", data);
-          for (var i = 0; i < data.length; i++) {
-            var point = data[i];
+      var user = firebase.auth().currentUser;
+      var dbPartners = firebase.database().ref().child("Partners")
+          .once('value').then(function(partners) {
+        console.log("Partners: ", partners);
+        if(partners.exists()) {
+          partners.forEach(function(partner) {
+            console.log("Partner: ", partner.key)
+            if(partner.val().Longitude == "" || partner.val().Latitude == "") {
+            }else{
+              var point = {
+                "type": "Point",
+                "coordinates": [
+                  partner.val().Longitude,
+                  partner.val().Latitude
+                ],
+                properties: {
+                  'marker-color': '#3bb2d0',
+                  'marker-size': 'large',
+                  'marker-symbol': 'rocket'
+                }
+              }
 
-            console.log("Point", point);
-            var popup = new mapboxgl.Popup({ offset: [0, -15] })
-              .setHTML('<h3 style="padding:0;margin-bottom:0;">' + point.properties["Farm/Business Name"] + '</h3>' +
-                point.properties.phone);
-
-            geocode(`${point.properties["Address"]}, ${point.properties["City "]}, Oregon, United States`)
-
-            var marker = new mapboxgl.Marker()
-              .setLngLat(point.geometry.coordinates)
-              .addTo(map)
-              .setPopup(popup);
-            point.marker = marker;
-          }
+              var popup = new mapboxgl.Popup({offset: [0, -15]})
+                .setHTML('<h3 style="padding:0;margin-bottom:0;">' + 
+                  partner.key + 
+                  '<h3>' + partner.val().Phone);
+                            
+              var marker = new mapboxgl.Marker()
+                .setLngLat(point.coordinates)
+                .addTo(map)
+                .setPopup(popup)
+              partnerMarkers.push({partner: partner, marker, marker});
+            }
+          });
+          var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(map)
         }
-      }).get();
+      })
+    }
+
+    const filterPartners = (str) => {
+      console.log(str);
+      filteredPartners = partnerMarkers.filter((partner) => {
+        if (!partner.partner.key.toLowerCase().contains(str)) {
+          return true;
+        }
+      });
+      partnerMarkers.forEach(partner => {partner.marker.addTo(map)})
+      filteredPartners.forEach(partner => { partner.marker.remove() })
     }
 
     window.addEvent('domready', function () {
       requestPartnerData()
     })
-
 //Add popup
   </script>
 
