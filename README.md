@@ -49,7 +49,7 @@ Windows scripts should be added.
 
 ## Deployment Steps
 
-1. Select config to use, run either `firebase use development` or `firebase use production` in command line
+1. Select config to use, run either `firebase use development` or `firebase use default` in command line
 2. Run `firebase deploy`
 
 Then open your browser and validate the deployment
