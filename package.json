@@ -1,7 +1,6 @@
 {
   "name": "hdffa_app",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "dotenv": "^8.2.0",
@@ -10,7 +9,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development http-server",
+    "prod": "NODE_ENV=production http-server"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,7 @@
   "bugs": {
     "url": "https://github.com/abell95/hdffa-site/issues"
   },
-  "homepage": "https://github.com/abell95/hdffa-site#readme"
+  "homepage": "https://github.com/abell95/hdffa-site#readme",
+  "keywords": [],
+  "description": ""
 }

@@ -69,6 +69,29 @@
   <script src="index.js"></script>
   <script src="config.js"></script>
   <script>
+    const partnerMarkers = [];
+
+    class SearchControl {
+      onAdd(map) {
+          this._map = map;
+          this._container = document.createElement('div');
+          this._container.className = 'mapboxgl-ctrl';
+          const searchbar = document.createElement('input');
+          searchbar.placeholder = "Search for partners";
+          searchbar.style = "font-size: 1.5rem; font-weight: bold;"
+          searchbar.oninput = (e) => {
+            filterPartners(searchbar.value);
+          }
+          this._container.appendChild(searchbar);
+          return this._container;
+      }
+
+      onRemove() {
+          this._container.parentNode.removeChild(this._container);
+          this._map = undefined;
+      }
+    }
+
     mapboxgl.accessToken = 'pk.eyJ1IjoibDByZWxsZWkiLCJhIjoiY2syZ2h0YXhoMHZhdzNpdGd1c3E0azlobCJ9.KlpdomPse99D7VyPdExaLg';
     var map = new mapboxgl.Map({
       container: 'map', // container id
@@ -92,15 +115,12 @@
       accessToken: mapboxgl.accessToken
     }), 'top-left');
 
-    // map.addControl(new MapboxGeocoder({
-    // 	accessToken: mapboxgl.accessToken,
-    // 	mapboxgl: mapboxgl
-    // }), 'top-right');
+    map.addControl(new SearchControl(), 'bottom-left')
 
     function requestPartnerData() {
       var user = firebase.auth().currentUser;
       var dbPartners = firebase.database().ref().child("Partners")
-                        .once('value').then(function(partners) {
+          .once('value').then(function(partners) {
         console.log("Partners: ", partners);
         if(partners.exists()) {
           partners.forEach(function(partner) {
@@ -121,14 +141,15 @@
               }
 
               var popup = new mapboxgl.Popup({offset: [0, -15]})
-                          .setHTML('<h3 style="padding:0;margin-bottom:0;">' + 
-                            partner.key + 
-                            '<h3>' + partner.val().Phone);
+                .setHTML('<h3 style="padding:0;margin-bottom:0;">' + 
+                  partner.key + 
+                  '<h3>' + partner.val().Phone);
                             
               var marker = new mapboxgl.Marker()
-                              .setLngLat(point.coordinates)
-                              .addTo(map)
-                              .setPopup(popup)
+                .setLngLat(point.coordinates)
+                .addTo(map)
+                .setPopup(popup)
+              partnerMarkers.push({partner: partner, marker, marker});
             }
           });
           var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(map)
@@ -136,10 +157,20 @@
       })
     }
 
+    const filterPartners = (str) => {
+      console.log(str);
+      filteredPartners = partnerMarkers.filter((partner) => {
+        if (!partner.partner.key.toLowerCase().contains(str)) {
+          return true;
+        }
+      });
+      partnerMarkers.forEach(partner => {partner.marker.addTo(map)})
+      filteredPartners.forEach(partner => { partner.marker.remove() })
+    }
+
     window.addEvent('domready', function () {
       requestPartnerData()
     })
-
 //Add popup
   </script>
 
