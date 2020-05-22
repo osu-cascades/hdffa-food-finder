@@ -9,7 +9,7 @@ Capstone project for HDFFA, providing a mobile-friendly navigable map containing
 3. Run `npm install -g firebase-tools`
 4. Run `npm install -g http-server`
 5. Log into Firebase with the command `firebase login`, and use HDFFA's credentials (email/username: app@hdffa.org, password: tmbF0mmX)
-6. Add the following in a file called config.json in the `public/` directory:
+6. Add the following in a file called `config.js` in the `public/` directory:
 
 ```const prodConfig = {
     apiKey: "AIzaSyD9d2WiBXKnszB7BOmaYpnkvbaJrVGtYa8",
@@ -33,9 +33,8 @@ const devConfig = {
     measurementId: "G-6TH66WM1B7"
   };
 
-  const firebaseConfig = process.env.NODE_ENV === 'production' ? prodConfig : devConfig;
-
-firebase.initializeApp(firebaseConfig);
+// pass in whichever config you intend to deploy with
+firebase.initializeApp(prodConfig);
 ```
 
 ## Run Local Environment:
