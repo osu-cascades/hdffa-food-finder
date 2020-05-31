@@ -9,33 +9,7 @@ Capstone project for HDFFA, providing a mobile-friendly navigable map containing
 3. Run `npm install -g firebase-tools`
 4. Run `npm install -g http-server`
 5. Log into Firebase with the command `firebase login`, and use HDFFA's credentials (email/username: app@hdffa.org, password: tmbF0mmX)
-6. Add the following in a file called `config.js` in the `public/` directory:
-
-```const prodConfig = {
-    apiKey: "AIzaSyD9d2WiBXKnszB7BOmaYpnkvbaJrVGtYa8",
-    authDomain: "hdffa-app.firebaseapp.com",
-    databaseURL: "https://hdffa-app.firebaseio.com",
-    projectId: "hdffa-app",
-    storageBucket: "hdffa-app.appspot.com",
-    messagingSenderId: "301209200300",
-    appId: "301209200300:web:2c705453275ee922cc2109",
-    measurementId: "G-4Q5LG2V1FF"
-};
-
-const devConfig = {
-    apiKey: "AIzaSyD1WtRQqbsdQSfXSvSSHeX7AFBvByxDaBQ",
-    authDomain: "hdffa-dev.firebaseapp.com",
-    databaseURL: "https://hdffa-dev.firebaseio.com",
-    projectId: "hdffa-dev",
-    storageBucket: "hdffa-dev.appspot.com",
-    messagingSenderId: "861981906703",
-    appId: "1:861981906703:web:87aaea299e17350474907a",
-    measurementId: "G-6TH66WM1B7"
-  };
-
-// pass in whichever config you intend to deploy with
-firebase.initializeApp(prodConfig);
-```
+6. Add a file named `config.js` in the `public/` directory, following the pattern in `config.example.js` and substituting the proper keys and authentication.
 
 ## Run Local Environment:
 
