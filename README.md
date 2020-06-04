@@ -8,7 +8,7 @@ Capstone project for HDFFA, providing a mobile-friendly navigable map containing
 2. Have recent version of Node.js (8.10.0 or better is recommended)
 3. Run `npm install -g firebase-tools`
 4. Run `npm install -g http-server`
-5. Log into Firebase with the command `firebase login`, and use HDFFA's credentials (email/username: app@hdffa.org, password: tmbF0mmX)
+5. Log into Firebase with the command `firebase login`, and use HDFFA's credentials 
 6. Add the following in a file called config.json in the `public/` directory:
 
 ```const prodConfig = {
