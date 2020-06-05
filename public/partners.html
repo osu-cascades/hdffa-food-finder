@@ -103,7 +103,7 @@
     {
         console.log('TELL ME....')
         var deleteRef = firebase.database().ref().child("Partners").child(key);
-        console.log(slug)
+        // console.log(slug)
         return deleteRef.remove()
         .then(function()
         {
@@ -119,16 +119,16 @@
     {
         var editRef = firebase.database().ref().child("Partners").child(key);
 
-        return editRef.edit()
-        //onclick="switchView('partners.html')"
-        .then(function()
-        {
-            console.log("Edited Successfully.");
-        })
-        .catch(function()
-        {
-            console.log("Error Occured.")
-        });
+        // return editRef.edit()
+        switchView('partnerDetails.html')
+        // .then(function()
+        // {
+        //     console.log("Edited Successfully.");
+        // })
+        // .catch(function()
+        // {
+        //     console.log("Error Occured.")
+        // });
     }
 
     //********************Ends Here -- Retrieve and Display Data from Firebase**************************************
