@@ -66,3 +66,4 @@ node_modules/
 .env
 
 config.js
+hdffa-service-key.json

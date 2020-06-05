@@ -18,6 +18,22 @@
 <script>
     //********************Retrieve and Display Data from Firebase**************************************
 
+    function slugify (text) {
+        const a = 'àáäâèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ·/_,:;'
+        const b = 'aaaaeeeeiiiioooouuuuncsyoarsnpwgnmuxzh------'
+        const p = new RegExp(a.split('').join('|'), 'g')
+
+        return text.toString().toLowerCase()
+            .replace(/\s+/g, '-')           // Replace spaces with -
+            .replace(p, c =>
+                b.charAt(a.indexOf(c)))     // Replace special chars
+            .replace(/&/g, '-and-')         // Replace & with 'and'
+            .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+            .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+            .replace(/^-+/, '')             // Trim - from start of text
+            .replace(/-+$/, '')             // Trim - from end of text
+        }
+
     var user = firebase.auth().currentUser;
     var dbPartners = firebase.database().ref().child("Partners").orderByChild("Farm or Business Name");
 
@@ -30,17 +46,21 @@
             partners.forEach(function(singlePartner)
             {
                 counter = counter + 1;
-
-                // partnersHtml += "<div class='jumbotron bg-light col-lg text-dark'>";
-                        partnersHtml += "<div style='text-align: justify; color: black;'>";
-                            partnersHtml += "<a class='form-control btn btn-light bg-light text-black' onclick=changeTo("+singlePartner.val()+")>";
+                var slug = slugify(singlePartner.key)
+                
+                partnersHtml += "<ul class='list-group'>";
+                        partnersHtml += "<li class='list-group-item' style='text-align: justify;'>";
+                            partnersHtml += "<a class='form-control btn btn-light text-black' onclick=changeTo("+singlePartner.val()+")>";
                                 partnersHtml += singlePartner.key;
                             partnersHtml += "</a>";
-                            partnersHtml += "<div class='form-group' style='text-align: justify-md-center; color: black;'>";
-                                partnersHtml += "<button class='form-control btn btn-sm justify-left btn-light bg-dark text-white' onclick=deletepartnerRecord('"+singlePartner.key+"')>Delete</button>";
-                                partnersHtml += "<button class='form-control btn btn-sm btn-light bg-dark text-white' onclick=editpartnerRecord('"+singlePartner.key+"')>Edit</button>";
-                            partnersHtml += "</div>";
-                        partnersHtml += "</div> <br>";
+                            partnersHtml += "<button class='btn btn-sm justify-left bg-dark text-white' style='display:inline-block' onclick=deletepartnerRecord('"+singlePartner.key+"')>Delete</button>";
+                            partnersHtml += "<button class='btn btn-sm justify-right bg-dark text-white' onclick=editpartnerRecord('"+singlePartner.key+"')>Edit</button>";
+
+                            // partnersHtml += "<div class='form-group' style='text-align: justify-md-center; color: black;'>";
+                            //     partnersHtml += "<button class='form-control btn btn-sm justify-left btn-light bg-dark text-white' onclick=deletepartnerRecord('"+singlePartner.key+"')>Delete</button>";
+                            //     partnersHtml += "<button class='form-control btn btn-sm btn-light bg-dark text-white' onclick=editpartnerRecord('"+singlePartner.key+"')>Edit</button>";
+                            // partnersHtml += "</div>";
+                        partnersHtml += "</li> <br>";
                         // partnersHtml += "<div> <img width='1000px' height='550px' src='";
                         //     partnersHtml += singlePartner.val().image;
                         // partnersHtml += "'/> </div> <br>";
@@ -72,7 +92,7 @@
                             // partnersHtml += "<button class='form-control btn btn-light bg-dark text-white' onclick=editpartnerRecord('"+singlePartner.key+"')>Edit this Partner</button>";
                         // partnersHtml += "</div>";
 
-                // partnersHtml += "</div>";
+                partnersHtml += "</ul>";
             });
             $("#partners").html(partnersHtml);
         }
@@ -81,8 +101,9 @@
 
     function deletepartnerRecord(key)
     {
+        console.log('TELL ME....')
         var deleteRef = firebase.database().ref().child("Partners").child(key);
-        console.log(key)
+        console.log(slug)
         return deleteRef.remove()
         .then(function()
         {
