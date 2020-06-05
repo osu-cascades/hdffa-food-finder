@@ -9,11 +9,7 @@ Capstone project for HDFFA, providing a mobile-friendly navigable map containing
 3. Run `npm install -g firebase-tools`
 4. Run `npm install -g http-server`
 5. Log into Firebase with the command `firebase login`, and use HDFFA's credentials (email/username: app@hdffa.org, password: tmbF0mmX)
-6. Add the config.js in the actual config.js file on basecamp in a file called `config.js` in the `public/` directory.
-
-// pass in whichever config you intend to deploy with
-firebase.initializeApp(prodConfig);
-```
+6. Add a file named `config.js` in the `public/` directory, following the pattern in `config.example.js` and substituting the proper keys and authentication.
 
 ## Run Local Environment:
 
