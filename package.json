@@ -1,30 +1,5 @@
 {
-  "name": "hdffa_app",
-  "version": "1.0.0",
-  "main": "index.js",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "firebase": "^7.14.1",
-    "http-server": "^0.12.3",
-    "require": "^2.4.20",
-    "slugify": "^1.4.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=development http-server",
-    "prod": "NODE_ENV=production http-server"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/abell95/hdffa-site.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/abell95/hdffa-site/issues"
-  },
-  "homepage": "https://github.com/abell95/hdffa-site#readme",
-  "keywords": [],
-  "description": ""
+  "name": "CHANGEME",
+  "private": true,
+  "dependencies": {}
 }

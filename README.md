@@ -1,35 +1,67 @@
-# HDFFA Food Finder
+# Rails 5 Application Boilerplate
 
-Capstone project for HDFFA, providing a mobile-friendly navigable map containing all HDFFA partners with relevant details for their locations and contact info.
+This is a starting point of a Rails 5 application that includes features common
+to most applications, such as user authentication. TODO what else.
 
-## Set Up Dev Environment
+## Expectations
 
-1. Clone, cd into directory
-2. Have recent version of Node.js (8.10.0 or better is recommended)
-3. Run `npm install -g firebase-tools`
-4. Run `npm install -g http-server`
-5. Log into Firebase with the command `firebase login`, and use HDFFA's credentials (email/username: app@hdffa.org, password: tmbF0mmX)
-6. Add a file named `config.js` in the `public/` directory, following the pattern in `config.example.js` and substituting the proper keys and authentication.
+Ruby versions, database, etc.
 
-## Run Local Environment:
+TODO Things you may want to cover:
 
-* To run w/ dev config: `npm run dev`
-* To run w/ prod config: `npm run prod`
+* Ruby version
 
-At present, this only works with Bash due to how environment variables are used in the scripts.
+* System dependencies
 
-Windows scripts should be added.
+* Configuration
 
-## Deployment Steps
+* Database creation
 
-1. Select config to use, run either `firebase use development` or `firebase use default` in command line
-2. Run `firebase deploy`
+* Database initialization
 
-Then open your browser and validate the deployment
+* How to run the test suite
 
-## Web Links:
+* Services (job queues, cache servers, search engines, etc.)
 
-* hdffa-app.web.app: Production URL
-* hdffa-dev.web.app Staging URL
+* Deployment instructions
 
-To log into admin portal, navigate to (URL)/admin.html and use following credentials: email/username: test@test.test, password: pass1234. This will eventually change to a more secure version on production, but for now this will suffice. 
+* ...
+
+
+## Development
+
+There are a few steps to get up and running in development.
+
+### Set the application name
+
+After forking and/or cloning, change `CHANGEME` to the app name. It exists throughout the source, in:
+
+* config/application.rb
+* config/cable.yml
+* config/database.yml
+* config/environments/production.rb
+* package.json
+
+### Customize `.env`
+
+* `RECAPTCHA_SITE_KEY`
+* `RECAPTCHA_SECRET_KEY`
+
+### TODO
+
+
+## Testing
+
+TODO
+
+
+## Production Notes
+
+Configure env vars:
+
+* `AWS_S3_KEY`
+* `AWS_S3_SECRET`
+* `AWS_REGION`
+* `AWS_S3_BUCKET`
+
+&copy; 2018 Yong Joseph Bakos. All rights reserved.
