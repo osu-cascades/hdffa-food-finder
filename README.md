@@ -1,7 +1,7 @@
-# Rails 5 Application Boilerplate
+# HDFFA FoodFinder
 
-This is a starting point of a Rails 5 application that includes features common
-to most applications, such as user authentication. TODO what else.
+A searchable map of locally-sourced food sources, sponsored by the
+[High Desert Food and Farm Alliance](https://www.hdffa.org).
 
 ## Expectations
 
@@ -32,16 +32,6 @@ TODO Things you may want to cover:
 
 There are a few steps to get up and running in development.
 
-### Set the application name
-
-After forking and/or cloning, change `CHANGEME` to the app name. It exists throughout the source, in:
-
-* config/application.rb
-* config/cable.yml
-* config/database.yml
-* config/environments/production.rb
-* package.json
-
 ### Customize `.env`
 
 * `RECAPTCHA_SITE_KEY`
@@ -64,4 +54,4 @@ Configure env vars:
 * `AWS_REGION`
 * `AWS_S3_BUCKET`
 
-&copy; 2018 Yong Joseph Bakos. All rights reserved.
+&copy; 2020 Yong Joseph Bakos. All rights reserved.
