@@ -5,11 +5,11 @@ default: &default
 
 development:
   <<: *default
-  database: food_finder_development
+  database: hdffa_directory_development
 
 test:
   <<: *default
-  database: food_finder_test
+  database: hdffa_directory_test
 
 production:
   <<: *default
