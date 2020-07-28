@@ -4,7 +4,6 @@
   .col.text-right
     = link_to 'New Provider', new_provider_path, class: 'btn btn-primary'
 
-
 %table
   %thead
     %tr
@@ -16,7 +15,6 @@
   %tbody
     - @providers.each do |provider|
       %tr
-
         %td= provider.name
         %td= provider.latitude
         %td= provider.longitude
