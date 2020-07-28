@@ -16,6 +16,7 @@
   %tbody
     - @providers.each do |provider|
       %tr
+<<<<<<< HEAD
         %td= provider.name
         %td= provider.latitude
         %td= provider.longitude
@@ -26,6 +27,8 @@
 %br
 
 = link_to 'New Provider', new_provider_path
+=======
+>>>>>>> 44e60fc4511873bc73682c1ef5f7f75497400e6f
         %td= link_to provider.name, provider
         %td
           = link_to 'Edit', edit_provider_path(provider), class: 'btn btn-sm btn-outline-primary'
