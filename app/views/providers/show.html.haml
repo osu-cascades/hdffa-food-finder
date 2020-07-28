@@ -1,9 +1,5 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @provider.name
-
-= link_to 'Edit', edit_provider_path(@provider)
-\|
-= link_to 'Back', providers_path
+.row
+  .col
+    %h1= @provider.name
+  .col.text-right
+    = link_to 'Edit', edit_provider_path(@provider), class: 'btn btn-primary'
