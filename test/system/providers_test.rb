@@ -16,7 +16,6 @@ class ProvidersTest < ApplicationSystemTestCase
     fill_in "Name", with: @provider.name
     click_on "Create Provider"
     assert_text "Provider was successfully created"
-    click_on "Back"
   end
 
   test "updating a Provider" do
@@ -25,7 +24,6 @@ class ProvidersTest < ApplicationSystemTestCase
     fill_in "Name", with: @provider.name
     click_on "Update Provider"
     assert_text "Provider was successfully updated"
-    click_on "Back"
   end
 
   test "destroying a Provider" do
