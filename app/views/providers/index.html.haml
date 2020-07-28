@@ -1,4 +1,9 @@
-%h1 Providers
+.row
+  .col
+    %h1 Providers
+  .col.text-right
+    = link_to 'New Provider', new_provider_path, class: 'btn btn-primary'
+
 
 %table
   %thead
@@ -21,3 +26,7 @@
 %br
 
 = link_to 'New Provider', new_provider_path
+        %td= link_to provider.name, provider
+        %td
+          = link_to 'Edit', edit_provider_path(provider), class: 'btn btn-sm btn-outline-primary'
+          = link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger'
