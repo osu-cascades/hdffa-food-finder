@@ -9,14 +9,11 @@
   .form-group
     = f.label :name
     = f.text_field :name, class: 'form-control'
+    = f.label :latitude
+    = f.number_field :latitude, class: 'form-control'
+    = f.label :longitude
+    = f.number_field :longitude, class: 'form-control'
   .form-group
     = f.submit({class: 'form-control btn btn-success'})
 
-  .field
-    = f.label :latitude
-    = f.number_field :latitude
-
-  .field
-    = f.label :longitude
-    = f.number_field :longitude
 
