@@ -6,27 +6,12 @@
 
 %table
   %thead
-    %tr
-      %th Name
-      %th
-      %th
-      %th
-
-  %tbody
-    - @providers.each do |provider|
-      %tr
-        %td= provider.name
-        %td= provider.latitude
-        %td= provider.longitude
-        %td= link_to 'Show', provider
-        %td= link_to 'Edit', edit_provider_path(provider)
-        %td= link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Provider', new_provider_path
-
-        %td= link_to provider.name, provider
-        %td
-          = link_to 'Edit', edit_provider_path(provider), class: 'btn btn-sm btn-outline-primary'
-          = link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger'
+    %tbody
+      - @providers.each do |provider|
+        %tr
+          %td= link_to provider.name, provider
+          %td= provider.latitude
+          %td= provider.longitude
+          %td
+            = link_to 'Edit', edit_provider_path(provider), class: 'btn btn-sm btn-outline-primary'
+            = link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger'
