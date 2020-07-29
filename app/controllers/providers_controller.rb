@@ -56,7 +56,7 @@ class ProvidersController < ApplicationController
   private
 
     def provider_params
-      params.require(:provider).permit(:name)
+      params.require(:provider).permit(:name, :longitude, :latitude)
     end
 
 end
