@@ -3,3 +3,9 @@
     %h1= @provider.name
   .col.text-right
     = link_to 'Edit', edit_provider_path(@provider), class: 'btn btn-primary'
+
+%dl.row
+  %dt.col-sm-3 Latitude
+  %dd.col-sm-9= @provider.latitude
+  %dt.col-sm-3 Longitude
+  %dd.col-sm-9= @provider.longitude
