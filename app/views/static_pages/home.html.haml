@@ -1,1 +1,14 @@
-%h1 Home
+%h1.text-center.border{style: 'height: 500px; background-color: #CCC'} [map here]
+
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th Category (?)
+      %th Address
+  %tbody
+    - 20.times do
+      %tr
+        %td= link_to 'Friendly Ranch', '#'
+        %td Meat
+        %td 12345 SE Metolius Blvd.
