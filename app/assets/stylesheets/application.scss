@@ -44,6 +44,12 @@ main {
   margin-bottom: 5rem;
 }
 
+.flash {
+  @extend .alert-dismissible;
+  @extend .fade;
+  @extend .show;
+}
+
 footer {
   position: absolute;
   bottom: 0;
