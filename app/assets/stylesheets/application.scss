@@ -20,14 +20,28 @@ nav#main {
   @extend .navbar-dark;
   @extend .bg-dark;
   @extend .fixed-top;
+  .logo {
+    height: 72px;
+  }
+  button {
+    @extend .navbar-toggler;
+  }
+  #navbar {
+    @extend .collapse;
+    @extend .navbar-collapse;
+    ul {
+      @extend .navbar-nav;
+      @extend .ml-auto;
+      li {
+        @extend .nav-item;
+      }
+    }
+  }
 }
 
 main {
+  @extend .container;
   margin-bottom: 5rem;
-}
-
-.logo {
-  height: 72px;
 }
 
 footer {
