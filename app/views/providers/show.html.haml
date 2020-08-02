@@ -1,8 +1,9 @@
-.row
-  .col
+.subnav
+  .title
     %h1= @provider.name
-  .col.text-right
-    = link_to 'Edit', edit_provider_path(@provider), class: 'btn btn-primary'
+  .actions
+    = link_to 'Delete', @provider, method: :delete, data: { confirm: 'Are you sure?' }, class: 'danger'
+    = link_to 'Edit', edit_provider_path(@provider), class: 'primary'
 
 %dl.row
   %dt.col-sm-3 Latitude

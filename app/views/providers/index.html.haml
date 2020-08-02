@@ -1,8 +1,8 @@
-.row
-  .col
+.subnav
+  .title
     %h1 Providers
-  .col.text-right
-    = link_to 'New Provider', new_provider_path, class: 'btn btn-primary'
+  .actions
+    = link_to 'New Provider', new_provider_path, class: 'primary'
 
 %table.table
   %thead
@@ -19,4 +19,4 @@
         %td= provider.longitude
         %td
           = link_to 'Edit', edit_provider_path(provider), class: 'btn btn-sm btn-outline-primary'
-          = link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger'
+          = link_to 'Delete', provider, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger'
