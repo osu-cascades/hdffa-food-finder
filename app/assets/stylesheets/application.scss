@@ -14,6 +14,14 @@ body {
   margin-bottom: 60px;
 }
 
+nav#main {
+  @extend .navbar;
+  @extend .navbar-expand-md;
+  @extend .navbar-dark;
+  @extend .bg-dark;
+  @extend .fixed-top;
+}
+
 main {
   margin-bottom: 5rem;
 }
