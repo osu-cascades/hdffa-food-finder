@@ -14,12 +14,40 @@ body {
   margin-bottom: 60px;
 }
 
+nav#main {
+  @extend .navbar;
+  @extend .navbar-expand-md;
+  @extend .navbar-dark;
+  @extend .bg-dark;
+  @extend .fixed-top;
+  .logo {
+    height: 72px;
+  }
+  button {
+    @extend .navbar-toggler;
+  }
+  #navbar {
+    @extend .collapse;
+    @extend .navbar-collapse;
+    ul {
+      @extend .navbar-nav;
+      @extend .ml-auto;
+      li {
+        @extend .nav-item;
+      }
+    }
+  }
+}
+
 main {
+  @extend .container;
   margin-bottom: 5rem;
 }
 
-.logo {
-  height: 72px;
+.flash {
+  @extend .alert-dismissible;
+  @extend .fade;
+  @extend .show;
 }
 
 footer {
@@ -121,3 +149,23 @@ body.sessions.new, body.registrations.new, body.registrations.create {
 .form-signin {
   max-width: 330px;
 }
+
+.subnav {
+  @extend .row;
+  .title {
+    @extend .col;
+  }
+  .actions {
+    @extend .col;
+    @extend .text-right;
+    a.primary {
+      @extend .btn;
+      @extend .btn-primary;
+    }
+    a.danger {
+      @extend .btn;
+      @extend .btn-outline-danger;
+    }
+  }
+}
+

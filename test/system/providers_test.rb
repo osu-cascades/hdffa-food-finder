@@ -27,7 +27,7 @@ class ProvidersTest < ApplicationSystemTestCase
 
   test "destroying a Provider" do
     visit providers_url
-    click_on "Destroy", match: :first
+    click_on "Delete", match: :first
     assert_text "Provider was successfully destroyed"
   end
 end

@@ -8,23 +8,23 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body{class: "#{controller.controller_name} #{controller.action_name}"}
-    %nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
+    %nav#main
       = link_to root_url, class: 'navbar-brand' do
         = image_tag 'hdffa_logo.png', class: 'logo'
-      %button.navbar-toggler{type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbar', 'aria-controls': 'navbar', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' }
+      %button{type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbar', 'aria-controls': 'navbar', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' }
         %span.navbar-toggler-icon
-      #navbar.collapse.navbar-collapse
-        %ul.navbar-nav.ml-auto
-          %li.nav-item= link_to 'Providers', providers_path, class: 'nav-link'
-          %li.nav-item= link_to 'B', '#', class: 'nav-link'
+      #navbar
+        %ul
+          %li= link_to 'Providers', providers_path, class: 'nav-link'
+          %li= link_to 'B', '#', class: 'nav-link'
           - if current_user&.admin?
-            %li.nav-item= link_to 'Users', users_path, class: 'nav-link'
+            %li= link_to 'Users', users_path, class: 'nav-link'
           - if user_signed_in?
-            %li.nav-item= link_to current_user, current_user, class: 'nav-link'
-          %li.nav-item= sign_in_or_out_link
-    %main.container{role: 'main'}
+            %li= link_to current_user, current_user, class: 'nav-link'
+          %li= sign_in_or_out_link
+    %main{role: 'main'}
       - flash.each do |message_type, message|
-        .alert.alert-dismissible.fade.show{class: "alert-#{message_type.to_s == 'notice' ? 'success' : 'warning'}"}
+        .flash.alert{class: "alert-#{message_type.to_s == 'notice' ? 'success' : 'warning'}"}
           = message
           %button.close{type: 'button', 'data-dismiss': 'alert', 'aria-label': 'Close'}
             %span{'aria-hidden': 'true'} &times;
