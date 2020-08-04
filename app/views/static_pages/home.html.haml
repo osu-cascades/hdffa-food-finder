@@ -24,13 +24,8 @@
   tileSize: 512,
   zoomOffset: -1
   }).addTo(mymap);
-  L.marker([44.0581700, -121.3153100]).addTo(mymap);
   $.getJSON("http://localhost:3000/providers.json", function(jsonData) {
-    var GeoJson = {}
-    GeoJson['properties'] = jsonData
-    GeoJson['type']= "Feature"
-    GeoJson['geometry']= {"type": "Point", "coordinates": [jsonData['latitude'], jsonData['longitude']]}
-  console.log(GeoJson)
-  L.geoJSON(GeoJson).addTo(mymap);
+    for (var i in jsonData) {
+    var latlong = L.latLng({ lat: jsonData[i].latitude, lng: jsonData[i].longitude });
+    L.marker( latlong ).addTo(mymap);};
   });
-
