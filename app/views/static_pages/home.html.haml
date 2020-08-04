@@ -24,7 +24,7 @@
   tileSize: 512,
   zoomOffset: -1
   }).addTo(mymap);
-  $.getJSON("http://localhost:3000/providers.json", function(jsonData) {
+  $.getJSON("https://hdffa-directory.herokuapp.com/providers.json", function(jsonData) {
     for (var i in jsonData) {
     var latlong = L.latLng({ lat: jsonData[i].latitude, lng: jsonData[i].longitude });
     L.marker( latlong ).addTo(mymap);};
