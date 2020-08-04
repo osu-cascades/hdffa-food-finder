@@ -1,7 +1,7 @@
 require 'JSON'
 namespace :db do
   desc "Import Provider values into database"
-  task import_providers: :load_config do
+  task import_providers: :environment do
     json = JSON.parse(File.read('lib/assets/hdffa-app-export.json.txt'))
     providers = json['Partners']
     providers.each do |key, val|
