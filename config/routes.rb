@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'static_pages#home'
+  root 'providers#index'
 
   # Users
   # Using Devise RegistrationsController for public user creation/registration.
