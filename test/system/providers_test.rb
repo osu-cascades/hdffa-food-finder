@@ -1,10 +1,6 @@
 require "application_system_test_case"
 
 class ProvidersTest < ApplicationSystemTestCase
-  test "visiting the index" do
-    visit providers_url
-    assert_selector "h1", text: "Providers"
-  end
 
   test "creating a Provider" do
     visit new_provider_url
@@ -30,4 +26,5 @@ class ProvidersTest < ApplicationSystemTestCase
     click_on "Delete", match: :first
     assert_text "Provider was successfully destroyed"
   end
+
 end
