@@ -1,4 +1,4 @@
-#mapid
+#map
 
 %table.table
   %thead
@@ -14,22 +14,27 @@
         %td 12345 SE Metolius Blvd.
 
 :javascript
-  var mymap = L.map('mapid').setView([44.0581700, -121.3153100], 13);
-  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-  maxZoom: 18,
-  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-  '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-  'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-  id: 'mapbox/streets-v11',
-  tileSize: 512,
-  zoomOffset: -1
-  }).addTo(mymap);
-  $.getJSON("/providers.json", function(jsonData) {
-    for (var i in jsonData) {
-    var latlong = L.latLng({ lat: jsonData[i].latitude, lng: jsonData[i].longitude });
-    L.marker( latlong ).bindPopup(jsonData[i].name).on('mouseover', function (e) {
-            this.openPopup();
-        }).on('mouseout', function (e) {
-            this.closePopup();
-        }).addTo(mymap);};
-  });
+  var map = L.map('map').setView([44.0581700, -121.3153100], 13)
+
+  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
+    {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1
+    }
+  ).addTo(map)
+
+  $.getJSON('/providers.json', (jsonData) => {
+    jsonData.forEach( (provider) => {
+      var latlon = L.latLng({lat: provider.latitude, lng: provider.longitude})
+      L.marker(latlon).bindPopup(provider.name).on('mouseover', (e) => {
+        this.openPopup()
+      }).on('mouseout', (e) => {
+        this.closePopup()
+      }).addTo(map)
+    })
+  })
