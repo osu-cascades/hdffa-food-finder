@@ -1,0 +1,18 @@
+= form_for [:admin, @provider] do |f|
+  - if @provider.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@provider.errors.count, "error")} prohibited this provider from being saved:"
+      %ul
+        - @provider.errors.full_messages.each do |message|
+          %li= message
+  .form-group
+    = f.label :name
+    = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.label :latitude
+    = f.number_field :latitude, class: 'form-control'
+  .form-group
+    = f.label :longitude
+    = f.number_field :longitude, class: 'form-control'
+  .form-group
+    = f.submit({class: 'form-control btn btn-success'})

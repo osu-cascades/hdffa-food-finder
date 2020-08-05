@@ -14,4 +14,8 @@ Rails.application.routes.draw do
 
   resources :providers
 
+  namespace :admin do
+    resources :providers
+  end
+
 end

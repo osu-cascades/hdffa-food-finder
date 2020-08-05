@@ -1,0 +1,12 @@
+.subnav
+  .title
+    %h1= @provider.name
+  .actions
+    = link_to 'Delete', [:admin, @provider], method: :delete, data: { confirm: 'Are you sure?' }, class: 'danger'
+    = link_to 'Edit', edit_admin_provider_path(@provider), class: 'primary'
+
+%dl.row
+  %dt.col-sm-3 Latitude
+  %dd.col-sm-9= @provider.latitude
+  %dt.col-sm-3 Longitude
+  %dd.col-sm-9= @provider.longitude
