@@ -31,9 +31,9 @@
   $.getJSON('/providers.json', (jsonData) => {
     jsonData.forEach( (provider) => {
       var latlon = L.latLng({lat: provider.latitude, lng: provider.longitude})
-      L.marker(latlon).bindPopup(provider.name).on('mouseover', (e) => {
+      L.marker(latlon).bindPopup(provider.name).on('mouseover', function(e) {
         this.openPopup()
-      }).on('mouseout', (e) => {
+      }).on('mouseout', function(e) {
         this.closePopup()
       }).addTo(map)
     })
