@@ -1,33 +1,31 @@
 require "application_system_test_case"
 
 class ProvidersTest < ApplicationSystemTestCase
-  test "visiting the index" do
+
+  test 'viewing a list of Providers' do
     visit providers_url
-    assert_selector "h1", text: "Providers"
+    assert_text providers(:one).name
   end
 
-  test "creating a Provider" do
-    visit new_provider_url
-    fill_in "Name", with: 'FAKE'
-    fill_in "Latitude", with: 42
-    fill_in "Longitude", with: 42
-    click_on "Create Provider"
-    assert_text "Provider was successfully created"
+  test 'viewing a Provider' do
+    provider = providers(:one)
+    visit provider_url(provider)
+    assert_text provider.name
   end
 
-  test "updating a Provider" do
-    visit providers_url
-    click_on "Edit", match: :first
-    fill_in "Name", with: 'FAKE'
-    fill_in "Latitude", with: 42
-    fill_in "Longitude", with: 42
-    click_on "Update Provider"
-    assert_text "Provider was successfully updated"
+  # API
+
+  test 'retrieving a list of Provider data' do
+    visit providers_url(format: :json)
+    provider_names = JSON.parse(page.body).collect { |p| p['name'] }
+    assert_includes(provider_names, providers(:one).name)
   end
 
-  test "destroying a Provider" do
-    visit providers_url
-    click_on "Delete", match: :first
-    assert_text "Provider was successfully destroyed"
+  test 'retrieving a Provider\'s data' do
+    provider = providers(:one)
+    visit provider_url(provider, format: :json)
+    provider_json = JSON.parse(page.body)
+    assert_equal(provider.name, provider_json['name'])
   end
+
 end
