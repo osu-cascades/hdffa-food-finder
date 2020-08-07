@@ -18,6 +18,22 @@ class ProviderTest < ActiveSupport::TestCase
     assert_respond_to(Provider.new, :description)
   end
 
+  test 'Provider has a street_address' do
+    assert_respond_to(Provider.new, :street_address)
+  end
+
+  test 'Provider has a city' do
+    assert_respond_to(Provider.new, :city)
+  end
+
+  test 'Provider has a state' do
+    assert_respond_to(Provider.new, :state)
+  end
+
+  test 'Provider has a zip' do
+    assert_respond_to(Provider.new, :zip)
+  end
+
   test 'Provider without a name is invalid' do
     provider = Provider.new(name: 'Fake', latitude: 42, longitude: 42)
     assert(provider.valid?)
