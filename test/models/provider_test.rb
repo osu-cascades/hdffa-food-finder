@@ -21,4 +21,12 @@ class ProviderTest < ActiveSupport::TestCase
     refute(provider.valid?)
   end
 
+  test 'Provider with a non-unique name is invalid' do
+    existing_provider_name = providers(:one).name
+    provider = Provider.new(name: 'New Provider')
+    assert provider.valid?
+    provider.name = existing_provider_name
+    refute provider.valid?
+  end
+
 end
