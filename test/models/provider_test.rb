@@ -14,6 +14,10 @@ class ProviderTest < ActiveSupport::TestCase
     assert_respond_to(Provider.new, :longitude)
   end
 
+  test 'Provider has a description' do
+    assert_respond_to(Provider.new, :description)
+  end
+
   test 'Provider without a name is invalid' do
     provider = Provider.new(name: 'Fake', latitude: 42, longitude: 42)
     assert(provider.valid?)
