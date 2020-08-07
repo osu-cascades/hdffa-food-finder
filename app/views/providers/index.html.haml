@@ -6,14 +6,13 @@
       %th Name
       %th Latitude
       %th Longitude
-      %th Description
+      %th
   %tbody
     - @providers.each do |provider|
       %tr
         %td= link_to provider.name, provider
         %td= provider.latitude
         %td= provider.longitude
-        %td= provider.description
         %td
           = link_to 'Edit', edit_provider_path(provider), class: 'btn btn-sm btn-outline-primary'
           = link_to 'Delete', provider, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger'
