@@ -2,10 +2,6 @@ require 'test_helper'
 
 class ProviderTest < ActiveSupport::TestCase
 
-  test 'Provider exists' do
-    Provider.new
-  end
-
   test 'Provider has a name' do
     assert_respond_to(Provider.new, :name)
   end
