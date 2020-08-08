@@ -1,9 +1,21 @@
 one:
   name: Fake Provider
-  latitude: 42
-  longitude: 42
+  description: A fake description
+  street_address: 123 Fake Street
+  city: Faketown
+  state: OR
+  zip: 11111
+  latitude: 1
+  longitude: -1
+  email: 'fake@example.com'
 
 two:
   name: Second Fake Provider
-  latitude: 42
-  longitude: 42
+  description: A second fake description
+  street_address: 234 Fake Blvd
+  city: Fakeville
+  state: OR
+  zip: 22222
+  latitude: 2
+  longitude: -2
+  email: 'fake2@example.com'
