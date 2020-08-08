@@ -6,6 +6,18 @@
     = link_to 'Edit', edit_admin_provider_path(@provider), class: 'primary'
 
 %dl.row
+  %dt.col-sm-3 Description
+  %dd.col-sm-9= @provider.description
+  %dt.col-sm-3 Street Address
+  %dd.col-sm-9= @provider.street_address
+  %dt.col-sm-3 City
+  %dd.col-sm-9= @provider.city
+  %dt.col-sm-3 State
+  %dd.col-sm-9= @provider.state
+  %dt.col-sm-3 Zip Code
+  %dd.col-sm-9= @provider.zip
+  %dt.col-sm-3 Email
+  %dd.col-sm-9= @provider.email
   %dt.col-sm-3 Latitude
   %dd.col-sm-9= @provider.latitude
   %dt.col-sm-3 Longitude

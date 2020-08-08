@@ -22,8 +22,7 @@ class AdminProvidersTest < ApplicationSystemTestCase
   test 'creating a Provider' do
     visit new_admin_provider_url
     fill_in 'Name', with: 'FAKE'
-    fill_in 'Latitude', with: 42
-    fill_in 'Longitude', with: 42
+    fill_in 'Email', with: 'fake@example.com'
     click_on 'Create Provider'
     assert_text 'Provider was successfully created'
   end
