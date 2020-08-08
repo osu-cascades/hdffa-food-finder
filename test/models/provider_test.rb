@@ -39,7 +39,7 @@ class ProviderTest < ActiveSupport::TestCase
   end
 
   test 'Provider without a name is invalid' do
-    provider = Provider.new(name: 'Fake', latitude: 42, longitude: 42)
+    provider = Provider.new(name: 'Fake', latitude: 42, longitude: 42, street_address: 'place ave', city: 'Bend', state: 'OR', zip: '789', email: 'person@gmail.com')
     assert(provider.valid?)
     provider.name = nil
     refute(provider.valid?)
@@ -51,6 +51,13 @@ class ProviderTest < ActiveSupport::TestCase
     assert provider.valid?
     provider.name = existing_provider_name
     refute provider.valid?
+  end
+
+  test 'Provider with a wrong email is invalid' do
+    provider = Provider.new(name: 'Fake', latitude: 42, longitude: 42, street_address: 'place ave', city: 'Bend', state: 'OR', zip: '789', email: 'person@gmail.com')
+    assert(provider.valid?)
+    provider.email = 'Abcdefghijklmnop'
+    refute(provider.valid?)
   end
 
 end
