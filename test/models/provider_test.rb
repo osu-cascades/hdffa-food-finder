@@ -2,6 +2,18 @@ require 'test_helper'
 
 class ProviderTest < ActiveSupport::TestCase
 
+  def new_provider
+    Provider.new(name: 'Fake', 
+      latitude: 42, 
+      longitude: 42, 
+      street_address: 'place ave', 
+      city: 'Bend', 
+      state: 'OR', 
+      zip: '789', 
+      email: 'person@gmail.com', 
+      phone:'509-552-3882')
+  end
+
   test 'Provider has a name' do
     assert_respond_to(Provider.new, :name)
   end
@@ -38,8 +50,12 @@ class ProviderTest < ActiveSupport::TestCase
     assert_respond_to(Provider.new, :email)
   end
 
+  test 'Provider has a phone number' do
+    assert_respond_to(Provider.new, :phone)
+  end
+
   test 'Provider without a name is invalid' do
-    provider = Provider.new(name: 'Fake', latitude: 42, longitude: 42, street_address: 'place ave', city: 'Bend', state: 'OR', zip: '789', email: 'person@gmail.com')
+    provider = new_provider
     assert(provider.valid?)
     provider.name = nil
     refute(provider.valid?)
@@ -54,9 +70,16 @@ class ProviderTest < ActiveSupport::TestCase
   end
 
   test 'Provider with a wrong email is invalid' do
-    provider = Provider.new(name: 'Fake', latitude: 42, longitude: 42, street_address: 'place ave', city: 'Bend', state: 'OR', zip: '789', email: 'person@gmail.com')
+    provider = new_provider
     assert(provider.valid?)
     provider.email = 'Abcdefghijklmnop'
+    refute(provider.valid?)
+  end
+
+  test 'Provider has a valid phone number' do
+    provider = new_provider
+    assert(provider.valid?)
+    provider.phone = '1234'
     refute(provider.valid?)
   end
 
