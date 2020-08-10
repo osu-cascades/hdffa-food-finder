@@ -57,7 +57,7 @@ class ProvidersController < ApplicationController
 
     def provider_params
       params.require(:provider).permit(:name, :longitude, :latitude, :description,
-        :street_address, :city, :state, :zip, :email, :phone)
+        :street_address, :city, :state, :zip, :email, :phone, :url)
     end
 
 end
