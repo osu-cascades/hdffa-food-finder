@@ -11,7 +11,7 @@ class ProviderTest < ActiveSupport::TestCase
       state: 'OR', 
       zip: '789', 
       email: 'person@gmail.com', 
-      phone:'509-552-3882',
+      phone:'(541) 610-4403',
       url:'https://link.com',
       hours_of_operation:'Monday - Friday')
 
