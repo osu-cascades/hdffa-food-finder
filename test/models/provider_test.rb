@@ -12,7 +12,8 @@ class ProviderTest < ActiveSupport::TestCase
       zip: '789', 
       email: 'person@gmail.com', 
       phone:'509-552-3882',
-      url:'https://link.com')
+      url:'https://link.com',
+      hours_of_operation:'Monday - Friday')
 
   end
 
@@ -58,6 +59,10 @@ class ProviderTest < ActiveSupport::TestCase
 
   test 'Provider has a URL' do
     assert_respond_to(Provider.new, :url)
+  end
+
+  test 'Provider has hours oof operation' do
+    assert_respond_to(Provider.new, :hours_of_operation)
   end
 
   test 'Provider without a name is invalid' do
