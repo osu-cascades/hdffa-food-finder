@@ -61,8 +61,12 @@ class ProviderTest < ActiveSupport::TestCase
     assert_respond_to(Provider.new, :url)
   end
 
-  test 'Provider has hours oof operation' do
+  test 'Provider has hours of operation' do
     assert_respond_to(Provider.new, :hours_of_operation)
+  end
+
+  test 'Provider has keywords' do
+    assert_respond_to(Provider.new, :keywords)
   end
 
   test 'Provider without a name is invalid' do
