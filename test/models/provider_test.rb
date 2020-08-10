@@ -11,7 +11,9 @@ class ProviderTest < ActiveSupport::TestCase
       state: 'OR', 
       zip: '789', 
       email: 'person@gmail.com', 
-      phone:'509-552-3882')
+      phone:'509-552-3882',
+      url:'https://link.com')
+
   end
 
   test 'Provider has a name' do
@@ -54,6 +56,10 @@ class ProviderTest < ActiveSupport::TestCase
     assert_respond_to(Provider.new, :phone)
   end
 
+  test 'Provider has a URL' do
+    assert_respond_to(Provider.new, :url)
+  end
+
   test 'Provider without a name is invalid' do
     provider = new_provider
     assert(provider.valid?)
@@ -83,4 +89,11 @@ class ProviderTest < ActiveSupport::TestCase
     refute(provider.valid?)
   end
 
+  test 'Provider  has a valid URL' do
+    provider = new_provider
+    assert(provider.valid?)
+    provider.url = 'html://link.com'
+    refute(provider.valid?)
+  end
+  
 end
