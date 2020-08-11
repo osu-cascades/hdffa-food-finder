@@ -3,17 +3,17 @@ require 'test_helper'
 class ProviderTest < ActiveSupport::TestCase
 
   def new_provider
-    Provider.new(name: 'Fake', 
-      latitude: 42, 
-      longitude: 42, 
-      street_address: 'place ave', 
-      city: 'Bend', 
-      state: 'OR', 
-      zip: '789', 
-      email: 'person@gmail.com', 
-      phone:'(541) 610-4403',
-      url:'https://link.com',
-      hours_of_operation:'Monday - Friday')
+    Provider.new(name: 'Fake',
+      latitude: 42,
+      longitude: 42,
+      street_address: 'Fake Address',
+      city: 'Fake City',
+      state: 'OR',
+      zip: '11111',
+      email: 'fake@example.com',
+      phone: '(541) 610-4403',
+      url: 'https://example.com',
+      hours_of_operation: 'Monday - Friday')
 
   end
 
@@ -71,9 +71,9 @@ class ProviderTest < ActiveSupport::TestCase
 
   test 'Provider without a name is invalid' do
     provider = new_provider
-    assert(provider.valid?)
+    assert provider.valid?
     provider.name = nil
-    refute(provider.valid?)
+    refute provider.valid?
   end
 
   test 'Provider with a non-unique name is invalid' do
@@ -84,25 +84,25 @@ class ProviderTest < ActiveSupport::TestCase
     refute provider.valid?
   end
 
-  test 'Provider with a wrong email is invalid' do
+  test 'Provider with an invalid email is invalid' do
     provider = new_provider
-    assert(provider.valid?)
-    provider.email = 'Abcdefghijklmnop'
-    refute(provider.valid?)
+    assert provider.valid?
+    provider.email = 'Invalid'
+    refute provider.valid?
   end
 
   test 'Provider has a valid phone number' do
     provider = new_provider
-    assert(provider.valid?)
-    provider.phone = '1234'
-    refute(provider.valid?)
+    assert provider.valid?
+    provider.phone = 'Invalid'
+    refute provider.valid?
   end
 
   test 'Provider  has a valid URL' do
     provider = new_provider
-    assert(provider.valid?)
-    provider.url = 'html://link.com'
-    refute(provider.valid?)
+    assert provider.valid?
+    provider.url = 'Invalid'
+    refute provider.valid?
   end
-  
+
 end
