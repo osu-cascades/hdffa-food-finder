@@ -98,7 +98,7 @@ class ProviderTest < ActiveSupport::TestCase
     refute provider.valid?
   end
 
-  test 'Provider  has a valid URL' do
+  test 'Provider has a valid URL' do
     provider = new_provider
     assert provider.valid?
     provider.url = 'Invalid'
