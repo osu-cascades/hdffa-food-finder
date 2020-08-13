@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CategoriesControllerTest < ActionDispatch::IntegrationTest
+class AdminCategoriesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @category = categories(:one)
   end
