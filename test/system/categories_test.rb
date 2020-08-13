@@ -6,12 +6,12 @@ class CategoriesTest < ApplicationSystemTestCase
   end
 
   test "visiting the index" do
-    visit categories_url
+    visit admin_categories_url
     assert_selector "h1", text: "Categories"
   end
 
   test "creating a Category" do
-    visit categories_url
+    visit admin_categories_url
     click_on "New Category"
 
     click_on "Create Category"
@@ -21,7 +21,7 @@ class CategoriesTest < ApplicationSystemTestCase
   end
 
   test "updating a Category" do
-    visit categories_url
+    visit admin_categories_url
     click_on "Edit", match: :first
 
     click_on "Update Category"
@@ -31,11 +31,8 @@ class CategoriesTest < ApplicationSystemTestCase
   end
 
   test "destroying a Category" do
-    visit categories_url
-    page.accept_confirm do
-      click_on "Destroy", match: :first
-    end
-
+    visit admin_categories_url
+    click_on "Destroy", match: :first
     assert_text "Category was successfully destroyed"
   end
 end
