@@ -7,8 +7,61 @@ class AdminCategoriesControllerTest < ActionDispatch::IntegrationTest
     assert(defines_before_filter?(Admin::ProvidersController, :authenticate_user!))
   end
 
-  test 'TODO' do
-    skip
+  test 'redirects requests from unauthenticated sessions' do
+    # index
+    get admin_categories_path
+    assert_redirected_to new_user_session_path
+    # show
+    get admin_category_path(id: 'fake')
+    assert_redirected_to new_user_session_path
+    # new
+    get new_admin_provider_path
+    assert_redirected_to new_user_session_path
+    # edit
+    get edit_admin_category_path(id: 'fake')
+    assert_redirected_to new_user_session_path
+    # create
+    post admin_categories_path
+    assert_redirected_to new_user_session_path
+    # update
+    patch admin_category_path(id: 'fake')
+    assert_redirected_to new_user_session_path
+    put admin_category_path(id: 'fake')
+    assert_redirected_to new_user_session_path
+    # destroy
+    delete admin_category_path(id: 'fake')
+    assert_redirected_to new_user_session_path
+  end
+
+  test 'restricts guest user access' do
+    assert defines_before_filter?(Admin::CategoriesController, :restrict_unless_admin)
+  end
+
+  test 'redirects requests from guest users to root url' do
+    sign_in users(:guest)
+    # index
+    get admin_categories_path
+    assert_redirected_to root_url
+    # show
+    get admin_category_path(id: 'fake')
+    assert_redirected_to root_url
+    # new
+    get new_admin_provider_path
+    assert_redirected_to root_url
+    # edit
+    get edit_admin_provider_path(id: 'fake')
+    assert_redirected_to root_url
+    # create
+    post admin_categories_path
+    assert_redirected_to root_url
+    # update
+    patch admin_category_path(id: 'fake')
+    assert_redirected_to root_url
+    put admin_category_path(id: 'fake')
+    assert_redirected_to root_url
+    # destroy
+    delete admin_category_path(id: 'fake')
+    assert_redirected_to root_url
   end
 
 end
