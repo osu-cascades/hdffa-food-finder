@@ -24,7 +24,7 @@ namespace :db do
         zip: val['ZIP'], 
         email: val['Email'], 
         phone: phone,
-        url: website,
+        url: website.downcase!,
         hours_of_operation: val['Hours of Operation: Dates and times'],
         keywords: val['Search Terms']
       )
