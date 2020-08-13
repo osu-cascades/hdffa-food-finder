@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :categories
   root 'providers#index'
 
   # Users
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :providers
+    resources :categories
   end
 
 end
