@@ -7,5 +7,4 @@ class Provider < ApplicationRecord
     format: { with: /\Ahttps?:\/\/([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?.*/,
     message: "must be an http or https URL"},
     allow_blank: true
-
 end
