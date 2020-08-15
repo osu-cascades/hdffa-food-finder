@@ -1,16 +1,13 @@
 require 'test_helper'
 
 class CategoryTest < ActiveSupport::TestCase
-  def new_category
-    Category.new(name:'Fake')
-  end
 
   test 'Category has a name' do
     assert_respond_to(Category.new, :name)
   end
 
   test 'Category without a name is invalid' do
-    category = new_category
+    category = categories(:one)
     assert category.valid?
     category.name = nil
     refute category.valid?
