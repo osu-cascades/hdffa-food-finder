@@ -14,8 +14,7 @@
         %td= provider.latitude
         %td= provider.longitude
         %td
-          = link_to 'Edit', edit_provider_path(provider), class: 'btn btn-sm btn-outline-primary'
-          = link_to 'Delete', provider, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger'
+          = link_to 'Details', provider_path(provider), class: 'btn btn-sm btn-outline-primary'
 
 :javascript
   var map = L.map('map').setView([44.0581700, -121.3153100], 13)
