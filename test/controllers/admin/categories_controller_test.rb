@@ -15,7 +15,7 @@ class AdminCategoriesControllerTest < ActionDispatch::IntegrationTest
     get admin_category_path(id: 'fake')
     assert_redirected_to new_user_session_path
     # new
-    get new_admin_provider_path
+    get new_admin_category_path
     assert_redirected_to new_user_session_path
     # edit
     get edit_admin_category_path(id: 'fake')
@@ -46,10 +46,10 @@ class AdminCategoriesControllerTest < ActionDispatch::IntegrationTest
     get admin_category_path(id: 'fake')
     assert_redirected_to root_url
     # new
-    get new_admin_provider_path
+    get new_admin_category_path
     assert_redirected_to root_url
     # edit
-    get edit_admin_provider_path(id: 'fake')
+    get edit_admin_category_path(id: 'fake')
     assert_redirected_to root_url
     # create
     post admin_categories_path
