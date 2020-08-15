@@ -5,7 +5,7 @@ class CategoryTest < ActiveSupport::TestCase
     Category.new(name:'Fake')
   end
 
-  test 'Cateegory has a name' do
+  test 'Category has a name' do
     assert_respond_to(Category.new, :name)
   end
 
