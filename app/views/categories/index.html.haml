@@ -1,0 +1,17 @@
+.subnav
+  .title
+    %h1 Categories
+
+%table.table
+  %thead
+    %tr
+      %th Category
+      %th
+      %th
+      %th
+  %tbody
+    - @categories.each do |category|
+      %tr
+        %td= link_to category.name, category
+        %td
+          = link_to 'Details', category_path(category), class: 'btn btn-sm btn-outline-primary'

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :providers, only: [:index, :show]
+  resources :categories, only: [:index, :show]
 
   namespace :admin do
     resources :providers
