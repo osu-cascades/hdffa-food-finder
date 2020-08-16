@@ -18,14 +18,11 @@
   %dt.col-sm-3 Zip Code
   %dd.col-sm-9= @provider.zip
   %dt.col-sm-3 Email
-  %dd.col-sm-9
-    %a{:href => "mailto:#{@provider.email}"} #{@provider.email}
+  %dd.col-sm-9= mail_to @provider.email
   %dt.col-sm-3 Phone
   %dd.col-sm-9= @provider.phone
   %dt.col-sm-3 Website
-  %dd.col-sm-9
-    %a
-      = link_to "#{@provider.url}", @provider.url
+  %dd.col-sm-9= link_to "#{@provider.url}", @provider.url
   %dt.col-sm-3 Hours Of Operation
   %dd.col-sm-9= @provider.hours_of_operation
   %dt.col-sm-3 Keywords
