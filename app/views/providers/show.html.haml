@@ -18,7 +18,8 @@
   %dt.col-sm-3 Zip Code
   %dd.col-sm-9= @provider.zip
   %dt.col-sm-3 Email
-  %dd.col-sm-9= @provider.email
+  %dd.col-sm-9
+    %a{:href => "mailto:#{@provider.email}"} #{@provider.email}
   %dt.col-sm-3 Phone
   %dd.col-sm-9= @provider.phone
   %dt.col-sm-3 Website
