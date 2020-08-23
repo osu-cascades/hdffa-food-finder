@@ -3,10 +3,6 @@
     %h1= @provider.name
 
 %dl.row
-  %dt.col-sm-3 Latitude
-  %dd.col-sm-9= @provider.latitude
-  %dt.col-sm-3 Longitude
-  %dd.col-sm-9= @provider.longitude
   %dt.col-sm-3 Description
   %dd.col-sm-9= @provider.description
   %dt.col-sm-3 Street Address
@@ -27,6 +23,9 @@
   %dd.col-sm-9= @provider.hours_of_operation
   %dt.col-sm-3 Keywords
   %dd.col-sm-9= @provider.keywords
+  %dt.col-sm-3 Latitude
+  %dd.col-sm-9= @provider.latitude
+  %dt.col-sm-3 Longitude
+  %dd.col-sm-9= @provider.longitude
   %dt.col-sm-3 Logo
   %dd.col-sm-9= image_tag @provider.logo
-
