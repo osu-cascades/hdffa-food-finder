@@ -20,4 +20,9 @@ class CategoryTest < ActiveSupport::TestCase
     category.name = existing_category_name
     refute category.valid?
   end
+
+  test '#to_s string representation is the category name' do
+    assert_equal(categories(:one).name, categories(:one).to_s)
+  end
+
 end
