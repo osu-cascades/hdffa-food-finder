@@ -105,4 +105,8 @@ class ProviderTest < ActiveSupport::TestCase
     refute provider.valid?
   end
 
+  test '#to_s string representation is the Provider name' do
+    assert_equal(providers(:one).name, providers(:one).to_s)
+  end
+
 end
