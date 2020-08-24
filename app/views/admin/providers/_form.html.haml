@@ -9,12 +9,6 @@
     = f.label :name
     = f.text_field :name, class: 'form-control'
   .form-group
-    = f.label :latitude
-    = f.number_field :latitude, class: 'form-control'
-  .form-group
-    = f.label :longitude
-    = f.number_field :longitude, class: 'form-control'
-  .form-group
     = f.label :description
     = f.text_area :description, class: 'form-control', rows: 10
   .form-group
@@ -32,6 +26,24 @@
   .form-group
     = f.label :email
     = f.text_field :email, class: 'form-control'
+  .form-group
+    = f.label :phone
+    = f.number_field :phone, class: 'form-control'
+  .form-group
+    = f.label :url
+    = f.url_field :url, class: 'form-control'
+  .form-group
+    = f.label :hours_of_operation
+    = f.text_field :hours_of_operation, class: 'form-control'
+  .form-group
+    = f.label :keywords
+    = f.text_field :keywords, class: 'form-control'
+  .form-group
+    = f.label :latitude
+    = f.number_field :latitude, class: 'form-control'
+  .form-group
+    = f.label :longitude
+    = f.number_field :longitude, class: 'form-control'
   .form-group
     = f.label :logo
     = f.file_field :logo, class: 'form-control-file'
