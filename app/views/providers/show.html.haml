@@ -18,7 +18,7 @@
       %dt.col-sm-3 Email
       %dd.col-sm-9= mail_to @provider.email
       %dt.col-sm-3 Phone
-      %dd.col-sm-9= "#{@provider.phone}".phony_formatted(normalize: :NA, format: :international, spaces: '-')
+      %dd.col-sm-9= "#{@provider.phone}".phony_formatted(normalize: :NA, format: :national, spaces: ' ')
       %dt.col-sm-3 Website
       %dd.col-sm-9= link_to "#{@provider.url}", @provider.url
       %dt.col-sm-3 Hours Of Operation
