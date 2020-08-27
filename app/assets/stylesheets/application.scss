@@ -175,23 +175,3 @@ body.sessions.new, body.registrations.new, body.registrations.create {
   height: 500px;
 }
 
-@media 
-(max-width: 480px),
-(min-width: 481px) and (max-width: 767px), 
-(min-width: 768px) and (max-width: 1023px),
-(max-height: 1024px)
-{ 
-  #map { 
-      width: 100%;
-      height: 400px;
-  }
-} 
-
-@media 
-(min-width: 1024px) and (max-width: 1280px),
-(min-width: 1281px)
-{
-  #map { 
-    height: 600px;
-  } 
-}
