@@ -1,5 +1,5 @@
 one:
-  name: Fake Provider
+  name: Fake Partner
   description: A fake description
   street_address: 123 Fake Street
   city: Faketown
@@ -10,7 +10,7 @@ one:
   email: 'fake@example.com'
 
 two:
-  name: Second Fake Provider
+  name: Second Fake Partner
   description: A second fake description
   street_address: 234 Fake Blvd
   city: Fakeville

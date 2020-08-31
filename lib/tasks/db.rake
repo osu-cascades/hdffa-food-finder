@@ -1,11 +1,11 @@
 require 'json'
 
 namespace :db do
-  desc "Import Provider values into database"
-  task import_providers: :environment do
+  desc "Import Partner values into database"
+  task import_ppartners: :environment do
     json = JSON.parse(File.read('lib/assets/hdffa-app-export.json.txt'))
-    providers = json['Partners']
-    providers.each do |key, val|
+    ppartners = json['Partners']
+    ppartners.each do |key, val|
       website = val['Website']
       phone = val['Phone']
       if(!website.start_with?("https"))
@@ -14,7 +14,7 @@ namespace :db do
       if (phone.size < 10)
         phone = ''
       end
-      Provider.create!(name: key, 
+      Ppartner.create!(name: key, 
         latitude: val['Latitude'], 
         longitude: val['Longitude'], 
         description: val['Description'],

@@ -8,13 +8,13 @@
       %th Longitude
       %th
   %tbody
-    - @providers.each do |provider|
+    - @partners.each do |partner|
       %tr
-        %td= link_to provider.name, provider
-        %td= provider.latitude
-        %td= provider.longitude
+        %td= link_to partner.name, partner
+        %td= partner.latitude
+        %td= partner.longitude
         %td
-          = link_to 'Details', provider_path(provider), class: 'btn btn-sm btn-outline-primary'
+          = link_to 'Details', partner_path(partner), class: 'btn btn-sm btn-outline-primary'
 
 :javascript
   var map = L.map('map').setView([44.0581700, -121.3153100], 13)
@@ -32,10 +32,10 @@
     }
   ).addTo(map)
 
-  $.getJSON('/providers.json', (jsonData) => {
-    jsonData.forEach( (provider) => {
-      var latlon = L.latLng({lat: provider.latitude, lng: provider.longitude})
-      L.marker(latlon).bindPopup(provider.name).on('mouseover', function(e) {
+  $.getJSON('/partners.json', (jsonData) => {
+    jsonData.forEach( (partner) => {
+      var latlon = L.latLng({lat: partner.latitude, lng: partner.longitude})
+      L.marker(latlon).bindPopup(partner.name).on('mouseover', function(e) {
         this.openPopup()
       }).on('mouseout', function(e) {
         this.closePopup()
