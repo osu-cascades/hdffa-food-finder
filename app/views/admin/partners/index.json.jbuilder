@@ -1,1 +1,1 @@
-json.array! @partners, partial: 'partners/provider', as: :provider
+json.array! @partners, partial: 'partners/partner', as: :partner
