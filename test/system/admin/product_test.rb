@@ -23,21 +23,21 @@ class AdminProductsTest < ApplicationSystemTestCase
     visit new_admin_product_url
     fill_in 'Name', with: 'FAKE'
     click_on 'Create Product'
-    assert_text 'product was successfully created'
+    assert_text 'Product was successfully created'
   end
 
   test 'updating a Product' do
     visit edit_admin_product_url(products(:one))
     fill_in 'Name', with: 'NEW FAKE NAME'
     click_on 'Update Product'
-    assert_text 'product was successfully updated'
+    assert_text 'Product was successfully updated'
     assert_text 'NEW FAKE NAME'
   end
 
   test 'destroying a Product' do
     visit admin_products_url
     click_on 'Delete', match: :first
-    assert_text 'product was successfully destroyed'
+    assert_text 'Product was successfully destroyed'
   end
 
 end
