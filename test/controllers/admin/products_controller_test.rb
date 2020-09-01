@@ -1,48 +1,67 @@
 require 'test_helper'
 
-class ProductsControllerTest < ActionDispatch::IntegrationTest
-  setup do
-    @product = products(:one)
+class AdminPartnersControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
+  test 'requires user authentication' do
+    assert(defines_before_filter?(Admin::PartnersController, :authenticate_user!))
   end
 
-  test "should get index" do
-    get products_url
-    assert_response :success
+  test 'redirects requests from unauthenticated sessions' do
+    # index
+    get admin_partners_path
+    assert_redirected_to new_user_session_path
+    # show
+    get admin_partner_path(id: 'fake')
+    assert_redirected_to new_user_session_path
+    # new
+    get new_admin_partner_path
+    assert_redirected_to new_user_session_path
+    # edit
+    get edit_admin_partner_path(id: 'fake')
+    assert_redirected_to new_user_session_path
+    # create
+    post admin_partners_path
+    assert_redirected_to new_user_session_path
+    # update
+    patch admin_partner_path(id: 'fake')
+    assert_redirected_to new_user_session_path
+    put admin_partner_path(id: 'fake')
+    assert_redirected_to new_user_session_path
+    # destroy
+    delete admin_partner_path(id: 'fake')
+    assert_redirected_to new_user_session_path
   end
 
-  test "should get new" do
-    get new_product_url
-    assert_response :success
+  test 'restricts guest user access' do
+    assert defines_before_filter?(Admin::PartnersController, :restrict_unless_admin)
   end
 
-  test "should create product" do
-    assert_difference('Product.count') do
-      post products_url, params: { product: { name: @product.name } }
-    end
-
-    assert_redirected_to product_url(Product.last)
+  test 'redirects requests from guest users to root url' do
+    sign_in users(:guest)
+    # index
+    get admin_partners_path
+    assert_redirected_to root_url
+    # show
+    get admin_partner_path(id: 'fake')
+    assert_redirected_to root_url
+    # new
+    get new_admin_partner_path
+    assert_redirected_to root_url
+    # edit
+    get edit_admin_partner_path(id: 'fake')
+    assert_redirected_to root_url
+    # create
+    post admin_partners_path
+    assert_redirected_to root_url
+    # update
+    patch admin_partner_path(id: 'fake')
+    assert_redirected_to root_url
+    put admin_partner_path(id: 'fake')
+    assert_redirected_to root_url
+    # destroy
+    delete admin_partner_path(id: 'fake')
+    assert_redirected_to root_url
   end
 
-  test "should show product" do
-    get product_url(@product)
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_product_url(@product)
-    assert_response :success
-  end
-
-  test "should update product" do
-    patch product_url(@product), params: { product: { name: @product.name } }
-    assert_redirected_to product_url(@product)
-  end
-
-  test "should destroy product" do
-    assert_difference('Product.count', -1) do
-      delete product_url(@product)
-    end
-
-    assert_redirected_to products_url
-  end
 end
