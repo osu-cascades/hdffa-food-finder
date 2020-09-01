@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_01_221810) do
+ActiveRecord::Schema.define(version: 2020_09_01_231716) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,6 +67,13 @@ ActiveRecord::Schema.define(version: 2020_09_01_221810) do
     t.string "hours_of_operation"
     t.string "keywords"
     t.index ["name"], name: "index_partners_on_name", unique: true
+  end
+
+  create_table "partners_products", id: false, force: :cascade do |t|
+    t.bigint "product_id", null: false
+    t.bigint "partner_id", null: false
+    t.index ["partner_id"], name: "index_partners_products_on_partner_id"
+    t.index ["product_id"], name: "index_partners_products_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|
