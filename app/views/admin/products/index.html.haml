@@ -1,21 +1,21 @@
-%h1 Listing products
+.subnav
+  .title
+    %h1 Products
+  .actions
+    = link_to 'New Product', new_admin_product_path, class: 'primary'
 
-%table
+%table.table
   %thead
     %tr
-      %th Name
+      %th product
+      %th 
       %th
       %th
-      %th
-
   %tbody
     - @products.each do |product|
       %tr
-        %td= product.name
-        %td= link_to 'Show', product
-        %td= link_to 'Edit', edit_product_path(product)
-        %td= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= link_to product.name, [:admin, product]
+        %td
+          = link_to 'Edit', edit_admin_partner_path(product), class: 'btn btn-sm btn-outline-primary'
+          = link_to 'Delete', [:admin, product], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger'
 
-%br
-
-= link_to 'New Product', new_product_path
