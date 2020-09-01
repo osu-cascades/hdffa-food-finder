@@ -1,43 +1,31 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
 class ProductsTest < ApplicationSystemTestCase
-  setup do
-    @product = products(:one)
-  end
 
-  test "visiting the index" do
+  test 'viewing a list of Products' do
     visit products_url
-    assert_selector "h1", text: "Products"
+    assert_text products(:one).name
   end
 
-  test "creating a Product" do
-    visit products_url
-    click_on "New Product"
-
-    fill_in "Name", with: @product.name
-    click_on "Create Product"
-
-    assert_text "Product was successfully created"
-    click_on "Back"
+  test 'viewing a Product' do
+    product = products(:one)
+    visit product_url(product)
+    assert_text product.name
   end
 
-  test "updating a Product" do
-    visit products_url
-    click_on "Edit", match: :first
+  # API
 
-    fill_in "Name", with: @product.name
-    click_on "Update Product"
-
-    assert_text "Product was successfully updated"
-    click_on "Back"
+  test 'retrieving a list of Product data' do
+    visit products_url(format: :json)
+    product_names = JSON.parse(page.body).collect { |p| p['name'] }
+    assert_includes(product_names, products(:one).name)
   end
 
-  test "destroying a Product" do
-    visit products_url
-    page.accept_confirm do
-      click_on "Destroy", match: :first
-    end
-
-    assert_text "Product was successfully destroyed"
+  test 'retrieving a Product\'s data' do
+    product = products(:one)
+    visit product_url(product, format: :json)
+    product_json = JSON.parse(page.body)
+    assert_equal(product.name, product_json['name'])
   end
+
 end
