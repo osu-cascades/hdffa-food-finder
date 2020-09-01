@@ -174,8 +174,6 @@ body.sessions.new, body.registrations.new, body.registrations.create {
 #map {
   height: 500px;
 }
-
-<<<<<<< HEAD
 @media only screen and (min-width: 200px) and (max-width: 500px){
   #map {
     height: 800px;
@@ -215,7 +213,8 @@ body.sessions.new, body.registrations.new, body.registrations.create {
   footer{
     display: none;
   }
-=======
+}
+
 @media 
 (max-width: 480px),
 (min-width: 481px) and (max-width: 767px), 
@@ -234,6 +233,5 @@ body.sessions.new, body.registrations.new, body.registrations.create {
 {
   #map { 
     height: 600px;
-  } 
->>>>>>> parent of 92fa66f... Revert "Add scss to modify map size depending on the devise, Add new meta tag for application layout."
+  }
 }
