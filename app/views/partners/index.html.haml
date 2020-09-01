@@ -8,16 +8,17 @@
       %th Longitude
       %th
   %tbody
-    - @providers.each do |provider|
+    - @partners.each do |partner|
       %tr
-        %td= link_to provider.name, provider
-        %td= provider.latitude
-        %td= provider.longitude
+        %td= link_to partner.name, partner
+        %td= partner.latitude
+        %td= partner.longitude
         %td
-          = link_to 'Details', provider_path(provider), class: 'btn btn-sm btn-outline-primary'
+          = link_to 'Details', partner_path(partner), class: 'btn btn-sm btn-outline-primary'
 
 :javascript
   var map = L.map('map').setView([44.0581700, -121.3153100], 13)
+  map.locate({setView: true, maxZoom: 16});
 
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
     {
@@ -31,13 +32,27 @@
     }
   ).addTo(map)
 
-  $.getJSON('/providers.json', (jsonData) => {
-    jsonData.forEach( (provider) => {
-      var latlon = L.latLng({lat: provider.latitude, lng: provider.longitude})
-      L.marker(latlon).bindPopup(provider.name).on('mouseover', function(e) {
+  $.getJSON('/partners.json', (jsonData) => {
+    jsonData.forEach( (partner) => {
+      var latlon = L.latLng({lat: partner.latitude, lng: partner.longitude})
+      L.marker(latlon).bindPopup(partner.name).on('mouseover', function(e) {
         this.openPopup()
       }).on('mouseout', function(e) {
         this.closePopup()
       }).addTo(map)
     })
   })
+
+  function onLocationFound(e) {
+    var radius = e.accuracy;
+
+    L.marker(e.latlng).addTo(map)
+        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+  }
+
+  function onLocationError(e) {
+    alert(e.message);
+  }
+
+  map.on('locationfound', onLocationFound);
+  map.on('locationerror', onLocationError);
