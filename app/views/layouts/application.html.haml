@@ -2,7 +2,11 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+<<<<<<< HEAD
     %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", :name => "viewport"}/
+=======
+    %meta{:content => "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1", :name => "viewport"}/
+>>>>>>> parent of 92fa66f... Revert "Add scss to modify map size depending on the devise, Add new meta tag for application layout."
     %title HDFFA Directory
     = csrf_meta_tags
     = csp_meta_tag
@@ -17,7 +21,7 @@
       #navbar
         %ul
           - if current_user&.admin?
-            %li= link_to 'Providers', admin_providers_path, class: 'nav-link'
+            %li= link_to 'Partners', admin_partners_path, class: 'nav-link'
             %li= link_to 'Categories', admin_categories_path, class: 'nav-link'
             %li= link_to 'Users', users_path, class: 'nav-link'
           - if user_signed_in?

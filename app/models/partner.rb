@@ -1,4 +1,4 @@
-class Provider < ApplicationRecord
+class Partner < ApplicationRecord
   phony_normalize :phone, default_country_code: 'US'
   has_one_attached :logo
   validates :name, presence: true, uniqueness: true

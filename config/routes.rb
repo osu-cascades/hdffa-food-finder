@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'providers#index'
+  root 'partners#index'
 
   # Users
   # Using Devise RegistrationsController for public user creation/registration.
@@ -12,11 +12,11 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :new, :create, :destroy]
   end
 
-  resources :providers, only: [:index, :show]
+  resources :partners, only: [:index, :show]
   resources :categories, only: [:index, :show]
 
   namespace :admin do
-    resources :providers
+    resources :partners
     resources :categories
   end
 
