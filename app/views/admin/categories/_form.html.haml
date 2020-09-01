@@ -8,8 +8,5 @@
   .form-group
     = f.label :name
     = f.text_field :name, class: 'form-control'
-  .form-group
-    = f.label :partners
-    = f.collection_check_boxes(:partner_ids, Partner.all, :id, :name)
   .actions
     = f.submit({class: 'form-control btn btn-success'})
