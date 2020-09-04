@@ -6,6 +6,11 @@ class CategoryTest < ActiveSupport::TestCase
     assert_respond_to(Category.new, :name)
   end
 
+  test 'Category has partners' do
+    assert_respond_to(Category.new, :partners)
+  end
+
+
   test 'Category without a name is invalid' do
     category = categories(:one)
     assert category.valid?
