@@ -6,6 +6,10 @@ class ProductTest < ActiveSupport::TestCase
     assert_respond_to(Product.new, :name)
   end
 
+  test 'Product has partners' do
+    assert_respond_to(Product.new, :partners)
+  end
+
   test 'Product without a name is invalid' do
     product = products(:one)
     assert product.valid?
