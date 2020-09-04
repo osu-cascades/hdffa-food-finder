@@ -2,21 +2,6 @@ require 'test_helper'
 
 class PartnerTest < ActiveSupport::TestCase
 
-  def new_partner
-    Partner.new(name: 'Fake',
-      latitude: 42,
-      longitude: 42,
-      street_address: 'Fake Address',
-      city: 'Fake City',
-      state: 'OR',
-      zip: '11111',
-      email: 'fake@example.com',
-      phone: '(541) 610-4403',
-      url: 'https://example.com',
-      hours_of_operation: 'Monday - Friday')
-
-  end
-
   test 'Partner has a name' do
     assert_respond_to(Partner.new, :name)
   end
@@ -69,8 +54,20 @@ class PartnerTest < ActiveSupport::TestCase
     assert_respond_to(Partner.new, :keywords)
   end
 
+  test 'Partner has categories' do
+    assert_respond_to(Partner.new, :categories)
+  end
+
+  test 'Partner has products' do
+    assert_respond_to(Partner.new, :products)
+  end
+
+  test 'Partner has logo' do
+    assert_respond_to(Partner.new, :logo)
+  end
+
   test 'Partner without a name is invalid' do
-    partner = new_partner
+    partner = partners(:one)
     assert partner.valid?
     partner.name = nil
     refute partner.valid?
@@ -85,21 +82,21 @@ class PartnerTest < ActiveSupport::TestCase
   end
 
   test 'Partner with an invalid email is invalid' do
-    partner = new_partner
+    partner = partners(:one)
     assert partner.valid?
     partner.email = 'Invalid'
     refute partner.valid?
   end
 
   test 'Partner has a valid phone number' do
-    partner = new_partner
+    partner = partners(:one)
     assert partner.valid?
     partner.phone = 'Invalid'
     refute partner.valid?
   end
 
   test 'Partner has a valid URL' do
-    partner = new_partner
+    partner = partners(:one)
     assert partner.valid?
     partner.url = 'Invalid'
     refute partner.valid?

@@ -7,7 +7,11 @@ one:
   zip: 11111
   latitude: 1
   longitude: -1
-  email: 'fake@example.com'
+  email: fake@example.com
+  phone: (541) 610-4403
+  url: https://example.com
+  hours_of_operation: Monday - Friday
+  keywords: alpha, beta, chi
 
 two:
   name: Second Fake Partner
@@ -18,4 +22,8 @@ two:
   zip: 22222
   latitude: 2
   longitude: -2
-  email: 'fake2@example.com'
+  email: fake2@example.com
+  phone: (541) 610-1656
+  url: https://example2.com
+  hours_of_operation: Monday - Friday
+  keywords: delta, epsilon, figma
