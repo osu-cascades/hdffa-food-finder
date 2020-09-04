@@ -8,15 +8,13 @@
   %thead
     %tr
       %th Name
-      %th Latitude
-      %th Longitude
+      %th
+      %th
       %th
   %tbody
     - @partners.each do |partner|
       %tr
         %td= link_to partner.name, [:admin, partner]
-        %td= partner.latitude
-        %td= partner.longitude
         %td
           = link_to 'Edit', edit_admin_partner_path(partner), class: 'btn btn-sm btn-outline-primary'
           = link_to 'Delete', [:admin, partner], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger'
