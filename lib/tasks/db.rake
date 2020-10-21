@@ -2,7 +2,7 @@ require 'json'
 
 namespace :db do
   desc "Import Partner values into database"
-  task import_ppartners: :environment do
+  task import_partners: :environment do
     json = JSON.parse(File.read('lib/assets/hdffa-app-export.json.txt'))
     ppartners = json['Partners']
     ppartners.each do |key, val|
@@ -14,7 +14,7 @@ namespace :db do
       if (phone.size < 10)
         phone = ''
       end
-      Ppartner.create!(name: key, 
+      Partner.create!(name: key, 
         latitude: val['Latitude'], 
         longitude: val['Longitude'], 
         description: val['Description'],
