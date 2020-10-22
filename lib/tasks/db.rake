@@ -4,8 +4,8 @@ namespace :db do
   desc "Import Partner values into database"
   task import_partners: :environment do
     json = JSON.parse(File.read('lib/assets/hdffa-app-export.json.txt'))
-    ppartners = json['Partners']
-    ppartners.each do |key, val|
+    partners = json['Partners']
+    partners.each do |key, val|
       website = val['Website']
       phone = val['Phone']
       if(!website.start_with?("https"))
