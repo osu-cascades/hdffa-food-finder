@@ -4,15 +4,15 @@
   %thead
     %tr
       %th Name
-      %th Latitude
-      %th Longitude
+      %th Categories
+      %th Products
       %th
   %tbody
     - @partners.each do |partner|
       %tr
         %td= link_to partner.name, partner
-        %td= partner.latitude
-        %td= partner.longitude
+        %td= partner.categories
+        %td= partner.products
         %td
           = link_to 'Details', partner_path(partner), class: 'btn btn-sm btn-outline-primary'
 
