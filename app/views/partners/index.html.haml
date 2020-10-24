@@ -11,8 +11,8 @@
     - @partners.each do |partner|
       %tr
         %td= link_to partner.name, partner
-        %td= partner.categories
-        %td= partner.products
+        %td= partner.categories.name
+        %td= partner.products.name
         %td
           = link_to 'Details', partner_path(partner), class: 'btn btn-sm btn-outline-primary'
 
