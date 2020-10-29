@@ -20,6 +20,7 @@ namespace :db do
         category.partners << partner
       end
       Partner.create!(
+        catrgories: [category]
         name: key, 
         latitude: val['Latitude'], 
         longitude: val['Longitude'], 
