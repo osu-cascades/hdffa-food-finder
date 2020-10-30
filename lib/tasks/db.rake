@@ -14,7 +14,8 @@ namespace :db do
       if (phone.size < 10)
         phone = ''
       end
-      Partner.create!(name: key, 
+      partner = Partner.create!(
+        name: key, 
         latitude: val['Latitude'], 
         longitude: val['Longitude'], 
         description: val['Description'],
@@ -28,6 +29,11 @@ namespace :db do
         hours_of_operation: val['Hours of Operation: Dates and times'],
         keywords: val['Search Terms']
       )
+      category_name = val['Category']
+      unless category_name.blank?
+        category = Category.find_or_create_by(name: category_name)
+        category.partners << partner
+      end
     end
   end
 end
