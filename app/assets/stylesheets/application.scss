@@ -180,9 +180,6 @@ body.sessions.new, body.registrations.new, body.registrations.create {
     height: 800px;
     overflow: show;
   }
-  table#partners {
-    display: none;
-  }
   .container, main {
     padding:0;
     margin:0;
@@ -207,9 +204,6 @@ body.sessions.new, body.registrations.new, body.registrations.create {
   body {
     padding-top: 0%;
     margin-bottom: 0%;
-  }
-  table#partners  {
-    display: none;
   }
   footer {
     display: none;
