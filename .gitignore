@@ -33,3 +33,5 @@
 .env
 .ruby-gemset
 .ruby-version
+
+.vscode/
