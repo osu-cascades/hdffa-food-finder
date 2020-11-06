@@ -27,12 +27,20 @@ namespace :db do
         phone: phone,
         url: website.downcase!,
         hours_of_operation: val['Hours of Operation: Dates and times'],
-        keywords: val['Search Terms']
+        # products: val['Products']
       )
       category_name = val['Category']
       unless category_name.blank?
         category = Category.find_or_create_by(name: category_name)
         category.partners << partner
+      end
+
+      product_names = val['Products'].to_s().split(",")
+      product_names.each do |product_name|
+        unless product_name.blank?
+          product = Product.find_or_create_by(name: product_name)
+          product.partners << partner
+        end
       end
     end
   end
