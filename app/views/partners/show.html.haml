@@ -24,11 +24,13 @@
       %dt.col-sm-3 Hours Of Operation
       %dd.col-sm-9= @partner.hours_of_operation
       %dt.col-sm-3 Categories
-      - @partner.categories.each do |category|
-        %dd.col-sm-9= category.name 
+      %dd.col-sm-9
+        - @partner.categories.each do |category|
+          .row= category.name 
       %dt.col-sm-3 Products
-      - @partner.products.each do |product|
-        %dd.col-sm-9= product.name 
+      %dd.col-sm-9
+        - @partner.products.each do |product|
+          .row= product.name 
       %dt.col-sm-3 Latitude
       %dd.col-sm-9= @partner.latitude
       %dt.col-sm-3 Longitude
