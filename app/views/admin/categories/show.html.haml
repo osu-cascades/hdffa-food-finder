@@ -10,5 +10,9 @@
     %tr
       %th Partners
       %th
- 
+  %tbody
+    - @category.partners.each do |partner|
+      %tr
+        %td= link_to partner.name, [:admin, partner]
+        %td
   
