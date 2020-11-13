@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 8d9c5953ba7cb12cc2eb792315bebaa5486fe373 Marji712 <marji712@gmail.com> 1604614346 -0800	branch: Created from master
+8d9c5953ba7cb12cc2eb792315bebaa5486fe373 96b49e861af64c76d2092015f420029472152f1c Marji712 <marji712@gmail.com> 1604614404 -0800	commit: Remove AWS items from .env.example
+96b49e861af64c76d2092015f420029472152f1c 96b49e861af64c76d2092015f420029472152f1c Marji712 <marji712@gmail.com> 1604614533 -0800	Branch: renamed refs/heads/61_update_env_example to refs/heads/64_update_env_example
