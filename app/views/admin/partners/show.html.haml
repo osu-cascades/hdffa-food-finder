@@ -34,13 +34,10 @@
       %dd.col-sm-9
         - @partner.products.each do |product|
           .row-sm-9= product.name
-      %dt.col-sm-3 Latitude
-      %dd.col-sm-9= @partner.latitude
-      %dt.col-sm-3 Longitude
-      %dd.col-sm-9= @partner.longitude
+
   .col-6
     %dl.row
       .text-center= image_tag(@partner.logo) if @partner.logo.attached?
     %dl.row
       %dt.col-sm-3 Notes
-      %dd.col-sm-9 Notefield
+      %dd.col-sm-9= @partner.notes
