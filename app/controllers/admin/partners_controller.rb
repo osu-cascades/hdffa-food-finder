@@ -33,6 +33,14 @@ class Admin::PartnersController < ApplicationController
 
   def update
     @partner = Partner.find(params[:id])
+
+    #@products = Product.find_by(@partner.product_ids)
+    @partner.products << Product.find(@partner.product_ids)    
+    #@partner.product_ids.each {|product_id|
+    #    puts @partner.products << Product.find(1)
+    #}
+
+
     respond_to do |format|
       if @partner.update(partner_params)
         format.html { redirect_to [:admin, @partner], notice: 'Partner was successfully updated.' }
@@ -57,7 +65,7 @@ class Admin::PartnersController < ApplicationController
 
     def partner_params
       params.require(:partner).permit(:name, :longitude, :latitude, :description,
-        :street_address, :city, :state, :zip, :email, :logo, :description)
+        :street_address, :city, :state, :zip, :email, :phone, :logo, :product, :email, :description)
     end
 
 end

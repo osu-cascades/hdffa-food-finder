@@ -32,5 +32,7 @@
       %dd.col-sm-9= @partner.latitude
       %dt.col-sm-3 Longitude
       %dd.col-sm-9= @partner.longitude
+      %dt.col-sm-3 Products
+      %dd.col-sm-9= @partner.products.all
   .col-6
     .text-center= image_tag(@partner.logo) if @partner.logo.attached?
