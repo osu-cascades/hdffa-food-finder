@@ -26,13 +26,18 @@
       %dd.col-sm-9= link_to "#{@partner.url}", @partner.url
       %dt.col-sm-3 Hours Of Operation
       %dd.col-sm-9= @partner.hours_of_operation
-      %dt.col-sm-3 Keywords
-      %dd.col-sm-9= @partner.keywords
-      %dt.col-sm-3 Latitude
-      %dd.col-sm-9= @partner.latitude
-      %dt.col-sm-3 Longitude
-      %dd.col-sm-9= @partner.longitude
+      %dt.col-sm-3 Categories
+      %dd.col-sm-9
+        - @partner.categories.each do |category|
+          .row-sm-9= category.name 
       %dt.col-sm-3 Products
-      %dd.col-sm-9= @partner.products.all
+      %dd.col-sm-9
+        - @partner.products.each do |product|
+          .row-sm-9= product.name
+
   .col-6
-    .text-center= image_tag(@partner.logo) if @partner.logo.attached?
+    %dl.row
+      .text-center= image_tag(@partner.logo) if @partner.logo.attached?
+    %dl.row
+      %dt.col-sm-3 Notes
+      %dd.col-sm-9= @partner.notes
