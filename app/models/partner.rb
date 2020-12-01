@@ -12,6 +12,10 @@ class Partner < ApplicationRecord
     message: "must be an http or https URL"},
     allow_blank: true
 
+  def remove_all_products
+      self.products.clear
+  end
+
   def to_s
     name
   end

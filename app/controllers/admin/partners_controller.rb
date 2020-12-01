@@ -33,9 +33,14 @@ class Admin::PartnersController < ApplicationController
 
   def update
     @partner = Partner.find(params[:id])
+    product_ids = params[:partner][:product_ids]
+    @partner.remove_all_products
+    product_ids.each do |product_id|
+      @partner.products << Product.find(product_id)
+    end
 
     #@products = Product.find_by(@partner.product_ids)
-    @partner.products << Product.find(@partner.product_ids)    
+    #@partner.products << Product.find(@partner.product_ids)    
     #@partner.product_ids.each {|product_id|
     #    puts @partner.products << Product.find(1)
     #}
