@@ -170,15 +170,16 @@ body.sessions.new, body.registrations.new, body.registrations.create {
   }
 }
 
-
+/*Default map height*/
 #map {
   height: 500px;
 }
 
-@media only screen and (min-width: 200px) and (max-width: 500px) {
+/*iPhone browser 375 x 667 (iPhone 8*/
+@media only screen and (min-width: 375px) and (max-width: 667px) {
   #map {
-    height: 800px;
-    overflow: show;
+    height: 100%;
+    overflow: auto;
   }
   .container, main {
     padding:0;

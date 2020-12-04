@@ -57,7 +57,8 @@ class Admin::PartnersController < ApplicationController
 
     def partner_params
       params.require(:partner).permit(:name, :longitude, :latitude, :description,
-        :street_address, :city, :state, :zip, :email, :logo, :description)
+        :street_address, :city, :state, :zip, :email, :phone, :url, :logo, :email, :description,
+        :hours_of_operation, :keywords, product_ids: [], category_ids: [])
     end
 
 end
