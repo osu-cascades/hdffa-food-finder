@@ -54,4 +54,7 @@
     = f.label :categories
     = f.collection_check_boxes(:category_ids, Category.all, :id, :name)
   .form-group
+    = f.label :notes
+    = f.text_area :notes, class: 'form-control', rows: 10
+  .form-group
     = f.submit({class: 'form-control btn btn-success'})

@@ -1,5 +1,9 @@
 class Admin::NotesController < ApplicationController
 
+  def index
+    @notes = Note.all
+  end
+  
   def show
     @note = Note.find(params[:id])
     respond_to do |format|
