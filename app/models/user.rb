@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :notes
   devise :database_authenticatable, :registerable, :trackable, :recoverable,
          :rememberable, :validatable
 

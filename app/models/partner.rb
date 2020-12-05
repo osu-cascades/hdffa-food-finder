@@ -1,7 +1,7 @@
 class Partner < ApplicationRecord
   has_and_belongs_to_many :categories
   has_and_belongs_to_many :products
-  has_and_belongs_to_many :notes
+  has_many :notes
   phony_normalize :phone, default_country_code: 'US'
   has_one_attached :logo
   validates :name, presence: true, uniqueness: true
