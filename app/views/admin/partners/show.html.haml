@@ -40,4 +40,6 @@
       .text-center= image_tag(@partner.logo) if @partner.logo.attached?
     %dl.row
       %dt.col-sm-3 Notes
-      %dd.col-sm-9= @partner.notes
+      %dd.col-sm-9
+        - @partner.notes.each do |note|
+          .row-sm-9= note.title
