@@ -1,9 +1,11 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  title: MyString
-  body: MyBody
+  title: First Note Title
+  body: First Note Body
+  partner: one
+  user: admin
 
 two:
-  title: MyString
-  body: MyBody
+  title: Second Note Title
+  body: Second Note Body
+  partner: two
+  user: admin

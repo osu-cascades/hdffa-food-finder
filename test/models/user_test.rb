@@ -70,5 +70,9 @@ class UserTest < ActiveSupport::TestCase
     assert_equal original_full_name, u.name_was
   end
 
+  test 'has notes' do
+    assert_respond_to(User.new, :notes)
+  end
+
 
 end
