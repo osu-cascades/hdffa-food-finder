@@ -42,7 +42,20 @@
       %dt.col-sm-3 Notes
       %dd.col-sm-9
         - @partner.notes.each do |note|
-          .row-sm-9= note.created_at
-          .row-sm-9= note.title
+          .row-sm-9= note.created_at 
+          .row-sm-9= note.title        
           .row-sm-9= note.body
+
+
+        = form_for [:admin, @partner, Note.new] do |f|
+          .form-group
+            = f.label :title
+            = f.text_field :title, class: 'form-control'
+          .form-group
+            = f.text_area :body, class: 'form-control', rows: 8 
+          .form-group
+            = f.submit({class: 'form-control btn btn-success'})
+
+
+
 
