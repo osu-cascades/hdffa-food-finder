@@ -1,5 +1,5 @@
 class Admin::NotesController < ApplicationController
-    before_action :restrict_unless_admin
+    # before_action :restrict_unless_admin
 
 
     def index
@@ -30,8 +30,8 @@ class Admin::NotesController < ApplicationController
 
     def create
       @partner = Partner.find(params[:partner_id])
-      @note = Note.new(note_params)
-      # @note = @partner.notes.build(note_params)
+      # @note = Note.new(note_params)
+      @note = @partner.notes.build(note_params)
       respond_to do |format|
         if @note.save
           format.html { redirect_to [:admin, @partner], notice: 'Note was successfully created.' }

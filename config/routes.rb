@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :partners do
-      resources :notes
+      resources :notes 
     end
     resources :categories
     resources :products
