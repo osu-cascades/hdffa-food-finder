@@ -32,6 +32,8 @@ class Admin::NotesController < ApplicationController
       @partner = Partner.find(params[:partner_id])
       # @note = Note.new(note_params)
       @note = @partner.notes.build(note_params)
+      @note.user_id = current_user.id
+
       respond_to do |format|
         if @note.save
           format.html { redirect_to [:admin, @partner], notice: 'Note was successfully created.' }

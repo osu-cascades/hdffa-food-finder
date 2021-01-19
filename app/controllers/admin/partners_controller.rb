@@ -3,6 +3,7 @@ class Admin::PartnersController < ApplicationController
 
   def index
     @partners = Partner.all
+    @note = Partner.notes
   end
 
   def show
