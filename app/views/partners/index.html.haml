@@ -15,7 +15,7 @@
         %td= partner.products.name
         %td
           = link_to 'Details', partner_path(partner), class: 'btn btn-sm btn-outline-primary'
-
+<!--
 :javascript
   var map = L.map('map').setView([44.0581700, -121.3153100], 13)
   map.locate({setView: true, maxZoom: 16});
@@ -56,3 +56,4 @@
 
   map.on('locationfound', onLocationFound);
   map.on('locationerror', onLocationError);
+  -->
