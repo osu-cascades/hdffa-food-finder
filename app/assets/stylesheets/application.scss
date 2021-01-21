@@ -19,8 +19,9 @@ nav#main {
   @extend .navbar;
   @extend .navbar-expand-md;
   @extend .navbar-dark;
-  @extend .bg-dark;
+  /*@extend .bg-dark;*/
   @extend .fixed-top;
+  background-color: #2C7D3D;
   .logo {
     height: 72px;
   }
