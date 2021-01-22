@@ -13,6 +13,22 @@ html {
 body {
   padding-top: 10rem;
   margin-bottom: 60px;
+  background-image: url('/assets/cow_background.jpg');
+
+  background-size: cover;
+}
+
+.bg {
+  /* The image used */
+  background-image: "../../../assets/images/cow_background.jpg";
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 nav#main {
