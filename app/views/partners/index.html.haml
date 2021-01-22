@@ -1,5 +1,10 @@
 <!-- #map -->
 
+%div{:style => "height: 500px"}
+  %strong{:class => "large-white-text", :style => "position: absolute; left: 810px; top: 255px;"}Find Partners
+  %input{:class => "form-control", :placeholder => "Get moo'vin", :type=>"text", :required => true, :style => "height: 40px; border-radius: 20px; width: 300px; position: absolute; left: 800px; top: 300px;"}
+
+<!--
 %table#partners.table.mt-5
   %thead
     %tr
@@ -15,7 +20,7 @@
         %td= partner.products.name
         %td
           = link_to 'Details', partner_path(partner), class: 'btn btn-sm btn-outline-primary'
-<!--
+
 :javascript
   var map = L.map('map').setView([44.0581700, -121.3153100], 13)
   map.locate({setView: true, maxZoom: 16});
