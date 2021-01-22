@@ -18,19 +18,6 @@ body {
   background-size: cover;
 }
 
-.bg {
-  /* The image used */
-  background-image: "../../../assets/images/cow_background.jpg";
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 nav#main {
   @extend .navbar;
   @extend .navbar-expand-md;
@@ -123,6 +110,12 @@ footer {
     margin-top: 1rem;
     width: auto;
   }
+}
+
+.large-white {
+  color: #F0F0F0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
 
 /* Authentication */
