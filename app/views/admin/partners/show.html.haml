@@ -41,8 +41,7 @@
       .text-center= image_tag(@partner.logo) if @partner.logo.attached?
     %dl.row
       %dt.col-sm-3 Notes
-      %dd.col-sm-3 
-        = button_tag "+", id: "notebutton", class: 'primary'  
+      -#%dd.col-sm-3         
         -#Marji button that looked prettier          
         -#%a.button{:href => "", class: 'add-btn'} +
 
@@ -50,18 +49,19 @@
         - @partner.notes.each do |note|
           %strong= note.title
           %body= date_time(note) 
-          .actions= link_to 'View Body', "note-body" => "#{note.body}" 
-
-      #notesform
-        = form_for [:admin, @partner, Note.new] do |f|
-          .form-group
-            = f.label :title
-            = f.text_field :title, class: 'form-control'
-          .form-group
-            = f.text_area :body, class: 'form-control', rows: 8 
-          .form-group
-            = f.submit({class: 'form-control btn btn-success'})
-            = button_tag 'Submit', type: 'submit', class: "btn btn-primary"
+          .actions= link_to 'View Body', "note-body" => "#{note.body}"        
+        = button_tag "+", id: "notebutton", class: 'primary' 
+      
+        #notesform
+          = form_for [:admin, @partner, Note.new] do |f|
+            .form-group
+              = f.label :title
+              = f.text_field :title, class: 'form-control'
+            .form-group
+              = f.text_area :body, class: 'form-control', rows: 8 
+            .form-group
+              = f.submit({class: 'form-control btn btn-success'})
+              -#= button_tag 'Submit', type: 'submit', class: "btn btn-primary"
             
 
 
