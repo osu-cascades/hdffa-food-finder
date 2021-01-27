@@ -42,14 +42,17 @@
     %dl.row
       %dt.col-sm-3 Notes
       %dd.col-sm-3 
-        %a.button{:href => "", class: 'add-btn'} +
+        = button_tag "+", id: "notebutton", class: 'primary'  
+        -#Marji button that looked prettier          
+        -#%a.button{:href => "", class: 'add-btn'} +
+
       %dd.col-sm-9
         - @partner.notes.each do |note|
           %strong= note.title
-          %body= date_time(note)             
+          %body= date_time(note) 
           .actions= link_to 'View Body', "note-body" => "#{note.body}" 
 
-
+      #notesform
         = form_for [:admin, @partner, Note.new] do |f|
           .form-group
             = f.label :title
@@ -58,9 +61,8 @@
             = f.text_area :body, class: 'form-control', rows: 8 
           .form-group
             = f.submit({class: 'form-control btn btn-success'})
-
-
-
+            = button_tag 'Submit', type: 'submit', class: "btn btn-primary"
+            
 
 
 

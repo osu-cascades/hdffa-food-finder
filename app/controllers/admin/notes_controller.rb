@@ -32,7 +32,8 @@ class Admin::NotesController < ApplicationController
       @partner = Partner.find(params[:partner_id])
       # @note = Note.new(note_params)
       @note = @partner.notes.build(note_params)
-      @note.user_id = current_user.id
+      #@note.user_id = current_user.id
+      @note.user = current_user
 
       respond_to do |format|
         if @note.save
