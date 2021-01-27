@@ -18,3 +18,10 @@
 //= require turbolinks
 //= require_tree .
 //= require leaflet
+
+$(document).on("click","#notebutton",function(){
+    $(notesform).show();
+  });
+
+
+
