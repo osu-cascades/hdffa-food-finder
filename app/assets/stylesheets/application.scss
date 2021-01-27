@@ -257,4 +257,9 @@ a.add-btn:hover {
 
 #notesform {
   display:none;
+  border-style: solid;
+  border-width: thin;
+  border-color: grey;
+  box-sizing: border-box;
+  padding: 20px;
 }
