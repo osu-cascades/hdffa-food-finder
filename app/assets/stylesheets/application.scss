@@ -239,18 +239,13 @@ body.sessions.new, body.registrations.new, body.registrations.create {
   }
 }
 
-.add-btn {
+#notebutton {
   background-color: #4CAF50;
   color: white;
   padding: 10px;
   text-align: center;
   font-weight: bold;
   border-radius: 20px;
-}
-
-a.add-btn:hover {
-  color: white;
-  text-decoration: none;
 }
 
 #notesform {
