@@ -3,7 +3,7 @@ class Admin::NotesController < ApplicationController
 
 
     def index
-      @notes = Note.all
+      @notes = Note.all.order("created_at DESC")
     end
     
     def show
