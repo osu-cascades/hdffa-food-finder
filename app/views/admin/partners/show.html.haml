@@ -41,15 +41,14 @@
       .text-center= image_tag(@partner.logo) if @partner.logo.attached?
     %dl.row
       %dt.col-sm-3 Notes
-      -#%dd.col-sm-3         
-        -#Marji button that looked prettier          
-        -#%a.button{:href => "", class: 'add-btn'} +
 
       %dd.col-sm-9
         - @partner.notes.each do |note|
           %strong= note.title
           %body= date_time(note) 
-          .actions= link_to 'View Body', "note-body" => "#{note.body}"        
+          / .actions= link_to 'View Body', "note-body" => "#{note.body}"  
+          %dl.row{:id => "bodybutton"}View Body
+          %dl.row.a{:id => "notebody"}#{note.body} 
         = button_tag "+", id: "notebutton", class: 'primary' 
       
         #notesform

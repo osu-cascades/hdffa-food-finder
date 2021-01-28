@@ -248,6 +248,17 @@ body.sessions.new, body.registrations.new, body.registrations.create {
   border-radius: 20px;
 }
 
+#bodybutton {
+  color: #4CAF50;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#bodybutton:hover {
+  cursor: pointer;
+}
+
 #notesform {
   display:none;
   border-style: solid;
@@ -255,4 +266,8 @@ body.sessions.new, body.registrations.new, body.registrations.create {
   border-color: grey;
   box-sizing: border-box;
   padding: 20px;
+}
+
+#notebody {
+  display: none;
 }
