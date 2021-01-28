@@ -4,6 +4,7 @@
  *= require leaflet
  */
 @import "bootstrap";
+$hdffa-green: #2C7D3D;
 
 html {
   position: relative;
@@ -13,9 +14,6 @@ html {
 body {
   padding-top: 10rem;
   margin-bottom: 60px;
-  background-image: url('/assets/cow_background.jpg');
-
-  background-size: cover;
 }
 
 nav#main {
@@ -24,7 +22,7 @@ nav#main {
   @extend .navbar-dark;
   /*@extend .bg-dark;*/
   @extend .fixed-top;
-  background-color: #2C7D3D;
+  background-color: $hdffa-green;
   .logo {
     height: 72px;
   }
