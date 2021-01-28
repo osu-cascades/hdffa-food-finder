@@ -20,8 +20,10 @@
 //= require leaflet
 
 $(document).on("click","#notebutton",function(){
-    $(notesform).show();
+    $(notesform).toggle();
   });
 
-
+$(document).on("click","#bodybutton",function(){
+    $(this).next("dl").toggle();
+  });
 
