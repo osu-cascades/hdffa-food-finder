@@ -16,9 +16,41 @@ body {
   margin-bottom: 60px;
 }
 
-.space-right {
+.space-left {
     width: 65%;
     float: left;
+}
+
+.space-center {
+  width: 35%; float: right;
+}
+
+.space-right {
+  width: 0%;
+  float: right;
+}
+
+.form-control {
+  width: 20%;
+}
+
+.large-white-text {
+  color: #F0F0F0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:2vw;
+}
+
+@media (max-width: 800px) {
+  .space-center {
+    width: 90%; 
+    float: right;
+  }
+  .form-control {
+    width: 70%;
+  }
+  .large-white-text {
+    font-size: 4vw;
+  }
 }
 
 nav#main {
@@ -113,12 +145,6 @@ footer {
     margin-top: 1rem;
     width: auto;
   }
-}
-
-.large-white-text {
-  color: #F0F0F0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size:2vw;
 }
 
 /* Authentication */
