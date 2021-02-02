@@ -20,7 +20,6 @@ nav#main {
   @extend .navbar;
   @extend .navbar-expand-md;
   @extend .navbar-dark;
-  /*@extend .bg-dark;*/
   @extend .fixed-top;
   background-color: $hdffa-green;
   .logo {
