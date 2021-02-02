@@ -16,6 +16,11 @@ body {
   margin-bottom: 60px;
 }
 
+.space-right {
+    width: 65%;
+    float: left;
+}
+
 nav#main {
   @extend .navbar;
   @extend .navbar-expand-md;
@@ -113,7 +118,7 @@ footer {
 .large-white-text {
   color: #F0F0F0;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
+  font-size:2vw;
 }
 
 /* Authentication */
