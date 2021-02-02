@@ -53,6 +53,12 @@ body {
   }
 }
 
+@media (max-width: 350px) {
+  .large-white-text {
+    font-size: 7vw;
+  }
+}
+
 nav#main {
   @extend .navbar;
   @extend .navbar-expand-md;
