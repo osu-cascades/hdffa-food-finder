@@ -238,7 +238,7 @@ body.sessions.new, body.registrations.new, body.registrations.create {
   }
 }
 
-.add-btn {
+#notebutton {
   background-color: #4CAF50;
   color: white;
   padding: 10px;
@@ -247,9 +247,15 @@ body.sessions.new, body.registrations.new, body.registrations.create {
   border-radius: 20px;
 }
 
-a.add-btn:hover {
-  color: white;
-  text-decoration: none;
+#bodybutton {
+  color: #4CAF50;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#bodybutton:hover {
+  cursor: pointer;
 }
 
 #notesform {
@@ -259,4 +265,8 @@ a.add-btn:hover {
   border-color: grey;
   box-sizing: border-box;
   padding: 20px;
+}
+
+#notebody {
+  display: none;
 }
