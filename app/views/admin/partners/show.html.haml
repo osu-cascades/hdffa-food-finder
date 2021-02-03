@@ -49,6 +49,7 @@
           / .actions= link_to 'View Body', "note-body" => "#{note.body}"  
           %dl.row{:id => "bodybutton"}View Body
           %dl.row.a{:id => "notebody"}#{note.body} 
+          %dl.row.actions= link_to "Delete Note", @note, id: "notedelete", class: "btn btn-primary", method: :delete, data: { confirm: "This note will be permanently deleted, press OK to confirm" }
         = button_tag "+", id: "notebutton", class: 'primary' 
       
         #notesform
