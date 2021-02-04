@@ -10,7 +10,7 @@ class PartnersController < ApplicationController
   end
 
   def search
-    @partner = Partner.where("title LIKE ?","%" + params[:q] + "%")
+    @partner = Partner.where("name LIKE ?","%" + params[:q] + "%")
   end
-  
+
 end
