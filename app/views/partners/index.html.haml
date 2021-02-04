@@ -8,7 +8,10 @@
       %form{:action=>"/search"}
         %input{:class => "form-control front", :placeholder=>"Get moo'vin", :name=>"q", :style => "height: 40px; border-radius: 20px; position: absolute; top: 300px;"}
       %div{:class=>"card", :style => "position: absolute; top: 360px; width: 15rem;"}
-        = render @notes || "show"
+        %ul{:class=>"list-group list-group-flush", :style=>"border: 1px;"}
+          %li{:class => "list-group-item"}= render @notes || "show"
+          %li{:class => "list-group-item"}= render @notes || "show"
+          %li{:class => "list-group-item"}= render @notes || "show"
     %div{:class => "space-right"}
 
 <!-- OLD MAP CODE
