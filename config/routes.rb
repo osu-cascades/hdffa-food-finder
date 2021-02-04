@@ -24,4 +24,6 @@ Rails.application.routes.draw do
     resources :products
   end
 
+  get 'search', to: "partners#search"
+
 end
