@@ -10,7 +10,11 @@
   %tbody
     - @notes.each do |note|
       %tr
-        %td= link_to note.title, [:admin, note]
+        %td= date_time(note) 
         %td
         %td= link_to note.user, [:admin, note]
         %td
+        %td= link_to note.title, [:admin, note]
+        %td
+
+
