@@ -5,16 +5,18 @@
 %table.table
   %thead
     %tr
-      %th Notes
-      %th
+      %th Date
+      %th User
+      %th Partner
+      %th Title
+      %th Body
   %tbody
     - @notes.each do |note|
       %tr
-        %td= date_time(note) 
-        %td
+        %td= date_time(note)
         %td= link_to note.user, [:admin, note]
-        %td
+        %td= link_to note.partner, [:admin, note]
         %td= link_to note.title, [:admin, note]
-        %td
+        %td= truncate(note.body, :length => 10) 
 
 

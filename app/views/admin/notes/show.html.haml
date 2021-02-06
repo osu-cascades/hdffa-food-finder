@@ -1,0 +1,15 @@
+.subnav
+  .title
+    %h1= @note.title
+    %p= "Created By:" 
+    %h3= @note.user
+  .actions
+    = link_to 'Delete', [:admin, @note], method: :delete, data: { confirm: 'Are you sure?' }, class: 'danger'
+    = link_to 'Edit', edit_admin_note_path(@note), class: 'primary'
+%table.table
+  %thead
+    %tr       
+      %td= @note.partner
+      %td= @note.user
+
+  %tbody

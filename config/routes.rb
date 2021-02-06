@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :partners, only: [:index, :show]
   resources :categories, only: [:index, :show]
   resources :products, only: [:index, :show]
+  resources :notes, only: [:index, :show]
 
   namespace :admin do
     resources :partners do

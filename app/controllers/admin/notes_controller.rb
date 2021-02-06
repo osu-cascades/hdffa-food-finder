@@ -73,7 +73,7 @@ class Admin::NotesController < ApplicationController
     private
 
       def note_params
-        params.require(:note).permit(:title, :body)
+        params.require(:note).permit(:title, :body, :user, :partner_id)
       end
 
   end
