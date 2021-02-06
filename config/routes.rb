@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     end
     resources :categories
     resources :products
+    resources :notes
   end
 
   get 'search', to: "partners#search"

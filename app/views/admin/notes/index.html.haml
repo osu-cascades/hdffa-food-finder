@@ -1,3 +1,14 @@
 .subnav
   .title
-    %h1= @note.body
+    %h1 Notes
+
+%table.table
+  %thead
+    %tr
+      %th Notes
+      %th
+  %tbody
+    - @notes.each do |note|
+      %tr
+        %td= link_to note.title, [:admin, note]
+        %td
