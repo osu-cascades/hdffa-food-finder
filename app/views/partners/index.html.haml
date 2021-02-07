@@ -5,11 +5,15 @@
     %div{:class => "space-left"}
     %div{:class => "space-center"}
       %strong{:class => "large-white-text", :style => "position: absolute; top: 255px;"}Find Partners
-      %input{:class => "form-control", :style => "height: 40px; border-radius: 20px; position: absolute; top: 300px;"}
+      %form{:action=>"/search"}
+        %input{:class => "form-control front", :placeholder=>"Get moo'vin", :name=>"q", :style => "height: 40px; border-radius: 20px; position: absolute; top: 300px;"}
+      %div{:class=>"card", :style => "position: absolute; top: 360px; width: 15rem;"}
+        %ul{:class=>"list-group list-group-flush", :style=>"border: 1px;"}
+          %li{:class => "list-group-item"}= render @notes || "show"
+          %li{:class => "list-group-item"}= render @notes || "show"
+          %li{:class => "list-group-item"}= render @notes || "show"
     %div{:class => "space-right"}
-      //= form_with url: "/search", method: :get do |form| form.text_field :query end
-      //, :style => "position: absolute; left: 810px; top: 255px;"
-      //, :style => "height: 40px; border-radius: 20px; width: 300px; position: absolute; left: 800px; top: 300px;"
+
 <!-- OLD MAP CODE
 %table#partners.table.mt-5
   %thead
