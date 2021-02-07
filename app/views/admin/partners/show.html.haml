@@ -49,6 +49,7 @@
           / .actions= link_to 'View Body', "note-body" => "#{note.body}"  
           %dl.row{:id => "bodybutton"}View Body
           %dl.row.a{:id => "notebody"}#{note.body} 
+          / %dl.row.actions= link_to "Delete Note", [:admin, @partner, Note.delete(note.id)], id: "notedelete", class: "btn btn-primary", data: { confirm: "Are you sure?" }
         = button_tag "+", id: "notebutton", class: 'primary' 
       
         #notesform
@@ -61,7 +62,4 @@
             .form-group
               = f.submit({class: 'form-control btn btn-success'})
               -#= button_tag 'Submit', type: 'submit', class: "btn btn-primary"
-            
-
-
 

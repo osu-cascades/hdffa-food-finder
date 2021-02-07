@@ -24,6 +24,8 @@ $(document).on("click","#notebutton",function(){
   });
 
 $(document).on("click","#bodybutton",function(){
-    $(this).next("dl").toggle();
+    $("#notebody").toggle();
+    $("#notedelete").toggle();
+
   });
 
