@@ -48,15 +48,15 @@ class Admin::NotesController < ApplicationController
     end
 
     def update
-      @partner = Partner.find(@note.partner_id)
       @note = Note.find(params[:id])
+      @partner = Partner.find(@note.partner_id)
       @note.user = current_user
       respond_to do |format|
-        if @note.update_attributes(params[:note])
+        if @note.update_attributes(note_params)
           format.html { redirect_to [:admin, @partner], notice: 'Note was successfully updated.' }
           format.json { head :no_content }
         else
-          format.html { render action: "edit" }
+          format.html { render action: :edit}
           format.json { render json: @note.errors, status: :unprocessable_entity }
         end
       end
