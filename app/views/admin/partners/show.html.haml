@@ -44,8 +44,8 @@
 
       %dd.col-sm-9
         - @partner.notes.each do |note|
-          %strong= note.title
           %body= date_time(note) 
+          %td= link_to note.title, [:admin, note]
           / .actions= link_to 'View Body', "note-body" => "#{note.body}"  
           %dl.row{:id => "bodybutton"}View Body
           %dl.row.a{:id => "notebody"}#{note.body} 
