@@ -71,11 +71,6 @@ class Admin::NotesController < ApplicationController
       end
     end
 
-    # def show_images
-    #   @note = Note.find(params[:id])
-    #   send_data @note.images, :type => 'image/png', :disposition => 'inline'
-    # end
-
     private
 
       def note_params

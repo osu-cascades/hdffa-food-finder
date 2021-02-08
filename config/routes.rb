@@ -27,5 +27,4 @@ Rails.application.routes.draw do
   end
 
   get 'search', to: "partners#search"
-  get 'show_images', to: "admin/notes#show_images" #show_images_path	
 end
