@@ -10,4 +10,11 @@
   %thead
     %tr       
       %td= @note.body
-  %tbody
+      %td
+      %td
+      %td
+%tbody
+  -if @note.images.attached?
+    -@note.images.each do |image| 
+      =image_tag image, class: 'note_image' 
+

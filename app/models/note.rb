@@ -4,6 +4,9 @@ class Note < ApplicationRecord
 	belongs_to :partner
 	belongs_to :user
 
+  # has_one_attached :image
+  has_many_attached :images
+
   validates :title, presence: true, allow_blank: false
   validates :body, presence: true, allow_blank: false
 

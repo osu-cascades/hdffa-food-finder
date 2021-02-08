@@ -38,7 +38,8 @@
 
   .col-6
     %dl.row
-      .text-center= image_tag(@partner.logo) if @partner.logo.attached?
+      %dt.col-sm-3 Logo
+      .text-center= image_tag(@partner.logo, class: 'partner_logo') if @partner.logo.attached?
     %dl.row
       %dt.col-sm-3 Notes
 

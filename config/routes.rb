@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :partners, only: [:index, :show]
   resources :categories, only: [:index, :show]
   resources :products, only: [:index, :show]
-  resources :notes, only: [:index, :show]
+  resources :notes, only: [:index, :show, :show_images]
 
   namespace :admin do
     resources :partners do
@@ -27,5 +27,5 @@ Rails.application.routes.draw do
   end
 
   get 'search', to: "partners#search"
-
+  get 'show_images', to: "admin/notes#show_images" #show_images_path	
 end
