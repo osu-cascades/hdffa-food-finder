@@ -64,11 +64,19 @@ class Admin::NotesController < ApplicationController
 
     def destroy
       @note = Note.find(params[:id])
-      @note.destroy
-      respond_to do |format|
-        format.html { redirect_to :back }
-        format.json { head :no_content }
+      @partner = Partner.find(@note.partner_id)
+      # @note.destroy
+      if current_user == @note.user
+        @note.destroy
+        respond_to do |format|
+          format.html { redirect_to admin_partners_path, notice: 'Note was successfully destroyed.' }
+          format.json { head :no_content }
+        end
       end
+      # respond_to do |format|
+      #   format.html { redirect_to :back }
+      #   format.json { head :no_content }
+      # end
     end
 
     private
