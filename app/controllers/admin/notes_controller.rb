@@ -1,5 +1,5 @@
 class Admin::NotesController < ApplicationController
-    # before_action :restrict_unless_admin
+    before_action :restrict_unless_admin
 
 
     def index
