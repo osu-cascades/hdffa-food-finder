@@ -10,7 +10,7 @@
       %th Category
       %th
   %tbody
-    - @categories.each do |category|
+    - @categories.sort.each do |category|
       %tr
         %td= link_to category.name, [:admin, category]
         %td
