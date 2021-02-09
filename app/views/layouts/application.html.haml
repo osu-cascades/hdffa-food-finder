@@ -18,6 +18,7 @@
         %ul
           - if current_user&.admin?
             %li= link_to 'Partners', admin_partners_path, class: 'nav-link'
+            %li= link_to 'Notes', admin_notes_path, class: 'nav-link'
             %li= link_to 'Categories', admin_categories_path, class: 'nav-link'
             %li= link_to 'Products', admin_products_path, class: 'nav-link'
             %li= link_to 'Users', users_path, class: 'nav-link'
