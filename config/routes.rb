@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'partners#index'
+  devise_scope :user do
+    root to: "devise/sessions#new"
+  end
 
   # Users
   # Using Devise RegistrationsController for public user creation/registration.
