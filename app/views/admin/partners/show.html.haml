@@ -61,6 +61,8 @@
             .form-group
               = f.text_area :body, :required => true, class: 'form-control', rows: 8 
             .form-group
+              =f.file_field :images, class: 'form-control'
+            .form-group
               = f.submit({class: 'form-control btn btn-success'})
               -#= button_tag 'Submit', type: 'submit', class: "btn btn-primary"
 
