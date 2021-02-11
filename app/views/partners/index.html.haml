@@ -7,12 +7,12 @@
       %strong{:class => "large-white-text", :style => "position: absolute; top: 255px;"}Find Partners
       %form{:action=>"/search"}
         %input{:class => "form-control front", :placeholder=>"Get moo'vin", :name=>"q", :style => "height: 40px; border-radius: 20px; position: absolute; top: 300px;"}
-      %div{:class=>"card", :style => "position: absolute; top: 360px; width: 15rem;"}
-        %ul{:class=>"list-group list-group-flush", :style=>"border: 1px;"}
-          %li{:class => "list-group-item"}= render @notes || "show"
-          %li{:class => "list-group-item"}= render @notes || "show"
-          %li{:class => "list-group-item"}= render @notes || "show"
-    %div{:class => "space-right"}
+      %div{:class=>"overflow-auto", :style=>"position: absolute; top: 360px; width: 15rem; height: 10rem;"}
+        - @notes.each do |note|
+          %div{:class=>"card"}
+            %div{:class=>"card-body"}
+              %h5{:class=>"card-title"}= link_to note.title, [:admin, note]
+              %h6{:class=>"card-subtitle mb-2 text-muted"}= date_time(note)
 
 <!-- OLD MAP CODE
 %table#partners.table.mt-5
