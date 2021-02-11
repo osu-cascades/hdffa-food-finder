@@ -55,12 +55,18 @@ body {
   .large-white-text {
     font-size: 4vw;
   }
+  .notes-history-position {
+    width: 89%; float: right;
+  }  
 }
 
 @media (max-width: 350px) {
   .large-white-text {
     font-size: 7vw;
   }
+  .notes-history-position {
+    float: center;
+  } 
 }
 
 nav#main {

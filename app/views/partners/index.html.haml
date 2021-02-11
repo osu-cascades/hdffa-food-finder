@@ -7,7 +7,9 @@
       %strong{:class => "large-white-text", :style => "position: absolute; top: 34%;"}Find Partners
       %form{:action=>"/search"}
         %input{:class => "form-control front", :placeholder=>"Get moo'vin", :name=>"q", :style => "height: 40px; border-radius: 20px; position: absolute; top: 40%;"}
-      %div{:class=>"overflow-auto", :style=>"position: absolute; top: 49%; width: 15rem; height: 10rem;"}
+      
+    %div{:class => "notes-history-position"}
+      %div{:class=>"overflow-auto", :style=>"position: absolute; top: 49%; width: 14rem; height: 10rem;"}
         - @notes.each do |note|
           %div{:class=>"card"}
             %div{:class=>"card-body"}
