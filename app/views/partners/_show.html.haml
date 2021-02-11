@@ -1,3 +1,15 @@
-.subnav
-  .title
-    %h1= @partners.ids
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th
+      %th
+      %th
+
+%tbody
+  - @partners.sort.each do |partner|
+    %tr
+      %td= link_to partner.name, [:admin, partner]
+      %td
+        = link_to 'Edit', edit_admin_partner_path(partner), class: 'btn btn-sm btn-outline-primary'
+        = link_to 'Delete', [:admin, partner], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger'
