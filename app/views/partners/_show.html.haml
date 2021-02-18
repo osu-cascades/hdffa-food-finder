@@ -1,9 +1,5 @@
-%table.table
-  %thead
-    %tr
-      %th
-
 %tbody
+  %br
   %div{:class=>"card-columns"}
     - @partners.sort.each do |partner|
       %div{:class=>"card"}
@@ -11,7 +7,7 @@
         %div{:class=>"card-img-top"}
           = image_tag(partner.logo, :class=>"card-img-top") if partner.logo.attached?
         %div{:class=>"card-body"}
-          %h5{:class=>"card-title"}= link_to partner.name
+          %h5{:class=>"card-title"}= link_to partner.name, [:admin, partner]
           %p{:class=>"card-text"}
             = link_to 'Edit', edit_admin_partner_path(partner), class: 'btn btn-sm btn-outline-primary'
             = link_to 'Delete', [:admin, partner], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger'
