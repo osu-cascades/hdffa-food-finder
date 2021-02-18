@@ -9,7 +9,7 @@
         %input{:class => "form-control front", :placeholder=>"Get moo'vin", :name=>"q", :style => "height: 40px; border-radius: 20px; position: absolute; top: 43%;"}
       
     %div{:class => "notes-history-position"}
-      %div{:class=>"overflow-auto", :style=>"position: absolute; top: 52%; width: 20rem; height: 10rem;"}
+      %div{:class=>"overflow-auto notes-history"}
         - @notes.each do |note|
           %div{:class=>"card"}
             %h5{:class=>"card-header"}= link_to note.title, [:admin, note]
