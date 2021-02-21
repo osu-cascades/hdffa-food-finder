@@ -4,11 +4,14 @@
   %div{:style => "height: 500px"}
     %div{:class => "space-left"}
     %div{:class => "space-center"}
-      %strong{:class => "large-white-text", :style => "position: absolute; top: 255px;"}Find Partners
+      %strong{:class => "large-white-text", :style => "position: absolute; top: 38%;"}Find Partners
       %form{:action=>"/search"}
-        %input{:class => "form-control front", :placeholder=>"Get moo'vin", :name=>"q", :style => "height: 40px; border-radius: 20px; position: absolute; top: 300px;"}
-      %div{:class=>"card", :style => "position: absolute; top: 360px; width: 15rem;"}
-        %ul{:class=>"list-group list-group-flush", :style=>"border: 1px;"}
+        %input{:class => "form-control front", :placeholder=>"Get moo'vin", :name=>"q", :style => "height: 40px; border-radius: 20px; position: absolute; top: 43%;"}
+      
+    %div{:class => "notes-history-position"}
+      %div{:class=>"overflow-auto notes-history"}
         - @notes.each do |note|
-          %li{:class => "list-group-item"}= note.title
-    %div{:class => "space-right"}
+          %div{:class=>"card"}
+            %h5{:class=>"card-header"}= link_to note.title, [:admin, note]
+            %div{:class=>"card-body"}
+              %h6{:class=>"card-subtitle mb-2 text-muted small"}="Note about #{note.partner} added #{date_time(note)} by #{note.user}"

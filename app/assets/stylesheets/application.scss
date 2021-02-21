@@ -40,6 +40,14 @@ body {
   font-size:2vw;
 }
 
+.notes-history-position {
+  width: 35%; float: right;
+}
+
+.overflow-auto.notes-history {
+  position: absolute; top: 52%; width: 20%; height: 10rem;
+}
+
 @media (max-width: 800px) {
   .space-center {
     width: 90%; 
@@ -51,12 +59,21 @@ body {
   .large-white-text {
     font-size: 4vw;
   }
+  .notes-history-position {
+    width: 100%; float: right;
+  }
+  .overflow-auto.notes-history {
+    position: absolute; top: 52%; width: 90%; height: 10rem;
+  }  
 }
 
 @media (max-width: 350px) {
   .large-white-text {
     font-size: 7vw;
   }
+  .notes-history-position {
+    float: center;
+  } 
 }
 
 nav#main {
