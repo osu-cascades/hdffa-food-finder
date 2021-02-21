@@ -25,10 +25,6 @@ body {
   width: 35%; float: right;
 }
 
-.notes-history-position {
-  width: 34%; float: right;
-}
-
 .space-right {
   width: 0%;
   float: right;
@@ -44,6 +40,14 @@ body {
   font-size:2vw;
 }
 
+.notes-history-position {
+  width: 35%; float: right;
+}
+
+.overflow-auto.notes-history {
+  position: absolute; top: 52%; width: 20%; height: 10rem;
+}
+
 @media (max-width: 800px) {
   .space-center {
     width: 90%; 
@@ -56,7 +60,10 @@ body {
     font-size: 4vw;
   }
   .notes-history-position {
-    width: 89%; float: right;
+    width: 100%; float: right;
+  }
+  .overflow-auto.notes-history {
+    position: absolute; top: 52%; width: 90%; height: 10rem;
   }  
 }
 
@@ -328,6 +335,6 @@ body.sessions.new, body.registrations.new, body.registrations.create {
 }
 
 .partner_logo {
-  width: 300px;
-  height: 250px;
+  width: contain;
+  height: contain;
 }

@@ -2,7 +2,7 @@
   .title
     %h1= @note.title
     %p Created By  <b> #{@note.user} </b> on  <b>#{date_time(@note)}</b> 
-    %p for <b>#{@note.partner}</b>
+    %p for <b>#{link_to @note.partner, [:admin, @note.partner]}</b>
   .actions
     = link_to 'Delete', [:admin, @note], method: :delete, data: { confirm: 'Are you sure?' }, class: 'danger'
     = link_to 'Edit', edit_admin_note_path(@note), class: 'primary'
