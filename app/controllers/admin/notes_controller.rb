@@ -72,6 +72,8 @@ class Admin::NotesController < ApplicationController
           format.html { redirect_to admin_partners_path, notice: 'Note was successfully destroyed.' }
           format.json { head :no_content }
         end
+      else 
+        format.html { redirect_to admin_partners_path, notice: 'Note was NOT destroyed. You must be the author of the note to successfully delete' }
       end
       # respond_to do |format|
       #   format.html { redirect_to :back }
