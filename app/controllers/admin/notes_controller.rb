@@ -71,8 +71,9 @@ class Admin::NotesController < ApplicationController
           format.html { redirect_to admin_notes_path, notice: 'Note was successfully destroyed.' }
           format.json { head :no_content }
         else
-          format.html { redirect_to admin_notes_path, errors: 'Note was NOT successfully destroyed. You are not authorized to delete a note you did not create' }
-          format.json { head :no_content }
+          format.html { render action: :destroy}
+          #{ redirect_to admin_notes_path, : 'Note was NOT successfully destroyed. You are not authorized to delete a note you did not create' }
+          format.json { render json: @note.errors, status: :unprocessable_entity }
         end
       end
     end
