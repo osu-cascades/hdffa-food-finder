@@ -318,6 +318,6 @@ body.sessions.new, body.registrations.new, body.registrations.create {
 }
 
 .partner_logo {
-  width: 300px;
-  height: 250px;
+  width: contain;
+  height: contain;
 }
