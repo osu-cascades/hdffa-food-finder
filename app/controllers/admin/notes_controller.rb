@@ -68,10 +68,10 @@ class Admin::NotesController < ApplicationController
       respond_to do |format|
         if current_user == @note.user
           @note.destroy
-          format.html { redirect_to admin_partners_path, notice: 'Note was successfully destroyed.' }
+          format.html { redirect_to admin_notes_path, notice: 'Note was successfully destroyed.' }
           format.json { head :no_content }
         else
-          format.html { redirect_to admin_partners_path, notice: 'Note was NOT successfully destroyed. You are not authorized to delete a note you did not create' }
+          format.html { redirect_to admin_notes_path, notice: 'Note was NOT successfully destroyed. You are not authorized to delete a note you did not create' }
           format.json { head :no_content }
         end
       end
