@@ -65,20 +65,16 @@ class Admin::NotesController < ApplicationController
     def destroy
       @note = Note.find(params[:id])
       @partner = Partner.find(@note.partner_id)
-      # @note.destroy
-      if current_user == @note.user
-        @note.destroy
-        respond_to do |format|
+      respond_to do |format|
+        if current_user == @note.user
+          @note.destroy
           format.html { redirect_to admin_partners_path, notice: 'Note was successfully destroyed.' }
           format.json { head :no_content }
+        else
+          format.html { redirect_to admin_partners_path, notice: 'Note was NOT successfully destroyed. You are not authorized to delete a note you did not create' }
+          format.json { head :no_content }
         end
-      else 
-        format.html { redirect_to admin_partners_path, notice: 'Note was NOT destroyed. You must be the author of the note to successfully delete' }
       end
-      # respond_to do |format|
-      #   format.html { redirect_to :back }
-      #   format.json { head :no_content }
-      # end
     end
 
     private
