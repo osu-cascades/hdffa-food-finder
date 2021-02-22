@@ -26,7 +26,11 @@ body {
 }
 
 .notes-history-position {
-  width: 34%; float: right;
+  width: 35%; float: right;
+}
+
+.overflow-auto.notes-history {
+  position: absolute; top: 52%; width: 20%; height: 10rem;
 }
 
 .space-right {
