@@ -2,7 +2,7 @@ class Admin::PartnersController < ApplicationController
   before_action :restrict_unless_admin
 
   def index
-    @partners = Partner.all
+    @partners = Partner.all.sort_by{ |partner| [ partner.name.upcase ] }
     # @note = Partner.notes
   end
 

@@ -2,7 +2,7 @@ class Admin::CategoriesController < ApplicationController
   before_action :restrict_unless_admin
 
   def index
-    @categories = Category.all
+    @categories = Category.all.sort_by{ |category| [ category.name.upcase ] }
   end
 
   def show

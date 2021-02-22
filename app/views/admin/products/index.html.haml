@@ -10,7 +10,7 @@
       %th Product
       %th
   %tbody
-    - @products.sort_by(&:name).each do |product|
+    - @products.each do |product|
       %tr
         %td= link_to product.name, [:admin, product]
         %td

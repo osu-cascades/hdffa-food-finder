@@ -2,7 +2,7 @@ class Admin::ProductsController < ApplicationController
     before_action :restrict_unless_admin
   
     def index
-      @products = Product.all
+      @products = Product.all.sort_by{ |product| [ product.name.upcase ] }
     end
   
     def show
