@@ -14,5 +14,5 @@
       %tr
         %td= link_to category.name, [:admin, category]
         %td
-          = link_to 'Edit', edit_admin_partner_path(category), class: 'btn btn-sm btn-outline-primary'
+          = link_to 'Edit', edit_admin_category_path(category), class: 'btn btn-sm btn-outline-primary'
           = link_to 'Delete', [:admin, category], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger'
