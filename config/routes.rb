@@ -31,4 +31,5 @@ Rails.application.routes.draw do
   get 'search', to: "partners#search"
 
   get 'api/v1/partners', to: "api/v1/partners#index"
+  get 'api/v1/partners/:id', to: "api/v1/partners#show"
 end
