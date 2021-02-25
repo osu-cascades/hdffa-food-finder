@@ -32,4 +32,5 @@ Rails.application.routes.draw do
 
   get 'api/v1/partners', to: "api/v1/partners#index"
   get 'api/v1/partners/:id', to: "api/v1/partners#show"
+  get 'api/v1/regions', to: "api/v1/regions#index"
 end
