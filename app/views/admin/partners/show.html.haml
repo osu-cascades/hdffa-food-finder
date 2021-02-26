@@ -1,15 +1,16 @@
-.subnav
-  .title
-    %h1= @partner.name
-  .actions
-    = link_to 'Delete', [:admin, @partner], method: :delete, data: { confirm: 'Are you sure?' }, class: 'danger'
-    = link_to 'Edit', edit_admin_partner_path(@partner), class: 'primary'
-
-.row.mt-5
-  .col-6
-    %dl.row
-      %dt.col-sm-3 Description
-      %dd.col-sm-9= @partner.description
+%div{:class => "container"}
+  %div{:class => "row"}
+    %div{:class => "col-sm"}
+      %div{:class =>"d-flex justify-content-center"}
+        =image_tag(@partner.logo, class: 'partner_logo') if @partner.logo.attached?
+      %div{:class =>"d-flex justify-content-center"}
+        %h1= @partner.name
+      %div{:class =>"d-flex justify-content-center"}
+        .actions
+          = link_to 'Delete', [:admin, @partner], method: :delete, data: { confirm: 'Are you sure?' }, class: 'danger'
+          = link_to 'Edit', edit_admin_partner_path(@partner), class: 'primary'
+      %div{:class =>"d-flex justify-content-center text-center"}
+        %dd.col-sm-9= @partner.description
       %dt.col-sm-3 Street Address
       %dd.col-sm-9= @partner.street_address
       %dt.col-sm-3 City
@@ -34,35 +35,31 @@
       %dd.col-sm-9
         - @partner.products.each do |product|
           .row-sm-9= product.name
+    %div{:class => "col-sm border rounded bg-light"}
+      .col-6
 
-
-  .col-6
-    %dl.row
-      %dt.col-sm-3 Logo
-      .text-center= image_tag(@partner.logo, class: 'partner_logo') if @partner.logo.attached?
-    %dl.row
-      %dt.col-sm-3 Notes
-
-      %dd.col-sm-9
-        - @partner.notes.each do |note|
-          %body= date_time(note) 
-          %td= link_to note.title, [:admin, note]
-          / .actions= link_to 'View Body', "note-body" => "#{note.body}"  
-          %dl.row{:id => "bodybutton"}View Body
-          %dl.row.a{:id => "notebody"}#{note.body} 
-          / %dl.row.actions= link_to "Delete Note", [:admin, @partner, Note.delete(note.id)], id: "notedelete", class: "btn btn-primary", data: { confirm: "Are you sure?" }
-        = button_tag "+", id: "notebutton", class: 'primary' 
-      
-        #notesform
-          = form_for [:admin, @partner, Note.new] do |f|
-            .form-group
-              = f.label :title
-              = f.text_field :title, :required => true, class: 'form-control'
-            .form-group
-              = f.text_area :body, :required => true, class: 'form-control', rows: 8 
-            .form-group
-              =f.file_field :images, class: 'form-control'
-            .form-group
-              = f.submit({class: 'form-control btn btn-success'})
-              -#= button_tag 'Submit', type: 'submit', class: "btn btn-primary"
+        %dl.row
+          %dt.col-sm-3 Notes
+          = button_tag "+", id: "notebutton", class: 'primary' 
+        
+          #notesform
+            = form_for [:admin, @partner, Note.new] do |f|
+              .form-group
+                = f.label :title
+                = f.text_field :title, :required => true, class: 'form-control'
+              .form-group
+                = f.text_area :body, :required => true, class: 'form-control', rows: 8 
+              .form-group
+                =f.file_field :images, class: 'form-control'
+              .form-group
+                = f.submit({class: 'form-control btn btn-success'})
+                -#= button_tag 'Submit', type: 'submit', class: "btn btn-primary"
+          %dd.col-sm-9
+            - @partner.notes.each do |note|
+              %body= date_time(note) 
+              %td= link_to note.title, [:admin, note]
+              / .actions= link_to 'View Body', "note-body" => "#{note.body}"  
+              %dl.row{:id => "bodybutton"}View Body
+              %dl.row.a{:id => "notebody"}#{note.body} 
+              / %dl.row.actions= link_to "Delete Note", [:admin, @partner, Note.delete(note.id)], id: "notedelete", class: "btn btn-primary", data: { confirm: "Are you sure?" }
 
