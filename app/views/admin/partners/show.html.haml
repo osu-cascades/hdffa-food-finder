@@ -6,27 +6,24 @@
       %div{:class =>"d-flex justify-content-center"}
         %h1= @partner.name
       %div{:class =>"d-flex justify-content-center"}
+        %p= @partner.hours_of_operation
+      %div{:class =>"d-flex justify-content-center"}
         .actions
-          = link_to 'Delete', [:admin, @partner], method: :delete, data: { confirm: 'Are you sure?' }, class: 'danger'
-          = link_to 'Edit', edit_admin_partner_path(@partner), class: 'primary'
+          -# = link_to 'Delete', [:admin, @partner], method: :delete, data: { confirm: 'Are you sure?' }, class: 'danger'
+          = link_to 'Edit Partner', edit_admin_partner_path(@partner), class: 'primary'
       %div{:class =>"d-flex justify-content-center text-center"}
         %dd.col-sm-9= @partner.description
-      %dt.col-sm-3 Street Address
-      %dd.col-sm-9= @partner.street_address
-      %dt.col-sm-3 City
-      %dd.col-sm-9= @partner.city
-      %dt.col-sm-3 State
-      %dd.col-sm-9= @partner.state
-      %dt.col-sm-3 Zip Code
-      %dd.col-sm-9= @partner.zip
-      %dt.col-sm-3 Email
-      %dd.col-sm-9= mail_to @partner.email
-      %dt.col-sm-3 Phone
-      %dd.col-sm-9= "#{@partner.phone}".phony_formatted(normalize: :NA, format: :national, spaces: ' ')
-      %dt.col-sm-3 Website
-      %dd.col-sm-9= link_to "#{@partner.url}", @partner.url
-      %dt.col-sm-3 Hours Of Operation
-      %dd.col-sm-9= @partner.hours_of_operation
+      %div{:class => "container"}
+        %div{:class => "row d-flex justify-content-center pt-1"}
+          %button{:class => "btn border btn-light btn-block rounded-pill w-60"}
+            #{@partner.street_address} #{@partner.city}, #{@partner.state} #{@partner.zip}
+        %div{:class => "row d-flex justify-content-center pt-1"}
+          %button{:class => "btn border btn-light btn-block rounded-pill w-60"}
+            = "#{@partner.phone}".phony_formatted(normalize: :NA, format: :national, spaces: ' ')
+        %div{:class => "row d-flex justify-content-center pt-1"}
+          %button{:class => "btn border btn-light btn-block rounded-pill w-60"}
+            = link_to "#{@partner.url}", @partner.url
+      %br
       %dt.col-sm-3 Categories
       %dd.col-sm-9
         - @partner.categories.each do |category|
