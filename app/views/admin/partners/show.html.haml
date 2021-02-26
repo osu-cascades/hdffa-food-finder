@@ -32,11 +32,12 @@
       %dd.col-sm-9
         - @partner.products.each do |product|
           .row-sm-9= product.name
-    %div{:class => "col-sm border rounded bg-light"}
-      .col-6
 
-        %dl.row
-          %dt.col-sm-3 Notes
+    %div{:class => "col-sm border rounded bg-light"}
+      %div{:class => "d-flex"}
+        %div{:class => "p-2"}
+          %h3 Notes
+        %div{:class => "ml-auto p-2"}
           = button_tag "+", id: "notebutton", class: 'primary' 
         
           #notesform
@@ -51,11 +52,14 @@
               .form-group
                 = f.submit({class: 'form-control btn btn-success'})
                 -#= button_tag 'Submit', type: 'submit', class: "btn btn-primary"
-          %dd.col-sm-9
-            - @partner.notes.each do |note|
-              %body= date_time(note) 
-              %td= link_to note.title, [:admin, note]
-              / .actions= link_to 'View Body', "note-body" => "#{note.body}"  
+      %div{:class => "container overflow-auto mt-4", :style => "height: 500px;"}
+        - @partner.notes.each do |note|
+          %div{:class => "card"}
+            %div{:class => "card-header"}
+              = link_to note.title, [:admin, note]
+              last edited #{date_time(note)} 
+            / .actions= link_to 'View Body', "note-body" => "#{note.body}"
+            %div{:class => "card-body"}  
               %dl.row{:id => "bodybutton"}View Body
               %dl.row.a{:id => "notebody"}#{note.body} 
               / %dl.row.actions= link_to "Delete Note", [:admin, @partner, Note.delete(note.id)], id: "notedelete", class: "btn btn-primary", data: { confirm: "Are you sure?" }
