@@ -1,5 +1,6 @@
 json.array! @categories do |category|
   json.id category.id
+  json.avatar_url 'url.chillbros'
   json.name category.name
-  json.created_at category.created_at
+  json.slug category.name
 end
