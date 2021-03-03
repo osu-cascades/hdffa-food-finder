@@ -28,6 +28,14 @@ Rails.application.routes.draw do
     resources :notes
   end
 
+  namespace :api, constraints: { format: 'json' } do  
+    namespace :v1 do
+      defaults format: :json do
+        resources :partners
+      end
+    end  
+  end  
+
   get 'search', to: "partners#search"
 
   get 'api/v1/partners', to: "api/v1/partners#index"
