@@ -30,7 +30,7 @@
         %div{:class => "row d-flex justify-content-center pt-1"}
           %button{:class => "btn border btn-light btn-block rounded-pill w-60", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Partner phone"}
             = "#{@partner.phone}".phony_formatted(normalize: :NA, format: :national, spaces: ' ')
-            %i{:class => "bi-telephone-fill pl-1"}
+            %i{:class => "bi-telephone pl-1"}
 
           %input{:style => "display:none;", :type => "text", :value => "#{@partner.street_address} #{@partner.city}, #{@partner.state} #{@partner.zip}", :id => "myInput"}
 
