@@ -52,11 +52,11 @@
           .row-sm-9= link_to product.name, [:admin, product]
 
     %div{:class => "col-sm border rounded bg-light"}
-      %div{:class => "d-flex"}
+      %div{:class => "d-flex pt-2"}
         %div{:class => "p-2"}
           %h3 Notes
         %div{:class => "ml-auto p-2"}
-          %button{:class => "btn btn-outline-dark", :id => "notebutton", :data-toggle => "tooltip", :data-placement => "bottom", :title => "Add a new note"}+
+          %button{:class => "btn btn-outline-dark rounded-circle", :id => "notebutton", :data-toggle => "tooltip", :data-placement => "bottom", :title => "Add a new note"}+
           -# = button_tag "", id: "notebutton", :class => "bi-plus-circle" 
         
           #notesform
