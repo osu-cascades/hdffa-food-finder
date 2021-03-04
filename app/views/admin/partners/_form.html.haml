@@ -49,9 +49,11 @@
     = f.file_field :logo, class: 'form-control-file'
   .form-group
     = f.label :products
-    = f.collection_check_boxes(:product_ids, Product.all, :id, :name)
+    = f.collection_check_boxes(:product_ids, Product.all, :id, :name) do |b|
+      =b.check_box + b.label(:class => "p-1")
   .form-group
     = f.label :categories
-    = f.collection_check_boxes(:category_ids, Category.all, :id, :name)
+    = f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |b|
+      =b.check_box + b.label(:class => "p-1")
   .form-group
     = f.submit({class: 'form-control btn btn-success'})
