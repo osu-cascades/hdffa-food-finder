@@ -16,8 +16,8 @@
         %dd.col-sm-9= @partner.description
       %div{:class => "container"}
         %div{:class => "row d-flex justify-content-center pt-1"}
-          %button{:class => "btn border btn-light btn-block rounded-pill w-60", :onclick => "copytoclipboard(); this.innerHTML='Copied!", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Copy address"}
-            #{@partner.street_address} #{@partner.city}, #{@partner.state} #{@partner.zip}
+          %button{:class => "btn border btn-light btn-block rounded-pill w-60", :onclick => "copytoclipboard(); this.innerHTML='Copied!", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Search address in Google maps"}
+            = link_to "#{@partner.street_address} #{@partner.city}, #{@partner.state} #{@partner.zip}", "http://www.google.com/maps?ie=UTF-8&q=#{@partner.street_address} #{@partner.city}, #{@partner.state} #{@partner.zip}", target: :_blank
             %i{:class => "bi-map"}
         %div{:class => "row d-flex justify-content-center pt-1"}
           %button{:class => "btn border btn-light btn-block rounded-pill w-60", :onclick => "copytoclipboard(); this.innerHTML='Copied!", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Send an email"}
@@ -25,7 +25,7 @@
             %i{:class => "bi-envelope"}
         %div{:class => "row d-flex justify-content-center pt-1"}
           %button{:class => "btn border btn-light btn-block rounded-pill w-60", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Go to partner website"}
-            = link_to "#{@partner.url}", @partner.url
+            = link_to "#{@partner.url}", @partner.url, target: :_blank
             %i{:class => "bi-link-45deg"}
         %div{:class => "row d-flex justify-content-center pt-1"}
           %button{:class => "btn border btn-light btn-block rounded-pill w-60", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Partner phone"}
