@@ -6,7 +6,7 @@
       %div{:class =>"d-flex justify-content-center"}
         %h1= @partner.name
       %div{:class =>"d-flex justify-content-center"}
-        %i{:class => "bi-clock"}
+        %i{:class => "bi-clock pr-1"}
         %p= @partner.hours_of_operation
       %div{:class =>"d-flex justify-content-center"}
         .actions
@@ -18,19 +18,19 @@
         %div{:class => "row d-flex justify-content-center pt-1"}
           %button{:class => "btn border btn-light btn-block rounded-pill w-60", :onclick => "copytoclipboard(); this.innerHTML='Copied!", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Search address in Google maps"}
             = link_to "#{@partner.street_address} #{@partner.city}, #{@partner.state} #{@partner.zip}", "http://www.google.com/maps?ie=UTF-8&q=#{@partner.street_address} #{@partner.city}, #{@partner.state} #{@partner.zip}", target: :_blank
-            %i{:class => "bi-map"}
+            %i{:class => "bi-map pl-1"}
         %div{:class => "row d-flex justify-content-center pt-1"}
           %button{:class => "btn border btn-light btn-block rounded-pill w-60", :onclick => "copytoclipboard(); this.innerHTML='Copied!", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Send an email"}
             = mail_to @partner.email
-            %i{:class => "bi-envelope"}
+            %i{:class => "bi-envelope pl-1"}
         %div{:class => "row d-flex justify-content-center pt-1"}
           %button{:class => "btn border btn-light btn-block rounded-pill w-60", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Go to partner website"}
             = link_to "#{@partner.url}", @partner.url, target: :_blank
-            %i{:class => "bi-link-45deg"}
+            %i{:class => "bi-link-45deg pl-1"}
         %div{:class => "row d-flex justify-content-center pt-1"}
           %button{:class => "btn border btn-light btn-block rounded-pill w-60", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Partner phone"}
             = "#{@partner.phone}".phony_formatted(normalize: :NA, format: :national, spaces: ' ')
-            %i{:class => "bi-telephone-fill"}
+            %i{:class => "bi-telephone-fill pl-1"}
 
           %input{:style => "display:none;", :type => "text", :value => "#{@partner.street_address} #{@partner.city}, #{@partner.state} #{@partner.zip}", :id => "myInput"}
 
