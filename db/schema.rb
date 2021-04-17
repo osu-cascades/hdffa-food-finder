@@ -88,6 +88,13 @@ ActiveRecord::Schema.define(version: 2021_04_14_233352) do
     t.index ["product_id"], name: "index_partners_products_on_product_id"
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.text "body"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
