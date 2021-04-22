@@ -15,6 +15,11 @@
       %div{:class =>"d-flex justify-content-center text-center"}
         %dd.col-sm-9= @partner.description
       %div{:class =>"d-flex justify-content-center"}
+      %div{:class =>"d-flex justify-content-center text-center"}
+        %dt.col-sm-3 Discount
+        %dd.col-sm-9= @partner.discount
+      %div{:class =>"d-flex justify-content-center"}
+      
         %i{:class => "m-2 bi bi-facebook fa-lg", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Link to partner Facebook"}
         %i{:class => "m-2 bi bi-instagram fa-lg", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Link to partner Instagram"}
         %i{:class => "m-2 bi bi-twitter fa-lg", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Link to partner twitter"}
