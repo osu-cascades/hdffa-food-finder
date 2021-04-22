@@ -53,8 +53,7 @@
           .row-sm-9= link_to product.name, [:admin, product]
       %dt.col-sm-3 Featured Listing
       %dd.col-sm-9
-        - @partner.featured_listings.each do |featured_listing|
-          .row-sm-9= link_to featured_listing.name, [:admin, featured_listing]
+        .row-sm-9= featured_listing_name(@partner.featured_listing_id)
 
     %div{:class => "col-sm border rounded bg-light"}
       %div{:class => "d-flex pt-2"}
