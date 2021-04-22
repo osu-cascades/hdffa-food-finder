@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   private
 
     def restrict_unless_admin
-      redirect_to(root_url, alert: 'Access denied.') unless current_user.admin?
+      redirect_to(root_url, alert: 'Access denied.') unless current_user.admin? || current_user.superadmin?
     end
 
     def after_sign_in_path_for(resource)

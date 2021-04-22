@@ -50,7 +50,7 @@ class Admin::NotesController < ApplicationController
     def update
       @note = Note.find(params[:id])
       @partner = Partner.find(@note.partner_id)
-      @note.user = current_user
+      # @note.user = current_user
       respond_to do |format|
         if @note.update_attributes(note_params)
           format.html { redirect_to [:admin, @partner], notice: 'Note was successfully updated.' }
