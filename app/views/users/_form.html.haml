@@ -18,7 +18,7 @@
   - if ['new', 'create'].include? action_name
     %h3.mt-5 Initial Password
     = render 'form_password_fields', f: f
-  - if current_user.admin?
+  - if current_user.admin? || current_user.superadmin?
     %h3.mt-5 Role and Status
     .form-group
       = f.label :role

@@ -32,6 +32,15 @@ Rails.application.routes.draw do
     resources :notes
   end
 
+  namespace :superadmin do
+    resources :partners do
+      resources :notes 
+    end
+    resources :categories
+    resources :products
+    resources :notes
+  end
+
   namespace :api, constraints: { format: 'json' } do  
     namespace :v1 do
       defaults format: :json do
