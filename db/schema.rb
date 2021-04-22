@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_07_073846) do
+ActiveRecord::Schema.define(version: 2021_04_14_233352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 2020_12_07_073846) do
     t.string "url"
     t.string "hours_of_operation"
     t.string "keywords"
+    t.text "discount"
     t.index ["name"], name: "index_partners_on_name", unique: true
   end
 

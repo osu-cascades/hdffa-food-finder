@@ -14,12 +14,25 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :new, :create, :destroy]
   end
 
+  scope 'superadmin' do
+    resources :users, only: [:index, :new, :create, :destroy]
+  end
+
   resources :partners, only: [:index, :show]
   resources :categories, only: [:index, :show]
   resources :products, only: [:index, :show]
   resources :notes, only: [:index, :show, :show_images]
 
   namespace :admin do
+    resources :partners do
+      resources :notes 
+    end
+    resources :categories
+    resources :products
+    resources :notes
+  end
+
+  namespace :superadmin do
     resources :partners do
       resources :notes 
     end
