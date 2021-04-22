@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_22_203432) do
+ActiveRecord::Schema.define(version: 2021_04_22_223420) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,11 +56,6 @@ ActiveRecord::Schema.define(version: 2021_04_22_203432) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "featured_listings_partners", id: false, force: :cascade do |t|
-    t.bigint "partner_id", null: false
-    t.bigint "featured_listing_id", null: false
-  end
-
   create_table "notes", force: :cascade do |t|
     t.string "title", null: false
     t.text "body", null: false
@@ -89,6 +84,8 @@ ActiveRecord::Schema.define(version: 2021_04_22_203432) do
     t.string "hours_of_operation"
     t.string "keywords"
     t.text "discount"
+    t.bigint "featured_listing_id"
+    t.index ["featured_listing_id"], name: "index_partners_on_featured_listing_id"
     t.index ["name"], name: "index_partners_on_name", unique: true
   end
 
@@ -130,4 +127,5 @@ ActiveRecord::Schema.define(version: 2021_04_22_203432) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "notes", "partners"
   add_foreign_key "notes", "users"
+  add_foreign_key "partners", "featured_listings"
 end

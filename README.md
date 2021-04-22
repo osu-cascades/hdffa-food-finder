@@ -64,4 +64,8 @@ Configure env vars in staging and production:
 Note: See _.env.example_ for a complete list of expected environment
 variables that need set in both staging & production environments.
 
+To create the featured_listing model:
+```rails g model featured_listing name:string```
+To undo  creating a model:
+```rails destroy model featured_listing```
 &copy; 2020 Yong Joseph Bakos and Brayden Brown. All rights reserved.

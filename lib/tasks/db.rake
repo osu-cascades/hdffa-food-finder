@@ -33,6 +33,11 @@ namespace :db do
           product.partners << partner
         end
       end
+      featured_listing_name = val['Featured Listing']
+      unless featured_listing_name.blank?
+        featured_listing = FeaturedListing.find_or_create_by(name: featured_listing_name)
+        featured_listing.partners << partner
+      end
     end
   end
 end
