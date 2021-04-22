@@ -14,6 +14,10 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :new, :create, :destroy]
   end
 
+  scope 'superadmin' do
+    resources :users, only: [:index, :new, :create, :destroy]
+  end
+
   resources :partners, only: [:index, :show]
   resources :categories, only: [:index, :show]
   resources :products, only: [:index, :show]
