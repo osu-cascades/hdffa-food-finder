@@ -18,7 +18,7 @@ namespace :db do
         email: val['Email'],
         phone: val['Phone'].size < 10 ? '' : val['Phone'],
         url: (val['Website'].start_with?('https') ? val['Website'] : "https://#{val['Website']}").downcase!,
-        hours_of_operation: val['Hours of Operation: Dates and times'],
+        hours_of_operation: val['Hours of Operation'],
         discount: val['Discount'],
       )
       category_name = val['Category']
