@@ -21,10 +21,12 @@ namespace :db do
         hours_of_operation: val['Hours of Operation'],
         discount: val['Discount'],
       )
-      category_name = val['Category']
-      unless category_name.blank?
-        category = Category.find_or_create_by(name: category_name)
-        category.partners << partner
+      category_names = val['Products'].to_s().split(',')
+      category_names.each do |category_name|
+        unless category_name.blank?
+          category = Category.find_or_create_by(name: category_name)
+          category.partners << partner
+        end
       end
       product_names = val['Products'].to_s().split(',')
       product_names.each do |product_name|
@@ -38,8 +40,8 @@ namespace :db do
         featured_listing = FeaturedListing.find_or_create_by(name: featured_listing_name)
         featured_listing.partners << partner
       end
-      dietary_name = val['Dietary'].to_s().split(',')
-      dietary_name.each do |dietary_name|
+      dietary_names = val['Dietary'].to_s().split(',')
+      dietary_names.each do |dietary_name|
         unless dietary_name.blank?
           dietary = Dietary.find_or_create_by(name: dietary_name)
           dietary.partners << partner
