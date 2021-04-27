@@ -97,6 +97,11 @@ Inside app/models/featured_listing.rb add ```has_many :partners``` within class 
 
 3a. Create a Join table using a Migration: 
 ```rails g migration CreateProcurementsPartnersJoinTable```
+-Go to "routes.rb" and add: 
+```resources :procurements``` withing the namespace: admin
+-Go to db.rake and add:
+```
+-Go to "app/views/admin/partners/show.html.haml" and add procurements to the location you want to show it in
 
 3b.Add some Migrations:
 *Since "partner" belongs_to "featured_listing", the "partner" table should have a "featured_listing_id" column as the foreign key
