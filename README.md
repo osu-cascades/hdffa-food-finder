@@ -62,7 +62,7 @@ Configure env vars in staging and production:
 * `AWS_S3_BUCKET`
 
 
-To import new data:
+## To import new data:
 
 LOCALHOST:
 1. Tear down/clear out the Database:
@@ -80,7 +80,9 @@ HEROKU STAGING:
 3. Import the data:
 ```heroku run rake db:import_partners -rstaging```
 
-To add new Fields: 
+To add new Data Fields:
+(Example: Adding "Procurement" and Adding "Featured_Listing") 
+
 1.Create a new Model: 
 
 Example: Adding a featured_listing field to Partners
@@ -95,14 +97,32 @@ Run the migration to reflect the changes in the database:
 Example: Inside app/models/partner.rb add ```belongs_to :featured_listings, optional: true``` and 
 Inside app/models/featured_listing.rb add ```has_many :partners``` within class definition
 
-3a. Create a Join table using a Migration: 
-```rails g migration CreateProcurementsPartnersJoinTable```
--Go to "routes.rb" and add: 
-```resources :procurements``` withing the namespace: admin
--Go to db.rake and add:
-```
--Go to "app/views/admin/partners/show.html.haml" and add procurements to the location you want to show it in
+When your New Field has a many->many relationship with Partner: 
+Reference: https://stackoverflow.com/questions/5120703/creating-a-many-to-many-relationship-in-rails/5120734
 
+3a.Create a Join table using a Migration: 
+```rails g migration CreateProcurementsPartnersJoinTable```
+
+  -Run the migration to reflect the changes in the database:
+```rails db:migrate```
+
+  -Go to "routes.rb" and add: 
+```resources :procurements``` within the ``namespace: admin``
+
+  -Go to db.rake and add:
+```procurement_names = val['Procurement'].to_s().split(', ')
+      procurement_names.each do |procurement_name|
+        unless procurement_name.blank?
+          procurement = Procurement.find_or_create_by(name: procurement_name)
+          procurement.partners << partner
+        end
+      end```
+
+  -Go to "app/views/admin/partners/show.html.haml" and add procurements to the location you want to show it in
+
+OR
+
+When your New Field has a one-->many relationship with Partner:
 3b.Add some Migrations:
 *Since "partner" belongs_to "featured_listing", the "partner" table should have a "featured_listing_id" column as the foreign key
 referencing to the featured_listing table*
