@@ -38,6 +38,13 @@ namespace :db do
         featured_listing = FeaturedListing.find_or_create_by(name: featured_listing_name)
         featured_listing.partners << partner
       end
+      dietary_name = val['Dietary'].to_s().split(',')
+      dietary_name.each do |dietary_name|
+        unless dietary_name.blank?
+          dietary = Dietary.find_or_create_by(name: dietary_name)
+          dietary.partners << partner
+        end
+      end
     end
   end
 end

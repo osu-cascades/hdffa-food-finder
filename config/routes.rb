@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :products
     resources :notes
+    resources :dietaries
   end
 
   namespace :superadmin do
@@ -42,6 +43,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :products
     resources :notes
+    resources :dietaries
   end
 
   namespace :api, constraints: { format: 'json' } do  
