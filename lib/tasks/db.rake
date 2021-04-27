@@ -21,7 +21,7 @@ namespace :db do
         hours_of_operation: val['Hours of Operation'],
         discount: val['Discount'],
       )
-      category_names = val['Products'].to_s().split(',')
+      category_names = val['Category'].to_s().split(',')
       category_names.each do |category_name|
         unless category_name.blank?
           category = Category.find_or_create_by(name: category_name)
