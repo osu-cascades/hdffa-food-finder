@@ -95,7 +95,10 @@ Run the migration to reflect the changes in the database:
 Example: Inside app/models/partner.rb add ```belongs_to :featured_listings, optional: true``` and 
 Inside app/models/featured_listing.rb add ```has_many :partners``` within class definition
 
-3.Add some Migrations:
+3a. Create a Join table using a Migration: 
+```rails g migration CreateProcurementsPartnersJoinTable```
+
+3b.Add some Migrations:
 *Since "partner" belongs_to "featured_listing", the "partner" table should have a "featured_listing_id" column as the foreign key
 referencing to the featured_listing table*
 
@@ -129,6 +132,15 @@ end
 c.Run the migration to reflect the changes in the database:
 ```rails db:migrate```
 *Refer to the "To Import New Data" section in the README
+
+5. Go the the "show.html.haml" file of the view you want to see the new field appear in and add
+
+6. Go to "lib/tasks/db.rake" and add:
+```featured_listing_name = val['Featured Listing']
+   unless featured_listing_name.blank?
+      featured_listing = FeaturedListing.find_or_create_by(name: featured_listing_name)
+      featured_listing.partners << partner
+    end```
 
 To generate a new Controller:
 ```rails g controller <path/<controller_name> <action>```

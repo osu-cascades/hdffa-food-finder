@@ -47,6 +47,13 @@ namespace :db do
           dietary.partners << partner
         end
       end
+      procurement_names = val['Procurement'].to_s().split(', ')
+      procurement_names.each do |procurement_name|
+        unless procurement_name.blank?
+          procurement = Procurement.find_or_create_by(name: procurement_name)
+          procurement.partners << partner
+        end
+      end
     end
   end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_27_215844) do
+ActiveRecord::Schema.define(version: 2021_04_27_230553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -102,11 +102,24 @@ ActiveRecord::Schema.define(version: 2021_04_27_215844) do
     t.index ["name"], name: "index_partners_on_name", unique: true
   end
 
+  create_table "partners_procurements", id: false, force: :cascade do |t|
+    t.bigint "procurement_id", null: false
+    t.bigint "partner_id", null: false
+    t.index ["partner_id"], name: "index_partners_procurements_on_partner_id"
+    t.index ["procurement_id"], name: "index_partners_procurements_on_procurement_id"
+  end
+
   create_table "partners_products", id: false, force: :cascade do |t|
     t.bigint "product_id", null: false
     t.bigint "partner_id", null: false
     t.index ["partner_id"], name: "index_partners_products_on_partner_id"
     t.index ["product_id"], name: "index_partners_products_on_product_id"
+  end
+
+  create_table "procurements", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|

@@ -58,6 +58,10 @@
       %dd.col-sm-9
         - @partner.dietaries.each do |dietary|
           .row-sm-9= dietary.name
+      %dt.col-sm-3 Procurement
+      %dd.col-sm-9
+        - @partner.procurements.each do |procurement|
+          .row-sm-9= procurement.name
 
     %div{:class => "col-sm border rounded bg-light"}
       %div{:class => "d-flex pt-2"}
