@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    get 'featured_listings/create'
+  end
   devise_scope :user do
     root to: "admin/welcome#home"
   end
