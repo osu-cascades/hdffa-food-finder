@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_22_223420) do
+ActiveRecord::Schema.define(version: 2021_04_27_231725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,19 @@ ActiveRecord::Schema.define(version: 2021_04_22_223420) do
     t.bigint "partner_id", null: false
     t.index ["category_id"], name: "index_categories_partners_on_category_id"
     t.index ["partner_id"], name: "index_categories_partners_on_partner_id"
+  end
+
+  create_table "dietaries", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dietaries_partners", id: false, force: :cascade do |t|
+    t.bigint "dietary_id", null: false
+    t.bigint "partner_id", null: false
+    t.index ["dietary_id"], name: "index_dietaries_partners_on_dietary_id"
+    t.index ["partner_id"], name: "index_dietaries_partners_on_partner_id"
   end
 
   create_table "featured_listings", force: :cascade do |t|
@@ -89,11 +102,31 @@ ActiveRecord::Schema.define(version: 2021_04_22_223420) do
     t.index ["name"], name: "index_partners_on_name", unique: true
   end
 
+  create_table "partners_procurements", id: false, force: :cascade do |t|
+    t.bigint "procurement_id", null: false
+    t.bigint "partner_id", null: false
+    t.index ["partner_id"], name: "index_partners_procurements_on_partner_id"
+    t.index ["procurement_id"], name: "index_partners_procurements_on_procurement_id"
+  end
+
   create_table "partners_products", id: false, force: :cascade do |t|
     t.bigint "product_id", null: false
     t.bigint "partner_id", null: false
     t.index ["partner_id"], name: "index_partners_products_on_partner_id"
     t.index ["product_id"], name: "index_partners_products_on_product_id"
+  end
+
+  create_table "partners_values", id: false, force: :cascade do |t|
+    t.bigint "value_id", null: false
+    t.bigint "partner_id", null: false
+    t.index ["partner_id"], name: "index_partners_values_on_partner_id"
+    t.index ["value_id"], name: "index_partners_values_on_value_id"
+  end
+
+  create_table "procurements", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|
@@ -122,6 +155,12 @@ ActiveRecord::Schema.define(version: 2021_04_22_223420) do
     t.boolean "active", default: true, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "values", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
