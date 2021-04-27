@@ -54,6 +54,13 @@ namespace :db do
           procurement.partners << partner
         end
       end
+      value_names = val['Value'].to_s().split(', ')
+      value_names.each do |value_name|
+        unless value_name.blank?
+          value = Value.find_or_create_by(name: value_name)
+          value.partners << partner
+        end
+      end
     end
   end
 end

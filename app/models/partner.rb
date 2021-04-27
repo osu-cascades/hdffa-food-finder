@@ -4,6 +4,7 @@ class Partner < ApplicationRecord
   belongs_to :featured_listings, optional: true
   has_and_belongs_to_many :dietaries
   has_and_belongs_to_many :procurements
+  has_and_belongs_to_many :values
   has_many :notes
   phony_normalize :phone, default_country_code: 'US'
   has_one_attached :logo
