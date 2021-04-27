@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_27_215231) do
+ActiveRecord::Schema.define(version: 2021_04_27_215844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,13 @@ ActiveRecord::Schema.define(version: 2021_04_27_215231) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "dietaries_partners", id: false, force: :cascade do |t|
+    t.bigint "dietary_id", null: false
+    t.bigint "partner_id", null: false
+    t.index ["dietary_id"], name: "index_dietaries_partners_on_dietary_id"
+    t.index ["partner_id"], name: "index_dietaries_partners_on_partner_id"
   end
 
   create_table "featured_listings", force: :cascade do |t|
