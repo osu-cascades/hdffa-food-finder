@@ -63,7 +63,7 @@ Configure env vars in staging and production:
 
 <br>
 
-## To import new data:
+## To Import new data:
 
 LOCALHOST:
 1. Tear down/clear out the Database:\
@@ -83,9 +83,9 @@ HEROKU STAGING:
 
 ## To add new Data Fields:
 Example: 
-Adding "Procurement" and Adding "Featured_Listing" to Partner Data) 
+Add "Procurement" and "Featured_Listing" to Partner Data 
 
-1.Create a new Model: 
+1. Create a new Model: 
 
 Example: 
 Adding a featured_listing field to Partners:\
@@ -93,28 +93,30 @@ Adding a featured_listing field to Partners:\
 Run the migration to reflect the changes in the database:\
 `rails db:migrate`
 
-2.Add Relationship associations to Models:
+2. Add Relationship associations to Models:
 *List of Associations: https://edgeguides.rubyonrails.org/association_basics.html
 
 Example: 
-Inside app/models/partner.rb add:\ 
-`belongs_to :featured_listings, optional: true` 
-Inside app/models/featured_listing.rb add:\ 
+* Inside app/models/partner.rb add:\ 
+```ruby 
+belongs_to :featured_listings, optional: true```
+
+* Inside app/models/featured_listing.rb add:\ 
 `has_many :partners` within class definition
 
-When your New Field has a many->many relationship with Partner: 
-Reference: https://stackoverflow.com/questions/5120703/creating-a-many-to-many-relationship-in-rails/5120734
+3. When your New Field has a many->many relationship with Partner: Choose a. 
+   When youre New Field has a one->many relationship with Partner: Choose b.
 
-3a.Create a Join table using a Migration: 
+a. Create a Join table using a Migration: 
 `rails g migration CreateProcurementsPartnersJoinTable`
 
-  -Run the migration to reflect the changes in the database:
+  * Run the migration to reflect the changes in the database:
 `rails db:migrate`
 
-  -Go to "routes.rb" and add: 
+  * Go to "routes.rb" and add: 
 `resources :procurements` within the `namespace: admin`
 
-  -Go to db.rake and add:
+  * Go to db.rake and add:
 ```ruby
 procurement_names = val['Procurement'].to_s().split(', ')
   procurement_names.each do |procurement_name|
@@ -131,7 +133,7 @@ end
 OR
 
 When your New Field has a one-->many relationship with Partner:
-3b.Add some Migrations:
+b.Add some Migrations:
 *Since "partner" belongs_to "featured_listing", the "partner" table should have a "featured_listing_id" column as the foreign key
 referencing to the featured_listing table*
 
@@ -153,7 +155,7 @@ c.Run the migration to reflect the changes in the database:
 
 *Open your schema file "/db/schema.rb" Now you can see "featured_listing_id" column in "partners" table
 
-4.Generate one more migration for creating the foreign key:
+4. Generate one more migration for creating the foreign key:
 
 a.Add "featured_listing_id" as a foreign key into the partner:
 ```rails g migration AddForeignKeyToPartner```
@@ -182,15 +184,15 @@ featured_listing_name = val['Featured Listing']
 end
 ```
 
-To generate a new Controller:
+## To generate a new Controller:
 `rails g controller <path/<controller_name> <action>`
 
 Example: 
 `rails g controller admin/featured_listings create`
 
 
-To create the featured_listing model:
-`rails g model featured_listing name:string`
+## To generate a new Model:
+`rails g model <model_name> <attributes></attributes>name:string`
 To undo  creating a model:
 `rails destroy model featured_listing`
 
