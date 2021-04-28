@@ -61,41 +61,46 @@ Configure env vars in staging and production:
 * `AWS_REGION`
 * `AWS_S3_BUCKET`
 
+<br>
 
 ## To import new data:
 
 LOCALHOST:
-* Tear down/clear out the Database:\
+1. Tear down/clear out the Database:\
  `rails db:reset`
-* Recreate the tables:
+2. Recreate the tables:\
 `rails db:migrate`
-* Import the data:
+3. Import the data:\
 `rails db:import_partners`
 
 HEROKU STAGING:
-1. Tear down/clear out the Database:
+1. Tear down/clear out the Database:\
 `heroku pg:reset -rstaging`
-2. Recreate the tables:
+2. Recreate the tables:\
 `heroku run rails db:migrate -rstaging`
-3. Import the data:
+3. Import the data:\
 `heroku run rake db:import_partners -rstaging`
 
-To add new Data Fields:
-(Example: Adding "Procurement" and Adding "Featured_Listing" to Partner Data) 
+## To add new Data Fields:
+Example: 
+Adding "Procurement" and Adding "Featured_Listing" to Partner Data) 
 
 1.Create a new Model: 
 
-Example: Adding a featured_listing field to Partners
-One-->Many = featured_listing-->partners
+Example: 
+Adding a featured_listing field to Partners:\
 `rails g model featured_listing name:string`
-Run the migration to reflect the changes in the database:
+Run the migration to reflect the changes in the database:\
 `rails db:migrate`
 
 2.Add Relationship associations to Models:
 *List of Associations: https://edgeguides.rubyonrails.org/association_basics.html
 
-Example: Inside app/models/partner.rb add `belongs_to :featured_listings, optional: true` and 
-Inside app/models/featured_listing.rb add `has_many :partners` within class definition
+Example: 
+Inside app/models/partner.rb add:\ 
+`belongs_to :featured_listings, optional: true` 
+Inside app/models/featured_listing.rb add:\ 
+`has_many :partners` within class definition
 
 When your New Field has a many->many relationship with Partner: 
 Reference: https://stackoverflow.com/questions/5120703/creating-a-many-to-many-relationship-in-rails/5120734
