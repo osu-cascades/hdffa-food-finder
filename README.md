@@ -184,16 +184,16 @@ Add "Procurement" and "Featured_Listing" to Partner Data
 <br> 
 
 ## To generate a new Controller:
-`rails g controller <path/<controller_name> <action>`
+Run: `rails g controller <path/<controller_name> <action>`
 
-Example:\ 
-`rails g controller admin/featured_listings create`
+Example: `rails g controller admin/featured_listings create`
 
 
 ## To generate a new Model:
-`rails g model <model_name> <attributes></attributes>name:string`\
+Run: `rails g model <model_name> <attributes></attributes>name:string`\
 To undo  creating a model:\
 `rails destroy model featured_listing`
+
 
 Note: See _.env.example_ for a complete list of expected environment
 variables that need set in both staging & production environments.
