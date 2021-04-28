@@ -105,7 +105,7 @@ Add "Procurement" and "Featured_Listing" to Partner Data
     * Inside app/models/featured_listing.rb add:
     `has_many :partners` within class definition
 
-3. When your New Field has a many->many relationship with Partner: Choose a.\ 
+3. When your New Field has a many->many relationship with Partner: Choose a.
    When youre New Field has a one->many relationship with Partner: Choose b.
 
     a. Create a Join table using a Migration: 
@@ -129,61 +129,51 @@ Add "Procurement" and "Featured_Listing" to Partner Data
         end 
         ```
 
-      * Go to "app/views/admin/partners/show.html.haml" and add procurements to the location you want to show it in
+    b. Generate a migration to create featured_listing_id into the partner table:
+    ```rails generate migration AddFeaturedListingToPartners```
 
-OR
+      * Add the following line to the new migration file inside "db/migrate/(ordered by date)":
 
-When your New Field has a one-->many relationship with Partner:
-b.Add some Migrations:
-*Since "partner" belongs_to "featured_listing", the "partner" table should have a "featured_listing_id" column as the foreign key
-referencing to the featured_listing table*
+      ```ruby
+      class AddFeaturedListingToPartners < ActiveRecord::Migration[5.2]
+        def change
+            add_reference :partners, :featured_listing
+        end
+      end
+      ```
+      * Run the migration to reflect the changes in the database:
+      ```rails db:migrate```
 
-a.Generate a migration to create featured_listing_id into the partner table:
-```rails generate migration AddFeaturedListingToPartners```
+      * Open your schema file "/db/schema.rb" Now you can see "featured_listing_id" column in "partners" table
 
-b.Add the following line to the new migration file inside "db/migrate/(ordered by date)":
+      * Generate one more migration for creating the foreign key:
 
-```ruby
-class AddFeaturedListingToPartners < ActiveRecord::Migration[5.2]
-  def change
-      add_reference :partners, :featured_listing
-  end
-end
-```
+      ** Add "featured_listing_id" as a foreign key into the partner:
+      ```rails g migration AddForeignKeyToPartner```
 
-c.Run the migration to reflect the changes in the database:
-```rails db:migrate```
+      ** Add the following line to the new migration file inside "db/migrate/(ordered by date)":
+      ```ruby
+      class AddForeignKeyToTask < ActiveRecord::Migration[5.2]
+        def change
+          add_foreign_key :partners, :featured_listings```
+        end
+      end
+      ```
+      * Run the migration to reflect the changes in the database:
+        ```rails db:migrate```
+    *Refer to the "To Import New Data" section in the README
 
-*Open your schema file "/db/schema.rb" Now you can see "featured_listing_id" column in "partners" table
-
-4. Generate one more migration for creating the foreign key:
-
-a.Add "featured_listing_id" as a foreign key into the partner:
-```rails g migration AddForeignKeyToPartner```
-
-b.Add the following line to the new migration file inside "db/migrate/(ordered by date)":
-```ruby
-class AddForeignKeyToTask < ActiveRecord::Migration[5.2]
-  def change
-    add_foreign_key :partners, :featured_listings```
-  end
-end
-```
-c.Run the migration to reflect the changes in the database:
-```rails db:migrate```
-*Refer to the "To Import New Data" section in the README
-
-5. Go the the "show.html.haml" file of the view you want to see the new field appear in and add
+5. Go to the "app/views/admin/partners/show.html.haml" file and add code wherever you want to see new field   appear: 
 
 6. Go to "lib/tasks/db.rake" and add:
-```ruby
-featured_listing_name = val['Featured Listing']
-   unless featured_listing_name.blank?
-      featured_listing = FeaturedListing.find_or_create_by(name: featured_listing_name)
-      featured_listing.partners << partner
+    ```ruby
+    featured_listing_name = val['Featured Listing']
+      unless featured_listing_name.blank?
+          featured_listing = FeaturedListing.find_or_create_by(name: featured_listing_name)
+          featured_listing.partners << partner
+        end
     end
-end
-```
+    ```
 
 ## To generate a new Controller:
 `rails g controller <path/<controller_name> <action>`
