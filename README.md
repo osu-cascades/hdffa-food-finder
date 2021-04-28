@@ -110,13 +110,16 @@ Reference: https://stackoverflow.com/questions/5120703/creating-a-many-to-many-r
 `resources :procurements` within the `namespace: admin`
 
   -Go to db.rake and add:
-`procurement_names = val['Procurement'].to_s().split(', ')
-      procurement_names.each do |procurement_name|
-        unless procurement_name.blank?
-          procurement = Procurement.find_or_create_by(name: procurement_name)
-          procurement.partners << partner
-        end
-      end`
+```ruby
+procurement_names = val['Procurement'].to_s().split(', ')
+  procurement_names.each do |procurement_name|
+    unless procurement_name.blank?
+      procurement = Procurement.find_or_create_by(name: procurement_name)
+      procurement.partners << partner
+    end
+  end
+end 
+```
 
   -Go to "app/views/admin/partners/show.html.haml" and add procurements to the location you want to show it in
 
@@ -131,11 +134,14 @@ a.Generate a migration to create featured_listing_id into the partner table:
 ```rails generate migration AddFeaturedListingToPartners```
 
 b.Add the following line to the new migration file inside "db/migrate/(ordered by date)":
+
+```ruby
 class AddFeaturedListingToPartners < ActiveRecord::Migration[5.2]
-def change
-    ```add_reference :partners, :featured_listing```
+  def change
+      add_reference :partners, :featured_listing
+  end
 end
-end
+```
 
 c.Run the migration to reflect the changes in the database:
 ```rails db:migrate```
@@ -148,12 +154,13 @@ a.Add "featured_listing_id" as a foreign key into the partner:
 ```rails g migration AddForeignKeyToPartner```
 
 b.Add the following line to the new migration file inside "db/migrate/(ordered by date)":
+```ruby
 class AddForeignKeyToTask < ActiveRecord::Migration[5.2]
   def change
-    ```add_foreign_key :partners, :featured_listings```
+    add_foreign_key :partners, :featured_listings```
   end
 end
-
+```
 c.Run the migration to reflect the changes in the database:
 ```rails db:migrate```
 *Refer to the "To Import New Data" section in the README
@@ -161,11 +168,14 @@ c.Run the migration to reflect the changes in the database:
 5. Go the the "show.html.haml" file of the view you want to see the new field appear in and add
 
 6. Go to "lib/tasks/db.rake" and add:
-`featured_listing_name = val['Featured Listing']
+```ruby
+featured_listing_name = val['Featured Listing']
    unless featured_listing_name.blank?
       featured_listing = FeaturedListing.find_or_create_by(name: featured_listing_name)
       featured_listing.partners << partner
-    end`
+    end
+end
+```
 
 To generate a new Controller:
 `rails g controller <path/<controller_name> <action>`
