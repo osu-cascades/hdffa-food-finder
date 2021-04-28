@@ -47,10 +47,6 @@
       %dd.col-sm-9
         - @partner.categories.each do |category|
           .row-sm-9= link_to category.name, [:admin, category]
-      %dt.col-sm-3 Products
-      %dd.col-sm-9
-        - @partner.products.each do |product|
-          .row-sm-9= link_to product.name, [:admin, product]
       %dt.col-sm-3 Featured Listing
       %dd.col-sm-9
         .row-sm-9= featured_listing_name(@partner.featured_listing_id)
