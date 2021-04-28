@@ -154,7 +154,7 @@ Add "Procurement" and "Featured_Listing" to Partner Data
       * Generate one more migration for creating the foreign key:
 
         * Add "featured_listing_id" as a foreign key into the partner:\
-          ```rails g migration AddForeignKeyToPartner```
+          Run: ```rails g migration AddForeignKeyToPartner```
 
         * Add the following line to the new migration file inside "db/migrate/(ordered by date)":
           ```ruby
