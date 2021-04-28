@@ -148,17 +148,17 @@ Add "Procurement" and "Featured_Listing" to Partner Data
 
       * Generate one more migration for creating the foreign key:
 
-      ** Add "featured_listing_id" as a foreign key into the partner:
-      ```rails g migration AddForeignKeyToPartner```
+        * Add "featured_listing_id" as a foreign key into the partner:
+        ```rails g migration AddForeignKeyToPartner```
 
-      ** Add the following line to the new migration file inside "db/migrate/(ordered by date)":
-      ```ruby
-      class AddForeignKeyToTask < ActiveRecord::Migration[5.2]
-        def change
-          add_foreign_key :partners, :featured_listings```
+        * Add the following line to the new migration file inside "db/migrate/(ordered by date)":
+        ```ruby
+        class AddForeignKeyToTask < ActiveRecord::Migration[5.2]
+          def change
+            add_foreign_key :partners, :featured_listings```
+          end
         end
-      end
-      ```
+        ```
       * Run the migration to reflect the changes in the database:
         ```rails db:migrate```
     *Refer to the "To Import New Data" section in the README
