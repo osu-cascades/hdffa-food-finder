@@ -134,18 +134,18 @@ Add "Procurement" and "Featured_Listing" to Partner Data
         end 
         ```
 
-    b. Generate a migration to create featured_listing_id into the partner table:
+    b. Generate a migration to create featured_listing_id into the partner table:\
     ```rails generate migration AddFeaturedListingToPartners```
 
       * Add the following line to the new migration file inside "db/migrate/(ordered by date)":
 
-      ```ruby
-      class AddFeaturedListingToPartners < ActiveRecord::Migration[5.2]
-        def change
-            add_reference :partners, :featured_listing
+        ```ruby
+        class AddFeaturedListingToPartners < ActiveRecord::Migration[5.2]
+          def change
+              add_reference :partners, :featured_listing
+          end
         end
-      end
-      ```
+        ```
       * Run the migration to reflect the changes in the database:
       ```rails db:migrate```
 
