@@ -135,7 +135,7 @@ Add "Procurement" and "Featured_Listing" to Partner Data
         ```
 
     b. Generate a migration to create featured_listing_id into the partner table:\
-    ```rails generate migration AddFeaturedListingToPartners```
+      ```rails generate migration AddFeaturedListingToPartners```
 
       * Add the following line to the new migration file inside "db/migrate/(ordered by date)":
 
@@ -147,14 +147,14 @@ Add "Procurement" and "Featured_Listing" to Partner Data
         end
         ```
       * Run the migration to reflect the changes in the database:
-      ```rails db:migrate```
+        ```rails db:migrate```
 
       * Open your schema file "db/schema.rb" Now you can see "featured_listing_id" column in "partners" table
 
       * Generate one more migration for creating the foreign key:
 
         * Add "featured_listing_id" as a foreign key into the partner:
-        ```rails g migration AddForeignKeyToPartner```
+          ```rails g migration AddForeignKeyToPartner```
 
         * Add the following line to the new migration file inside "db/migrate/(ordered by date)":
           ```ruby
