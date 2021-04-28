@@ -104,9 +104,10 @@ Add "Procurement" and "Featured_Listing" to Partner Data
       ```ruby 
       belongs_to :featured_listings, optional: true
       ```
-
     * Inside app/models/featured_listing.rb add:
-      `ruby has_many :partners` within class definition
+      ```ruby 
+        has_many :partners
+      ``` within class definition
 
 3. When your New Field has a many->many relationship with Partner: Choose a.
 
@@ -148,7 +149,7 @@ Add "Procurement" and "Featured_Listing" to Partner Data
       * Run the migration to reflect the changes in the database:
       ```rails db:migrate```
 
-      * Open your schema file "/db/schema.rb" Now you can see "featured_listing_id" column in "partners" table
+      * Open your schema file "db/schema.rb" Now you can see "featured_listing_id" column in "partners" table
 
       * Generate one more migration for creating the foreign key:
 
@@ -163,32 +164,35 @@ Add "Procurement" and "Featured_Listing" to Partner Data
             end
           end
           ```
+        * Go to "lib/tasks/db.rake" and add:
+          ```ruby
+          featured_listing_name = val['Featured Listing']
+            unless featured_listing_name.blank?
+                featured_listing = FeaturedListing.find_or_create_by(name: featured_listing_name)
+                featured_listing.partners << partner
+              end
+          end
+          ```
       * Run the migration to reflect the changes in the database:
         ```rails db:migrate```
     *Refer to the "To Import New Data" section in the README
 
 5. Go to the "app/views/admin/partners/show.html.haml" file and add code wherever you want to see new field   appear: 
 
-6. Go to "lib/tasks/db.rake" and add:
-    ```ruby
-    featured_listing_name = val['Featured Listing']
-      unless featured_listing_name.blank?
-          featured_listing = FeaturedListing.find_or_create_by(name: featured_listing_name)
-          featured_listing.partners << partner
-        end
-    end
-    ```
+6. Refer to the "To add new Data Fields" Section inside this README to learn how to tear down the database and import  new 
+
+<br> 
 
 ## To generate a new Controller:
 `rails g controller <path/<controller_name> <action>`
 
-Example: 
+Example:\ 
 `rails g controller admin/featured_listings create`
 
 
 ## To generate a new Model:
-`rails g model <model_name> <attributes></attributes>name:string`
-To undo  creating a model:
+`rails g model <model_name> <attributes></attributes>name:string`\
+To undo  creating a model:\
 `rails destroy model featured_listing`
 
 Note: See _.env.example_ for a complete list of expected environment
