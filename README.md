@@ -114,15 +114,15 @@ Add "Procurement" and "Featured_Listing" to Partner Data
    When your New Field has a one->many relationship with Partner: Choose b.
 
     a. Create a Join table using a Migration:\
-    `rails g migration CreateProcurementsPartnersJoinTable`
+        `rails g migration CreateProcurementsPartnersJoinTable`
 
       * Run the migration to reflect the changes in the database:\
-    `rails db:migrate`
+          `rails db:migrate`
 
       * Go to "routes.rb" and add: 
-    `resources :procurements` within the `namespace: admin`
+          `resources :procurements` within the `namespace: admin`
 
-      * Go to "db.rake" and add:
+      * Go to "lib/tasks/db.rake" and add:
         ```ruby
         procurement_names = val['Procurement'].to_s().split(', ')
           procurement_names.each do |procurement_name|
@@ -135,7 +135,7 @@ Add "Procurement" and "Featured_Listing" to Partner Data
         ```
 
     b. Generate a migration to create featured_listing_id into the partner table:\
-      ```rails generate migration AddFeaturedListingToPartners```
+        ```rails generate migration AddFeaturedListingToPartners```
 
       * Add the following line to the new migration file inside "db/migrate/(ordered by date)":
 
@@ -153,7 +153,7 @@ Add "Procurement" and "Featured_Listing" to Partner Data
 
       * Generate one more migration for creating the foreign key:
 
-        * Add "featured_listing_id" as a foreign key into the partner:
+        * Add "featured_listing_id" as a foreign key into the partner:\
           ```rails g migration AddForeignKeyToPartner```
 
         * Add the following line to the new migration file inside "db/migrate/(ordered by date)":
