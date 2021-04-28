@@ -97,39 +97,39 @@ Add "Procurement" and "Featured_Listing" to Partner Data
 *List of Associations: https://edgeguides.rubyonrails.org/association_basics.html
 
     Example: 
-    * Inside app/models/partner.rb add:\ 
+    * Inside app/models/partner.rb add: 
     ```ruby 
     belongs_to :featured_listings, optional: true
     ```
 
-    * Inside app/models/featured_listing.rb add:\ 
+    * Inside app/models/featured_listing.rb add:
     `has_many :partners` within class definition
 
-3. When your New Field has a many->many relationship with Partner: Choose a. 
+3. When your New Field has a many->many relationship with Partner: Choose a.\ 
    When youre New Field has a one->many relationship with Partner: Choose b.
 
-a. Create a Join table using a Migration: 
-`rails g migration CreateProcurementsPartnersJoinTable`
+    a. Create a Join table using a Migration: 
+    `rails g migration CreateProcurementsPartnersJoinTable`
 
-  * Run the migration to reflect the changes in the database:
-`rails db:migrate`
+      * Run the migration to reflect the changes in the database:
+    `rails db:migrate`
 
-  * Go to "routes.rb" and add: 
-`resources :procurements` within the `namespace: admin`
+      * Go to "routes.rb" and add: 
+    `resources :procurements` within the `namespace: admin`
 
-  * Go to db.rake and add:
-    ```ruby
-    procurement_names = val['Procurement'].to_s().split(', ')
-      procurement_names.each do |procurement_name|
-        unless procurement_name.blank?
-          procurement = Procurement.find_or_create_by(name: procurement_name)
-          procurement.partners << partner
-        end
-      end
-    end 
-    ```
+      * Go to db.rake and add:
+        ```ruby
+        procurement_names = val['Procurement'].to_s().split(', ')
+          procurement_names.each do |procurement_name|
+            unless procurement_name.blank?
+              procurement = Procurement.find_or_create_by(name: procurement_name)
+              procurement.partners << partner
+            end
+          end
+        end 
+        ```
 
-  * Go to "app/views/admin/partners/show.html.haml" and add procurements to the location you want to show it in
+      * Go to "app/views/admin/partners/show.html.haml" and add procurements to the location you want to show it in
 
 OR
 
