@@ -65,11 +65,11 @@ Configure env vars in staging and production:
 ## To import new data:
 
 LOCALHOST:
-1. Tear down/clear out the Database:
+* Tear down/clear out the Database:
  `rails db:reset`
-2. Recreate the tables:
+* Recreate the tables:
 `rails db:migrate`
-3. Import the data:
+* Import the data:
 `rails db:import_partners`
 
 HEROKU STAGING:
