@@ -81,6 +81,9 @@ HEROKU STAGING:
 3. Import the data:\
 `heroku run rake db:import_partners -rstaging`
 
+
+<br>
+
 ## To add new Data Fields:
 Example: 
 Add "Procurement" and "Featured_Listing" to Partner Data 
