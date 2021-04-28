@@ -65,7 +65,7 @@ Configure env vars in staging and production:
 ## To import new data:
 
 LOCALHOST:
-* Tear down/clear out the Database:
+* Tear down/clear out the Database:\
  `rails db:reset`
 * Recreate the tables:
 `rails db:migrate`
