@@ -17,11 +17,11 @@
       %div{:class =>"d-flex justify-content-center"}
       %div{:class =>"d-flex justify-content-center text-center"}
       %div{:class =>"d-flex justify-content-center"}
-        = button_to @partner.facebook, {class: 'btn btn-small', :disabled => !@partner.facebook.present?}do
+        = button_to @partner.facebook, {class: 'btn btn-small', :disabled => !@partner.facebook.present?, :form => {target: '_blank'}} do
           %i{:class => "m-2 bi bi-facebook fa-lg", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Link to partner Facebook"}
-        = button_to @partner.instagram, {class: 'btn btn-small', :disabled => !@partner.instagram.present?} do
+        = button_to @partner.instagram, {class: 'btn btn-small', :disabled => !@partner.instagram.present?, :form => {target: '_blank'}} do
           %i{:class => "m-2 bi bi-instagram fa-lg", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Link to partner Instagram"}
-        = button_to @partner.twitter, {class: 'btn btn-small', :disabled => !@partner.twitter.present?} do
+        = button_to @partner.twitter, {class: 'btn btn-small', :disabled => !@partner.twitter.present?, :form => {target: '_blank'}} do
           %i{:class => "m-2 bi bi-twitter fa-lg", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Link to partner twitter"}
       %div{:class => "container"}
         %div{:class => "row d-flex justify-content-center pt-1"}
