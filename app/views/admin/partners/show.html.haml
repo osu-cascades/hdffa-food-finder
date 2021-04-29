@@ -17,12 +17,12 @@
       %div{:class =>"d-flex justify-content-center"}
       %div{:class =>"d-flex justify-content-center text-center"}
       %div{:class =>"d-flex justify-content-center"}
-        
-        %i{:class => "m-2 bi bi-facebook fa-lg", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Link to partner Facebook"}
-          -#= link_to "#{@partner.facebook}", @partner.facebook, target: :_blank
-        %i{:class => "m-2 bi bi-instagram fa-lg", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Link to partner Instagram"}
-        %i{:class => "m-2 bi bi-twitter fa-lg", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Link to partner twitter"}
-        -# all of these will be links once the new field is added
+        = button_to @partner.facebook, {class: 'btn btn-small'} do
+          %i{:class => "m-2 bi bi-facebook fa-lg", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Link to partner Facebook"}
+        = button_to @partner.instagram, {class: 'btn btn-small'} do
+          %i{:class => "m-2 bi bi-instagram fa-lg", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Link to partner Instagram"}
+        = button_to @partner.twitter, {class: 'btn btn-small'} do
+          %i{:class => "m-2 bi bi-twitter fa-lg", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Link to partner twitter"}
       %div{:class => "container"}
         %div{:class => "row d-flex justify-content-center pt-1"}
           %button{:class => "btn border btn-light btn-block rounded-pill w-60", :onclick => "copytoclipboard(); this.innerHTML='Copied!", :data-toggle => "tooltip", :data-placement => "bottom", :title =>"Search address in Google maps"}
