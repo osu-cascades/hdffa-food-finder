@@ -1184,7 +1184,7 @@
 	    "Description": "Abiqua Naturals is dedicated to creating high quality, holistic products using as many locally sourced ingredients as possible. Each product is small batch made with care and attention to detail. Elderberry Boost has been our most popular product since 2015. Proudly processing locally",
 	    "Category": "Locally Made",
 	    "Discount": "",
-	    "Procurement": "Gluten-Free, Online Ordering, Woman-owned",
+	    "Procurement": "Online Ordering",
 	    "Dietary": "Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1202,7 +1202,7 @@
 	    "Description": "We are a specialty food distributor that brings sustainable food to kitchens of all sizes. Our farm-direct, custom-harvested foods are sourced from over 40 Oregon producers year-round. We supply homes, restaurants, food trucks, groceries, processors, resorts, caterers, and institutions with fresh, authentically local and high quality produce, eggs, meat proteins, dairy and dry goods. Proudly sourcing from: Rooper Ranch, Seed To Table Farm, Sungrounded Farm, Tender Greens, Vaquero Valley Ranch, Zajac Farm, and many more!",
 	    "Category": "Market & Grocer, Grocer, Distributor",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Online Ordering, Home Delivery, Takeout, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Online Ordering, Home Delivery, Takeout",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1220,7 +1220,7 @@
 	    "Description": "Bella Baker is a locally owned business located in Bend, Oregon. Founded by Milena Ziober in 2015 after adventuring in their Brazilian restaurant located in Leucadia, California. Their most requested item on the menu was a fresh baked Pão de Queijo, the Brazilian cheese bread. A tradition to the Brazilians, found in every corner street bakery. Each region has its own traditional recipe using a variety of cheeses and tapioca flour. Proudly sourcing from: Central Oregon Locavore",
 	    "Category": "Locally Made",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Gluten-Free",
+	    "Procurement": "",
 	    "Dietary": "Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1238,7 +1238,7 @@
 	    "Description": "From quaint beginnings atop Drake Park to a thriving, bustling market in nearby Brooks Alley, the Bend Farmers market has been growing and feeding Central Oregon for over 20 years! Our market runs Wednesdays, rain or shine, smoke or hail, from 2pm to 6pm in Downtown Bend. 2021 dates coming soon! The mission of the Bend Farmers Market is to create and sustain a centralized market that provides fresh local produce and farm products to the Central Oregon community, providing a viable market for local farmers, and enhancing the business, nutritional, and community health of Central Oregon.  We pride ourselves are on our diverse selection and commitment to local agriculture. We are excited to be into our second decade of supporting local food.",
 	    "Category": "Farmers Market",
 	    "Discount": "",
-	    "Procurement": "Accept EBT or WIC or SFMNP or FDNP, Takeout, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Accept EBT or WIC or SFMNP or FDNP, Takeout",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": ""
 	  },
@@ -1256,7 +1256,7 @@
 	    "Description": "We empower aspiring vegetable gardeners in Central Oregon by sharing research based information and offering personalized on-site coaching. We help turn the back, side, and front yards of Central Oregonians into edible garden spaces, increasing access to and enjoyment of fresh, flavorful, and nutritious food. Book an on-site consultation to get ideas on how to create a new edible garden or how to improve your existing edible garden on your own. Our personalized crop plans map out where and when to sow seeds or transplant starts. We customize your plan based on your eating priorities for the growing season and your available space. Along with your personalized crop plan, we can supply you with short season seed varieties, locally hardened off plant starts, and vegetable gardening lessons. Set yourself up with the appropriate infrastructure to grow and protect your vegetables in Central Oregon's unpredictable climate. With our beautiful cedar or locally milled juniper raised garden beds, topped with mini hoophouses, we help extend our short growing season and protect plants from pests. Growing vegetables in Central Oregon can be intimidating and frustrating, but we make gardening in our climate accessible through inspiration, education, and ongoing support.  Proudly supporting locally grown",
 	    "Category": "Seeds/Plants/Landscape",
 	    "Discount": "",
-	    "Procurement": "Woman-owned",
+	    "Procurement": "",
 	    "Dietary": "",
 	    "Value": "Woman-owned"
 	  },
@@ -1274,7 +1274,7 @@
 	    "Description": "Blissful Spoon is a bakery, tapas & wine bar specializing in Mediterranean and globally-inspired tapas & desserts for lunch and dinner; French pastries (w/ the best variety of gluten-free goodies in Central Oregon) and coffee/tea for breakfast. We focus on sourcing local products and fresh, organic ingredients! You can also find our gluten-free granola in stores throughout the Pacific Northwest. Proudly sourcing from: Broadus Bees, Groundworks Organics, Happy Harvest Farms, Hummingbird Wholesale, Larkin Valley Ranch, and more!",
 	    "Category": "Eat & Drink, Bakery/Dessert, Catering, Coffee/Tea/Kombucha, Restaurant/Cafe",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Online Ordering, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Online Ordering",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1292,7 +1292,7 @@
 	    "Description": "BoRo is the only commercial wood-fire coffee roaster in Central Oregon. When we learned the majority of all coffee beans in the world are roasted using petroleum based heat, we decided to find a better way. This focused exploration led us to discover a more healthful and flavorful way to roast. We built a one-of-kind roaster that uses select hardwoods, producing a moist heat. This eliminates the bitter aftertaste that can overpower a quality bean. BoRo sources all green beans directly from socially and responsibly sourced small family farms from around the world. We are micro-roasters using responsibly/directly sourced beans. Free local delivery! Proudly processing locally",
 	    "Category": "Eat & Drink, Coffee/Tea/Kombucha",
 	    "Discount": "FREE doorstep delivery in most tri-county cities. Enter code LOCAL on our webstore.",
-	    "Procurement": "Woman-owned, Online Ordering, Home Delivery, Takeout, Vegan, Gluten-Free",
+	    "Procurement": "Online Ordering, Home Delivery, Takeout",
 	    "Dietary": "Vegan, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1310,7 +1310,7 @@
 	    "Description": "Jeff and Juli Labhart started pasteurizing milk and creating hand crafted gelato in their home based commercial kitchen in 2011 and then built their own commercial dairy plant in 2015. Today, they employ over 40 employees and sell their artisan gelato all over Oregon using NW ingredients like Eberhard's milk, Tumalo Lavender, Oregon Spirit Distillers bourbon, and HolmMade Toffee when ever possible. Their motto is pure, simple, goodness, which describes their philosophy from day one. Proudly sourcing from:  Holm Made Toffee,  Metolious Tea, Oregon Spirit Distillers, Tumalo Lavender, Voila Coffee, and more!",
 	    "Category": "Eat & Drink, Bakery/Dessert, Catering, Food Truck, Restaurant/Cafe",
 	    "Discount": "Buy one, get one free - 4 oz cup or cone",
-	    "Procurement": "Woman-owned, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1328,7 +1328,7 @@
 	    "Description": "Boone Dog Pizza is a wood fired pizza cart that is dedicated to sourcing local vegetables and animal products, and the finest cheeses available.  We use organic grains in all of our pizzas and breads.  Boone Dog Pizza strives to share in our success through our regular contribution to social, environmental and racial justice initiatives.  We follow all Oregon Health Authority guidelines to remain COVID compliant. Proudly sourcing from: Casad Family Farm, Fields Farm, Home Farm Foods, Mahonia Gardens, Rainshadow Organics,  Seed To Table, and more!",
 	    "Category": "Eat & Drink, Restaurant/Cafe, Food Truck",
 	    "Discount": "",
-	    "Procurement": "Minority-owned, Woman-owned, Online Ordering, Takeout, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Online Ordering, Takeout",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": "Minority-owned, Woman-owned"
 	  },
@@ -1364,7 +1364,7 @@
 	    "Description": "Great food is about relationships between chefs, local farmers, and servers, who conspire to deliver exceptional experiences. Most of all, great food is about our relationships with the people with whom we gather to enjoy a wonderful meal. At Brasada Ranch, we celebrate all of these relationships in the incredible foods we prepare and the fantastic experiences we foster every day throughout the resort. Proudly sourcing from: Flying Double J Ranch, 9 Peaks Organics, and Sisters Coffee",
 	    "Category": "Eat & Drink, Catering, Coffee/Tea/Kombucha, Restaurant/Cafe",
 	    "Discount": "",
-	    "Procurement": "Takeout, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Takeout",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": ""
 	  },
@@ -1382,7 +1382,7 @@
 	    "Description": "Welcome to Broadus Bees! Our mission is to create a sustainable business through honeybee products, hive installation and maintenance, and educating the public about the critical role bees play in producing the food we eat! I feel like it is my responsibility to give back to the very thing that gives us life, bees!!! A key to our success is our pure, raw, unadulterated honey flavored by a wide variety of flowering plants in Bend and Medford, Oregon. All our honey is flavored by what the bees are pollinating, nothing else. Broadus Bees also carries lip balm made with local beeswax and honey soap made with our local Bend Wildflower Honey! Proudly working with local bees to create honey",
 	    "Category": "Locally Made, Honey",
 	    "Discount": "$5 off your next purchase at Broadus Bees",
-	    "Procurement": "Takeout, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Takeout",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": ""
 	  },
@@ -1400,7 +1400,7 @@
 	    "Description": "Busy IZZY Foods is a specialty food producer dedicated to the highest standards in ingredients, methods, freshness, and cleanliness. Izzy currently specializes in gluten-free granola and makes her products available online and at retail locations throughout Central Oregon and was awarded the HDFFA \"Local Champion\" for specialty foods in 2019 and 2020. Proudly sourcing from:  Bob's Redmill, Glory Bee, Hummingbird Wholesale, and Green Valley Pecan.",
 	    "Category": "Locally Made, Granola/Nuts",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Online Ordering, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Online Ordering",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1418,7 +1418,7 @@
 	    "Description": "Locavore is a 501c3 nonprofit supporting local food and farms through educational programs and a year-round farmers market, striving to improve access to local food, educating the community about the benefits of sustainably produced food, and supporting our local farms and ranchers. Proudly sourcing from: Agricultural Connections",
 	    "Category": "Market & Grocer, Grocer, Nonprofit",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Accept EBT or WIC or SFMNP or FDNP, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Accept EBT or WIC or SFMNP or FDNP",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1454,7 +1454,7 @@
 	    "Description": "Central Oregon Veterans Ranch is a local non-profit farm focused on agri-therapy for local veterans. We are a volunteer based 19-acre ranch currently growing hydroponic lettuce in vertical towers year round. We also host a veterans community garden in our high tunnel hoop house which is free to local veterans and their families. We sell free range eggs to Volcano Veggies and Central Oregon Locavore. Free community garden plots for veterans available through May.",
 	    "Category": "Farm & Ranch, Nonprofit, Vegetables/Fruit",
 	    "Discount": "",
-	    "Procurement": "Veteran-owned",
+	    "Procurement": "",
 	    "Dietary": "",
 	    "Value": "Veteran-owned"
 	  },
@@ -1472,7 +1472,7 @@
 	    "Description": "We believe a healthy world starts with a healthy community. Big impact can start with small acts. And good things start with compassion. Our commitment to compassion includes: flavoring our kombucha with whole, organic fruit (never juices or flavorings), brewing with Elephant Friendly certified whole leaf teas, and donating a portion of our profits to families in need. Proudly sourcing from: Broadus Bees",
 	    "Category": "Locally Made, Coffee/Tea/Kombucha",
 	    "Discount": "",
-	    "Procurement": "Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": ""
 	  },
@@ -1490,7 +1490,7 @@
 	    "Description": "Roots Revival Movement to produce hand crafted beer and food. Providing exclusive, small batch ales and lagers, and daily smoked meats and a unique southern approach to food. A lot of GF options as well as Vegetarian. Proudly sourcing from: Akler Family Farm, Mecca Grade Estate Malt, Pioneer Ranch, and Sunrise Micro Farm",
 	    "Category": "Eat & Drink, Wine/Beer/Spirits, Food Truck, Coffee/Tea/Kombucha",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Online Ordering, Takeout, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Online Ordering, Takeout",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1544,7 +1544,7 @@
 	    "Description": "A fruit spread that is not just for toast anymore. Proudly processing locally",
 	    "Category": "Locally Made, Jam/Sauce/Condiments, Preserved Foods",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Online Ordering, Home Delivery, Vegan, Vegetarian",
+	    "Procurement": "Online Ordering, Home Delivery",
 	    "Dietary": "Vegan, Vegetarian",
 	    "Value": "Woman-owned"
 	  },
@@ -1580,7 +1580,7 @@
 	    "Description": "We are a small market farm located in Central Oregon now growing a wide variety of herbs, vegetable plants, and flowers and we also sell a small selection of vegetables at the Redmond Farmer's Market. We grow a nice variety of crops and plants sustainably and organically for the community! Find our plant starts at Central Oregon Locavore this spring.  We will have a nice selection of our \"Instant Garden Trays\" available at both locations and at the farm by appointment. Proudly growing locally",
 	    "Category": "Seeds/Plants/Landscape",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Online Ordering, Accept EBT or WIC or SFMNP or FDNP",
+	    "Procurement": "Online Ordering, Accept EBT or WIC or SFMNP or FDNP",
 	    "Dietary": "",
 	    "Value": "Woman-owned"
 	  },
@@ -1598,7 +1598,7 @@
 	    "Description": "We use the highest quality, sustainably sourced ingredients to make big steamed buns, teriyaki chicken, and other Asian inspired food. We provide big flavors in our unique dishes as well as a full bar. Find our food carts at all your favorite events too! We also have our dumplings and sauces on shelves in grocery stores. Proudly sourcing from:  Boundless Farmstead, Casad Family Farms, Central Oregon Ostrich, Deschutes Gourmet Mushrooms,  Fields Farm, and more!",
 	    "Category": "Eat & Drink, Locally Made, Catering, Food Truck, Restaurant/Cafe, Jam/Sauce/Condiments",
 	    "Discount": "",
-	    "Procurement": "Online Ordering, Takeout, Vegan, Vegetarian",
+	    "Procurement": "Online Ordering, Takeout",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": ""
 	  },
@@ -1616,7 +1616,7 @@
 	    "Description": "Your local taco dealers serving up craveable food in fun and festive environments at our restaurant and food carts, as well as various events and catering functions. Proudly sourcing from: Agriculutural Connections, Volcano Veggies, Home Farm Foods, Splitting Aces, and DD Ranch",
 	    "Category": "Eat & Drink, Catering, Food Truck, Restaurant/Cafe",
 	    "Discount": "",
-	    "Procurement": "Online Ordering, Takeout, Vegetarian, Gluten-Free",
+	    "Procurement": "Online Ordering, Takeout",
 	    "Dietary": "Vegetarian, Gluten-Free",
 	    "Value": ""
 	  },
@@ -1634,7 +1634,7 @@
 	    "Description": "F5 Smokehouse is a local butcher shop and custom meat processing facility. We custom process wild and domestic animals. We also sell USDA products fresh and frozen sourced as local as possible. The smokehouse makes jerky, pepperoni, summer sausage, brats, beer dogs and many other amazing products including candied bacon. We have an amazing staff that looks forward to serving you and we gladly accept SNAP benefits. Proudly processing locally.",
 	    "Category": "Market & Grocer, Grocer",
 	    "Discount": "$5 off purchase of $75+. Only good for retail items. Limit one per customer, expires 12/31/21",
-	    "Procurement": "Woman-owned, Accept EBT or WIC or SFMNP or FDNP, Gluten-Free",
+	    "Procurement": "Accept EBT or WIC or SFMNP or FDNP",
 	    "Dietary": "Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1652,7 +1652,7 @@
 	    "Description": "Faith Hope and Charity Vineyards is located on a 312 acre farm in a private valley with amazing views of the Cascade Mountain Range.  Close to Bend and Far from Ordinary! We are a destination for the whole family.  Award Winning Wines! Natural and sustainable.  Growing cold hardy French American grapes. Proudly sourcing from: our estate vineyard",
 	    "Category": "Eat & Drink, Wine/Beer/Spirits",
 	    "Discount": "$5 off of a dine-in pizza purchase. Limit one per customer. Expires 10/01/2021",
-	    "Procurement": "Woman-owned, Online Ordering, Home Delivery, Takeout",
+	    "Procurement": "Online Ordering, Home Delivery, Takeout",
 	    "Dietary": "",
 	    "Value": "Woman-owned"
 	  },
@@ -1670,7 +1670,7 @@
 	    "Description": "Our main focus is sourcing our products from local family owned farms. We serve wood fired grub with the freshest ingredients possible. We're bringing what we love about restaurants to our food truck! Proudly sourcing from: Vaquero Valley Ranch, Windy Acres Farm, Sungrounded Farm, Rainshadow Organics, Rooper Ranch, and more!",
 	    "Category": "Eat & Drink, Food Truck",
 	    "Discount": "10% off entire purchase. Limit one per customer. 04/01/2022",
-	    "Procurement": "Woman-owned, Takeout, Vegetarian, Gluten-Free",
+	    "Procurement": "Takeout",
 	    "Dietary": "Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1688,7 +1688,7 @@
 	    "Description": "We use only the highest quality ingredients in everything we make. From our family to yours, we put lots of love and careful attention in each item we create. We hope you enjoy our work as much as we enjoy bringing it to you.\nWe always support our local community of organic farmers whenever possible because we believe it leads to more delicious food, is more equitable for the environment and in the end, is the right way to do business.\nWe value quality and beauty, both of which shine through in the products we make and the space we make them in. Proudly sourcing from: Boundless farms, Broadus Bees, DD Ranch, Gorilla Greens, Thomas Orchards, and Rainshadow Organics",
 	    "Category": "Eat & Drink, Bakery/Dessert",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Online Ordering, Vegetarian, Gluten-Free",
+	    "Procurement": "Online Ordering",
 	    "Dietary": "Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1724,7 +1724,7 @@
 	    "Description": "Holm Made Toffee Co. is a family-owned artisan confectioner based in Bend.  We craft our candy in traditional handmade batches, utilizing Oregon grown hazelnuts and ingredients from around the Pacific Northwest. We put a little bit of happiness into every box of Holm Made Toffee. That's our promise.  And with no gluten, soy, or corn syrup, it's Happiness. Plain and Simple. Available at local retailers and online. Proudly sourcing from: Broadus Bees, Locavore, Justy's Jellys, Savory Spice, Tumalo Lavender, and more!",
 	    "Category": "Eat & Drink, Bakery/Dessert, Locally Made, Candy/Toffee",
 	    "Discount": "15% off online toffee purchases (excludes gift sets and specialty items): HDFFA15\nexpires 12/31/21",
-	    "Procurement": "Woman-owned, Online Ordering, Takeout, Gluten-Free",
+	    "Procurement": "Online Ordering, Takeout",
 	    "Dietary": "Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1742,7 +1742,7 @@
 	    "Description": "Food truck offering farm to table food service options  including catering! Call in/take out available. Dinner club service on Tuesday & Friday evenings at 5pm (featuring weekly collaborators and seasonal products). Proudly sourcing from: Boudless Farmstead, Sungrounded Farm, Tender Greens, DD Ranch, Windy Acres, and more!",
 	    "Category": "Eat & Drink, Food Truck, Catering",
 	    "Discount": "",
-	    "Procurement": "Takeout, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Takeout",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": ""
 	  },
@@ -1778,7 +1778,7 @@
 	    "Description": "A local-food driven restaurant focusing on from-scratch cooking including handmade pasta, pizza and bread. Open for breakfast, lunch and dinner 7 days a week. Proudly sourcing from: Boundless Farmstead, Bonta Gelato, Home Farm Foods, Rainshadow Organics, Zajac Farms, and more!",
 	    "Category": "Eat & Drink, Restaurant/Cafe",
 	    "Discount": "",
-	    "Procurement": "Online Ordering, Takeout, Vegetarian",
+	    "Procurement": "Online Ordering, Takeout",
 	    "Dietary": "Vegetarian",
 	    "Value": ""
 	  },
@@ -1796,7 +1796,7 @@
 	    "Description": "Gluten & Top 8 Allergen free baking mixes.  Your family deserves breakfasts as good as the ones you remember. We use better-for-you ingredients to create the same fluffy texture and delightful taste of old-fashioned, lazy Saturday mornings. All of Josie's Best mixes are produced in a Top 8+ Allergen-free facility. That means all of our products are gluten-free, nut-free, soy-free, safe for vegan diets, and also non-GMO. Plus you can make them with traditional eggs and milk or with plant based milk and egg-free alternatives. Because while Josie's Best award winning products are delicious for everyone, we also want them to be safe for anyone. Proudly processing locally",
 	    "Category": "Locally Made, Bakery/Dessert",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Online Ordering, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Online Ordering",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1814,7 +1814,7 @@
 	    "Description": "All vegan food truck out to change the world! Specializing in comfort food. Proudly sourcing from: Big Ed's Artisan Bread",
 	    "Category": "Eat & Drink, Food Truck",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Online Ordering, Takeout, Vegan, Gluten-Free",
+	    "Procurement": "Online Ordering, Takeout",
 	    "Dietary": "Vegan, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1886,7 +1886,7 @@
 	    "Description": "As a family-owned, independent Oregon grocer since 1979, we understand the importance of shopping local and giving back. We started with a single store and have since grown to 11 stores, located in Ashland, Eugene, Corvallis, Bend, Portland and West Linn. Over the years we've developed deep, meaningful relationships with local farmers, ranchers, fisherfolk, and food and beverage producers across our great state. Because we want to see them succeed, we strive to inspire, mentor and assist them, as well as amplify BIPOC, LGBTQ+ and women entrepreneurs. Together, we form a diverse, forward-thinking food community, one you can find on our shelves and in our hearts every day. Proudly sourcing from: Home Farm Foods and Bonta",
 	    "Category": "Market & Grocer, Grocer, Bakery/Dessert, Catering, Restaurant/Cafe, Coffee/Tea/Kombucha",
 	    "Discount": "",
-	    "Procurement": "Accept EBT or WIC or SFMNP or FDNP, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Accept EBT or WIC or SFMNP or FDNP",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": ""
 	  },
@@ -1940,7 +1940,7 @@
 	    "Description": "Since opening in 1976, we are the #1 choice of foodies in Central Oregon. Today, we are a 100-percent employee-owned specialty grocer that supports local producers and offers an expansive selection of high-quality, in-demand food and beverage items, including 500 varieties of craft beer. Proudly sourcing from: Central Oregon Veterans Ranch, Holm Made Toffee, Tender Greens, and Volcano Veggies",
 	    "Category": "Market & Grocer, Grocer",
 	    "Discount": "",
-	    "Procurement": "Accept EBT or WIC or SFMNP or FDNP, Online Ordering, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Accept EBT or WIC or SFMNP or FDNP, Online Ordering",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": ""
 	  },
@@ -1958,7 +1958,7 @@
 	    "Description": "Food truck serving authentic Italian food made from scratch. Utilizing what Central Oregon has to offer by sourcing local and organic ingredients. Proudly sourcing from: Boundless Farmstead, Deschutes Gourmet Mushroom,  Rainshadow Organics, Sungrounded Farm, and Vaquero Valley Ranch",
 	    "Category": "Eat & Drink, Food Truck",
 	    "Discount": "Buy one entree get one 1/2 off. Expires 12/31/21",
-	    "Procurement": "Woman-owned, Online Ordering, Home Delivery, Takeout, Vegetarian, Vegan, Gluten-Free",
+	    "Procurement": "Online Ordering, Home Delivery, Takeout",
 	    "Dietary": "Vegetarian, Vegan, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -1976,7 +1976,7 @@
 	    "Description": "We offer a  variety of upscale finger food perfect for sharing and enjoying along with a beer.  Our eclectic menu features a rotating variety of sandwiches and sliders, hand cut fries, poutine, and house pickled veggies. We also provide seasonal specials. In addition to creating delicious food, we strive to support small local farms. Proudly sourcing from: Agricultural Connections, Big Ed's Artisian Bread, Central Oregon Beef, Dragonfly Station, In the Pines Family Farm",
 	    "Category": "Eat & Drink, Food Truck",
 	    "Discount": "",
-	    "Procurement": "Takeout, Vegetarian",
+	    "Procurement": "Takeout",
 	    "Dietary": "Vegetarian",
 	    "Value": ""
 	  },
@@ -2012,7 +2012,7 @@
 	    "Description": "OH GHEE INC. manufactures organic ultra-clarified ghee in 5 flavors. We combine organic oils, locally sourced herb derivatives and focus on minimal packaging. Ghee has been researched for its abundance of health benefits for gut health, high amino acid ratio, and vitamins. It has a long history of use in Ayurvedic practices and ceremonial use. Ghee is a Keto dieter's favorite for health and its ability to provide pure fat for energy. All manufacturing and product development take place in our Central Oregon cGMP kitchen. Proudly processing locally",
 	    "Category": "Locally Made, Jam/Sauce/Condiments",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Online Ordering, Vegetarian, Gluten-Free",
+	    "Procurement": "Online Ordering",
 	    "Dietary": "Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -2048,7 +2048,7 @@
 	    "Description": "Palate's mission is to serve amazing coffee in an unpretentious environment, while creating a space for our community to have open discussions and feel welcome. We work with Coava Coffee Roasters out of Portland and their mission is to source coffee directly from the producers vs buying from importers, which in turn puts money directly back into those coffee communities. We appreciate your support of our small business, which in turn supports so many other families. We feature so many local and Oregon based businesses; we are lucky to have so many to choose from here. And stay tuned for our breakfast truck, featuring locally sourced food, opening in the backyard this summer! Thank you and cheers to community! Proudly sourcing from: Metolius Tea, Sparrow Bakery, and Picky Bars",
 	    "Category": "Eat & Drink, Restaurant/Cafe, Coffee/Tea/Kombucha",
 	    "Discount": "",
-	    "Procurement": "Online Ordering, Takeout, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Online Ordering, Takeout",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": ""
 	  },
@@ -2066,7 +2066,7 @@
 	    "Description": "Grower of plants - herbs, vegetable starts and flowers - for sale to the public at CO Locavore, garden sales and seminars, and by appointment at the greenhouse.  All plants are grown using organic and environmentally responsible methods. Only organic soils and fertilizers used.  No pesticides or neonicotinoids. Proudly growing locally",
 	    "Category": "Seeds/Plants/Landscape",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Home Delivery",
+	    "Procurement": "Home Delivery",
 	    "Dietary": "",
 	    "Value": "Woman-owned"
 	  },
@@ -2084,7 +2084,7 @@
 	    "Description": "A seasonal farmers market located downtown Redmond, OR open June-Sept. from 3-6pm in Centennial Park. We have a fantastic group of farmers, artisans and producers from Central Oregon that bring fresh, local, organic produce, fruit, eggs, honey, meat, soaps, herbal remedies and so much more.",
 	    "Category": "Farmers Market",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Accept EBT or WIC or SFMNP or FDNP",
+	    "Procurement": "Accept EBT or WIC or SFMNP or FDNP",
 	    "Dietary": "",
 	    "Value": "Woman-owned"
 	  },
@@ -2138,7 +2138,7 @@
 	    "Description": "Small-batch pantry staples, bone broth and curiosities handmade in midtown Bend. Locally sourced, seasonal, nourishing deliciousness. Proudly sourcing from: Agricultural Connections, Central Oregon Locavore, DD Ranch, and Great American Egg",
 	    "Category": "Locally Made, Honey, Coffee/Tea/Kombucha, Jam/Sauce/Condiments, Granola/Nuts, Preserved Foods",
 	    "Discount": "Complimentary cup of bone broth beverage with purchase. Expires 12/31/21",
-	    "Procurement": "Woman-owned, Takeout, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Takeout",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -2156,7 +2156,7 @@
 	    "Description": "Root Down Kitchen is a small batch all vegan restaurant located in the historic Old Bend neighborhood. We source organic produce from local farms and food purveyors. Proudly sourcing from: Agricultural Connections, Boundless Farmstead, Fields Farms, Sungrounded Farm, and Sunrise Micro Farm",
 	    "Category": "Eat & Drink, Restaurant/Cafe",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Takeout, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Takeout",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -2174,7 +2174,7 @@
 	    "Description": "Full service flavor solution provider.  With over 400 spices, spice blends, sauces, and meal kits, Savory Spice can provide the best cooking solutions to make cooking locally sourced foods easy and fun. Proudly sourcing from: Bend Sauce, Holm Made Toffee, Metolius Tea, and Meadowland Syrup",
 	    "Category": "Market & Grocer, Preserved Foods, Grocer",
 	    "Discount": "",
-	    "Procurement": "Online Ordering, Takeout, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Online Ordering, Takeout",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": ""
 	  },
@@ -2210,7 +2210,7 @@
 	    "Description": "Seed to Table is a non-profit educational farm based in Sisters, OR whose mission is to increase health and wellness of the Central Oregon community through providing equitable access to locally grown, farm fresh produce and offering opportunities in farm based education.",
 	    "Category": "Farm & Ranch, Nonprofit, Vegetables/Fruit",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Wholesale, CSA or Herd Share",
+	    "Procurement": "Wholesale, CSA or Herd Share",
 	    "Dietary": "",
 	    "Value": "Woman-owned"
 	  },
@@ -2228,7 +2228,7 @@
 	    "Description": "Family owned and operated coffee roasting business since 1989, with two retail cafes and regional wholesale distribution.",
 	    "Category": "Eat & Drink, Bakery/Dessert, Coffee/Tea/Kombucha, Restaurant/Cafe",
 	    "Discount": "",
-	    "Procurement": "Online Ordering, Takeout, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Online Ordering, Takeout",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": ""
 	  },
@@ -2246,7 +2246,7 @@
 	    "Description": "Sisters Farmers Market supports a healthier community through partnerships, educational programming, and essential infrastructure for organic farmers, artisans, and local food producers. All are welcome to come experience the bounty of our small, special community market on Sundays! Shop for fresh, micro-local produce and artisanal goods throughout Fir Street Park in the heart of Sisters, Oregon.",
 	    "Category": "Farmers Market",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Accept EBT or WIC or SFMNP or FDNP, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Accept EBT or WIC or SFMNP or FDNP",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -2264,7 +2264,7 @@
 	    "Description": "THE SOUTHWEST COMES TO THE NORTHWEST! Welcome to Southwest Salsa Co. A little corner of Mexico right in your neighborhood. We're proud to bring to you the most authentic gourmet salsa in the northwest. We encourage our customers to incorporate salsa into cooking, as opposed to popular stand-alone chips and salsa options; focusing more on flavor rather than heat. Our salsas are good for cooking, marinating, or dipping with chips. Proudly processing locally.",
 	    "Category": "Locally Made, Jam/Sauce/Condiments, Preserved Foods",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Online Ordering, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Online Ordering",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -2282,7 +2282,7 @@
 	    "Description": "Serving lunch in Northwest Crossing made with lots of love! Proudly sourcing from: Boundless Farmstead, Fields Farm, and Home Farm Foods",
 	    "Category": "Eat & Drink, Restaurant/Cafe",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Takeout, Vegetarian, Gluten-Free",
+	    "Procurement": "Takeout",
 	    "Dietary": "Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -2300,7 +2300,7 @@
 	    "Description": "We make all of our own pastas, sauces, breads and dressings. We source many PNW ingredients and we are inspired by local farmers and purveyors though the seasons. Proudly sourcing from: Agricultural Connections, Central Oregon Locavore, Childers, Hills Premium Meats, Provvista, and more!",
 	    "Category": "Eat & Drink, Food Truck",
 	    "Discount": "",
-	    "Procurement": "Woman-owned",
+	    "Procurement": "",
 	    "Dietary": "",
 	    "Value": "Woman-owned"
 	  },
@@ -2318,7 +2318,7 @@
 	    "Description": "Super Belly is dedicated to sharing real food probiotics. We make clean naturally fermented food & drinks - dressing, marinades, kvass, vegan dips, spreads,  and more!  Dairy free, gluten free, non-GMO, probiotic + delicious! What started as a quest to make the perfect sauce, transformed into a project to create the most delicious and approachable fermented foods for all. Our goal is to share the whole body & mind benefits that come from eating a diverse and fermented diet. Super Belly's beverages, dips, condiments, and snacks are a perfect way to eat clean, while supporting your microbiome's resiliency. Proudly sourcing from: Boundless Farmstead",
 	    "Category": "Locally Made, Jam/Sauce/Condiments, Granola/Nuts",
 	    "Discount": "Buy one get one 50% off at Bend & Northwest Crossing 2021 farmers markets. Limit one per customer.",
-	    "Procurement": "Woman-owned, Online Ordering, Home Delivery, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Online Ordering, Home Delivery",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -2372,7 +2372,7 @@
 	    "Description": "We are a local, fresh from scratch cafe specializing in amazing espresso drinks and simple comfort foods. Nothing fancy but we can name and pronounce all of the ingredients. Proudly sourcing from: Oregon Beef, Green Drive, Bridge 99, and our own garden",
 	    "Category": "Eat & Drink, Restaurant/Cafe, Coffee/Tea/Kombucha",
 	    "Discount": "",
-	    "Procurement": "Veteran-owned, Woman-owned, Online Ordering, Takeout, Gluten-Free",
+	    "Procurement": "Online Ordering, Takeout",
 	    "Dietary": "Gluten-Free",
 	    "Value": "Veteran-owned, Woman-owned"
 	  },
@@ -2390,7 +2390,7 @@
 	    "Description": "Savory hand pies for the people! Our handmade pasties are a Midwest staple and the perfect fuel for your next adventure. Our dedication to delicious flavors is matched only by the high desert farmers and ranchers from which many of our ingredients hail. Join our Underground Pasty Club to get in on frozen ready-to-bake pasties. Email Jess at thepeoplespies@gmail.com for club info or to ask about pasties for special events. Proudly sourcing from: Boundless Farmstead, Golden Eagle Organics, Home Farm Foods, DD Ranch, Sungrounded Farm, and more!",
 	    "Category": "Eat & Drink, Bakery/Dessert, Catering",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Online Ordering, Takeout, Vegetarian",
+	    "Procurement": "Online Ordering, Takeout",
 	    "Dietary": "Vegetarian",
 	    "Value": "Woman-owned"
 	  },
@@ -2408,7 +2408,7 @@
 	    "Description": "A seasonal farm stand, featuring sustainably grown vegetables from Mahonia Gardens of Sisters. We also provide organic/sustainable vegetables, eggs, berries and more from many other local farms. Open 9-7 daily, May through October. Proudly sourcing from: Mahonia Gardens, Boundless Farmstead, Sungrounded Farm, Rainshadow Organics, Deschutes Gourmet Mushrooms and more!",
 	    "Category": "Market & Grocer",
 	    "Discount": "$5 off your first visit to The Stand. Limit one per customer per season. Expires 10/31/2021",
-	    "Procurement": "Woman-owned, CSA or Herd Share, Accept EBT or WIC or SFMNP or FDNP, Vegetarian, Vegan",
+	    "Procurement": "CSA or Herd Share, Accept EBT or WIC or SFMNP or FDNP",
 	    "Dietary": "Vegetarian, Vegan",
 	    "Value": "Woman-owned"
 	  },
@@ -2444,7 +2444,7 @@
 	    "Description": "West Coast Provisions is a small, specialty market in Bend, OR that offers a curated selection of groceries, wine, beer, household staples, home goods and gifts, with a particular focus on artisan products from Oregon and surrounding states. We hand select for flavor, ingredients, production methods and aesthetics and aim to provide shoppers an opportunity to discover and taste the best products from the west coast and beyond. Proudly sourcing from: Pioneer Ranch, Tumalo Chicken Ranch, and Volcano Veggies",
 	    "Category": "Market & Grocer, Grocer",
 	    "Discount": "",
-	    "Procurement": "Woman-owned, Takeout, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Takeout",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": "Woman-owned"
 	  },
@@ -2462,7 +2462,7 @@
 	    "Description": "For 40 years, Whole Foods Market has been the world's leading natural and organic foods retailer. From sustainable wild-caught seafood to an ever-growing list of unacceptable food ingredients, we take pride in what we do sell and even more in what we don't. Most important of all, we're pushing to make those standards higher and higher every day. At Whole Foods Market, we love Local. Discover new, cool and unique products in our store from Oregon growers, artisans, makers, entrepreneurs and producers. We also care for our community and contribute to local non-profit organizations every quarter, with donations led by our local store team members. Our purpose is to nourish people and the planet. We're a purpose-driven company that aims to set the standards of excellence for food retailers. Quality is a state of mind at Whole Foods Market. Proudly sourcing from: Volcano Veggies and Humm Kombucha",
 	    "Category": "Market & Grocer, Grocer",
 	    "Discount": "",
-	    "Procurement": "Accept EBT or WIC or SFMNP or FDNP, Online Ordering, Takeout, Vegan, Vegetarian, Gluten-Free",
+	    "Procurement": "Accept EBT or WIC or SFMNP or FDNP, Online Ordering, Takeout",
 	    "Dietary": "Vegan, Vegetarian, Gluten-Free",
 	    "Value": ""
 	  },

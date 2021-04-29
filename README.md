@@ -80,6 +80,8 @@ HEROKU STAGING:
 `heroku run rails db:migrate -rstaging`
 3. Import the data:\
 `heroku run rake db:import_partners -rstaging`
+4. Import seeded data:\
+`heroku run rake db:seed -rstaging`
 
 
 <br>
