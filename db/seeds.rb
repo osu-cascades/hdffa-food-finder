@@ -8,6 +8,15 @@
 
 u1 = User.create(first_name: 'Kristen', last_name: 'Orue', email: 'oruek@oregonstate.edu', password: 'password', role: 'admin')
 u2 = User.create(first_name: 'Marji', last_name: 'Symonds', email: 'symondsm@oregonstate.edu', password: 'password', role: 'admin')
-u3 = User.create(first_name: 'Michael', last_name: 'Tornatta', email: 'stornattm@oregonstate.edu', password: 'password', role: 'admin')
+u3 = User.create(first_name: 'Michael', last_name: 'Tornatta', email: 'tornattm@oregonstate.edu', password: 'password', role: 'admin')
+u4 = User.create(first_name: 'Yong', last_name: 'Bakos', email: 'yong.bakos@osucascades.edu', password: 'password', role: 'admin')
+
+
+# remove after 4.29.21 deployment
+u5 = User.create(first_name: 'Caroline', last_name: 'Danielson', email: 'caroline@hdffa.org', password: 'password', role: 'admin')
+u6 = User.create(first_name: 'Annie', last_name: 'Nichols', email: 'annie@hdffa.org', password: 'password', role: 'admin')
+u7 = User.create(first_name: 'Laurie', last_name: 'Wayne', email: 'lauriewayne@gmail.com', password: 'password', role: 'admin')
+u8 = User.create(first_name: 'Chantel', last_name: 'Welch', email: 'chantel@hdffa.org', password: 'password', role: 'admin')
+
 
 
