@@ -15,6 +15,19 @@ class Partner < ApplicationRecord
     format: { with: /\Ahttps?:\/\/([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?.*/,
     message: "must be an http or https URL"},
     allow_blank: true
+  validates :twitter,
+    format: { with: /\Ahttps?:\/\/([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?.*/,
+    message: "must be an http or https URL"},
+    allow_blank: true
+  validates :instagram,
+    format: { with: /\Ahttps?:\/\/([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?.*/,
+    message: "must be an http or https URL"},
+    allow_blank: true
+  validates :facebook,
+    format: { with: /\Ahttps?:\/\/([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w\.-]*)*\/?.*/,
+    message: "must be an http or https URL"},
+    allow_blank: true
+
 
   def remove_all_products
       self.products.clear

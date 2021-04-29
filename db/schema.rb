@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_27_231725) do
+ActiveRecord::Schema.define(version: 2021_04_29_022854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -98,6 +98,9 @@ ActiveRecord::Schema.define(version: 2021_04_27_231725) do
     t.string "keywords"
     t.text "discount"
     t.bigint "featured_listing_id"
+    t.string "twitter"
+    t.string "instagram"
+    t.string "facebook"
     t.index ["featured_listing_id"], name: "index_partners_on_featured_listing_id"
     t.index ["name"], name: "index_partners_on_name", unique: true
   end

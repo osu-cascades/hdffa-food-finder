@@ -21,6 +21,18 @@ namespace :db do
         hours_of_operation: val['Hours of Operation'],
         discount: val['Discount'],
       )
+      social_links = val['Social Account'].to_s().split(' ')
+        social_links.each do |social_link|
+          unless social_link.blank?
+            if social_link.include? "twitter"
+              partner.twitter = social_link
+            elsif social_link.include? "instagram"
+              partner.instagram = social_link
+            elsif social_link.include? "facebook"
+              partner.facebook = social_link
+            end
+          end
+        end
       category_names = val['Category'].to_s().split(', ')
       category_names.each do |category_name|
         unless category_name.blank?
