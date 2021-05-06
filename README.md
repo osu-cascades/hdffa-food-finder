@@ -109,7 +109,8 @@ Add "Procurement" and "Featured_Listing" to Partner Data
     * Inside app/models/featured_listing.rb add:
       ```ruby 
         has_many :partners
-      ``` within class definition
+      ``` 
+      within class definition
 
 3. When your New Field has a many->many relationship with Partner: Choose a.
 
