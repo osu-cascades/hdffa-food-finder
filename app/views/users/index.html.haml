@@ -21,6 +21,7 @@
         %td= user.status
         %td= user.last_sign_in_at&.localtime&.to_s(:short)
         %td
-          = link_to 'Edit', edit_user_path(user), class: 'btn btn-light btn-sm mr-4'
-          - unless current_user == user
-            = link_to 'Delete', "/admin/users/#{user.id}", method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn text-danger btn-sm'
+          - if current_user&.superadmin?
+            = link_to 'Edit', edit_user_path(user), class: 'btn btn-light btn-sm mr-4'
+            - unless current_user == user
+              = link_to 'Delete', "/admin/users/#{user.id}", method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn text-danger btn-sm'
