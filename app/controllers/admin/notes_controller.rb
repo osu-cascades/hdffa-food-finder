@@ -3,8 +3,7 @@ class Admin::NotesController < ApplicationController
 
 
     def index
-      # @notes = Note.all.order("created_at DESC")
-      @notes = Note.filter(params.slice(:partner, :user, :title))
+      @notes = Note.all.order("created_at DESC")
     end
     
     def show

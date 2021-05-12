@@ -1,5 +1,4 @@
 class Note < ApplicationRecord
-  include Filterable
   default_scope {order('created_at DESC')}
 
 	belongs_to :partner
