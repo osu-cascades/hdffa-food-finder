@@ -77,6 +77,11 @@ class Admin::NotesController < ApplicationController
       end
     end
 
+    def by_user
+      @note = Note.find(params[:id])
+    end
+  
+
     private
 
       def note_params

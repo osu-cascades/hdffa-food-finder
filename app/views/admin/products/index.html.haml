@@ -15,4 +15,4 @@
         %td= link_to product.name, [:admin, product]
         %td
           = link_to 'Edit', edit_admin_product_path(product), class: 'btn btn-sm btn-outline-primary'
-          = link_to 'Delete', [:admin, product], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger'
+          = link_to 'Delete', [:admin, product], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger' if @current_user.superadmin?

@@ -10,8 +10,8 @@
         %p= @partner.hours_of_operation
       %div{:class =>"d-flex justify-content-center"}
         .actions
-          -# = link_to 'Delete', [:admin, @partner], method: :delete, data: { confirm: 'Are you sure?' }, class: 'danger'
-          = link_to 'Edit Partner', edit_admin_partner_path(@partner), class: 'primary'
+          = link_to 'Delete', [:admin, @partner], method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger' if @current_user.superadmin?
+          = link_to 'Edit Partner', edit_admin_partner_path(@partner), class: 'btn btn-sm btn-outline-primary'
       %div{:class =>"d-flex justify-content-center text-center"}
         %dd.col-sm-9= @partner.description
       %div{:class =>"d-flex justify-content-center"}

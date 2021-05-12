@@ -2,10 +2,13 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get 'featured_listings/create'
+    get 'notes/filter/by_user/:id' => "notes#by_user", as: "notes_by_user"
   end
   devise_scope :user do
     root to: "admin/welcome#home"
   end
+
+
 
   # Users
   # Using Devise RegistrationsController for public user creation/registration.

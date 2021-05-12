@@ -197,6 +197,22 @@ Run: `rails g model <model_name> <attributes></attributes>name:string`\
 To undo  creating a model:\
 `rails destroy model featured_listing`
 
+## To create a new user role:
+In *user.rb*, the user model, add a role to the roles enum
+
+In *application_controller.rb*, in controllers, you may need to edit permissions given to certain roles. For example, for admin we have the function
+`def restrict_unless_admin`
+  `redirect_to(root_url, alert: 'Access denied.') unless current_user.admin? || current_user.superadmin?`
+`end`
+Were you can adjust any admin restricted view through the controllers by role. You can add roles with `||` or remove roles from functions like this. If you write another function to restrict by role, you can add that function to the top of the controller you would like to affect. The way the above code is implemented in a controller is with the line:
+`before_action :restrict_unless_admin`
+
+Many role restrictions are defined within views *(you may want to change this)*
+Check the following files for editing view restrictions:
+  **application.html.haml* in views
+  *any of the *show.html.haml* files for each model view
+  *any of the *index.html.haml* files for each model view
+
 
 Note: See _.env.example_ for a complete list of expected environment
 variables that need set in both staging & production environments.
