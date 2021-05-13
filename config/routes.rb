@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'featured_listings/create'
     get 'notes/filter/by_user/:id' => "notes#by_user", as: "notes_by_user"
+    get 'notes/filter/by_partner/:id' => "notes#by_partner", as: "notes_by_partner"
+
   end
   devise_scope :user do
     root to: "admin/welcome#home"

@@ -14,8 +14,8 @@
     - @notes.each do |note|
       %tr
         %td= date_time(note)
-        %td= link_to note.user, admin_notes_by_user_path(note.id)
-        %td= link_to note.partner, admin_notes_by_partner_path(note.id)
+        %td= link_to note.user, [:admin, note]
+        %td= link_to note.partner, [:admin, note]
         %td= link_to note.title, [:admin, note]
         %td= truncate(note.body, :length => 10) 
 

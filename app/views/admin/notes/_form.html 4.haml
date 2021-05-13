@@ -1,0 +1,17 @@
+= form_for [:admin, @note], multipart: true do |f|
+  - if @note.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@note.errors.count, "error")} prohibited this note from being saved:"
+      %ul
+        - @note.errors.full_messages.each do |message|
+          %li= message
+  .form-group
+    = f.label :title
+    = f.text_field :title, class: 'form-control'
+  .form-group
+    = f.label :body
+    = f.text_area :body, class: 'form-control', rows: 10
+  .form-group
+    =f.file_field :images, class: 'form-control'
+  .form-group
+    = f.submit({class: 'form-control btn btn-success'})

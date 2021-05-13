@@ -1,0 +1,17 @@
+<!-- #map -->
+
+%body{:style => "background-image: url('../../../assets/cow_background.jpg'); background-size: cover; background-width: 100%;"}
+  %div{:style => "height: 500px"}
+    %div{:class => "space-left"}
+    %div{:class => "space-center"}
+      %strong{:class => "large-white-text", :style => "position: absolute; top: 34%;"}Find Partners
+      %form{:action=>"/search"}
+        %input{:class => "form-control front", :placeholder=>"Get moo'vin", :name=>"q", :style => "height: 40px; border-radius: 20px; position: absolute; top: 40%;"}
+      
+    %div{:class => "notes-history-position"}
+      %div{:class=>"overflow-auto", :style=>"position: absolute; top: 49%; width: 14rem; height: 10rem;"}
+        - @notes.each do |note|
+          %div{:class=>"card"}
+            %div{:class=>"card-body"}
+              %h5{:class=>"card-title"}= link_to note.title, [:admin, note]
+              %h6{:class=>"card-subtitle mb-2 text-muted"}= date_time(note)
