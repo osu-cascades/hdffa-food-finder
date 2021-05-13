@@ -80,6 +80,10 @@ class Admin::NotesController < ApplicationController
     def by_user
       @note = Note.find(params[:id])
     end
+
+    def by_partner
+      @note = Note.find(params[:id])
+    end
   
 
     private

@@ -1,0 +1,76 @@
+<!-- #map -->
+
+%body{:style => "background-image: url('../../../assets/cow_background.jpg'); background-size: cover; background-width: 100%;"}
+  %div{:style => "height: 500px"}
+    %div{:class => "space-left"}
+    %div{:class => "space-center"}
+      %strong{:class => "large-white-text", :style => "position: absolute; top: 34%;"}Find Partners
+      %form{:action=>"/search"}
+        %input{:class => "form-control front", :placeholder=>"Get moo'vin", :name=>"q", :style => "height: 40px; border-radius: 20px; position: absolute; top: 40%;"}
+      
+    %div{:class => "notes-history-position"}
+      %div{:class=>"overflow-auto", :style=>"position: absolute; top: 49%; width: 14rem; height: 10rem;"}
+        - @notes.each do |note|
+          %div{:class=>"card"}
+            %div{:class=>"card-body"}
+              %h5{:class=>"card-title"}= link_to note.title, [:admin, note]
+              %h6{:class=>"card-subtitle mb-2 text-muted"}= date_time(note)
+
+<!-- OLD MAP CODE
+%table#partners.table.mt-5
+  %thead
+    %tr
+      %th Name
+      %th Categories
+      %th Products
+      %th
+  %tbody
+    - @partners.each do |partner|
+      %tr
+        %td= link_to partner.name, partner
+        %td= partner.categories.name
+        %td= partner.products.name
+        %td
+          = link_to 'Details', partner_path(partner), class: 'btn btn-sm btn-outline-primary'
+
+:javascript
+  var map = L.map('map').setView([44.0581700, -121.3153100], 13)
+  map.locate({setView: true, maxZoom: 16});
+
+  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
+    {
+      maxZoom: 18,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+        '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+        'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1
+    }
+  ).addTo(map)
+
+  $.getJSON('/partners.json', (jsonData) => {
+    jsonData.forEach( (partner) => {
+      var latlon = L.latLng({lat: partner.latitude, lng: partner.longitude})
+      L.marker(latlon).bindPopup(partner.name).on('mouseover', function(e) {
+        this.openPopup()
+      }).on('mouseout', function(e) {
+        this.closePopup()
+      }).addTo(map)
+    })
+  })
+
+  function onLocationFound(e) {
+    var radius = e.accuracy;
+
+    L.marker(e.latlng).addTo(map)
+        .bindPopup("You are within " + radius + " meters from this point").openPopup();
+  }
+
+  function onLocationError(e) {
+    alert(e.message);
+  }
+
+  map.on('locationfound', onLocationFound);
+  map.on('locationerror', onLocationError);
+  -->
