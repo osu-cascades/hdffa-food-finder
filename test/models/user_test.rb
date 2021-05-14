@@ -22,9 +22,9 @@ class UserTest < ActiveSupport::TestCase
     refute u.valid?
   end
 
-  test 'has a default role of guest' do
+  test 'has a default role of admin' do
     new_user = User.new
-    assert_equal new_user.role, 'guest'
+    assert_equal new_user.role, 'admin'
   end
 
   test 'pre-existing User without defined role has a default role of participant' do
