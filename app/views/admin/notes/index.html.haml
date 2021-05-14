@@ -1,6 +1,9 @@
 .subnav
   .title
     %h1 Notes
+  .actions
+    = link_to 'Last Week', admin_filtered_notes_path(:week), class: 'primary'
+    = link_to 'Last Month', admin_filtered_notes_path(:month), class: 'primary'
 
 %table.table
   %thead

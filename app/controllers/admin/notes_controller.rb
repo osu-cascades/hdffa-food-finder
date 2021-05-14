@@ -2,7 +2,14 @@ class Admin::NotesController < ApplicationController
     before_action :restrict_unless_admin
 
     def index
-      @notes = Note.all.order("created_at DESC")
+      case params[:filter]
+      when "week"
+        @notes = Note.past_n_days(7)
+      when "month"
+        @notes = Note.past_n_days(30)
+      else
+        @notes = Note.all.order("created_at DESC")
+      end
     end
     
     def show
