@@ -1,5 +1,6 @@
 class Note < ApplicationRecord
   default_scope {order('created_at DESC')}
+  scope :past_n_days, ->(days) { where("created_at >= ?" , days.days.ago) }
 
 	belongs_to :partner
 	belongs_to :user

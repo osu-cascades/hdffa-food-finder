@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     get 'featured_listings/create'
     get 'notes/filter/by_user/:id' => "notes#by_user", as: "notes_by_user"
     get 'notes/filter/by_partner/:id' => "notes#by_partner", as: "notes_by_partner"
-
+    get "notes/filter/:filter" => "notes#index", as: "filtered_notes"
   end
   devise_scope :user do
     root to: "admin/welcome#home"
