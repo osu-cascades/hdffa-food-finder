@@ -28,8 +28,9 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test 'returns Sign In when not signed in' do
+    skip("Test not relevant, we are not displaying a navbar sign in link anymore")
     @signed_in = false
-    assert_match /Sign In/, sign_in_or_out_link
+    assert_match 'sign in', sign_in_or_out_link
   end
 
   test 'displays sign out link when user is logged in' do
