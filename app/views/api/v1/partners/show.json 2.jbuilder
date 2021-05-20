@@ -1,2 +1,0 @@
-json.extract! @partner, :id, :street_address, :city, :state, :zip, :name, :description, :email, :phone, :latitude, :longitude, :created_at, :updated_at
-json.url admin_partner_url(@partner, format: :json)
