@@ -75,6 +75,10 @@ class PartnerTest < ActiveSupport::TestCase
     assert_respond_to(Partner.new, :dietaries)
   end
 
+  test 'Partner has procurements' do
+    assert_respond_to(Partner.new, :procurements)
+  end
+
   test 'Partner without a name is invalid' do
     partner = partners(:one)
     assert partner.valid?
