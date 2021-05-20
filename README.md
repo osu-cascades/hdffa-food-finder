@@ -1,12 +1,23 @@
-# HDFFA Directory
+# HDFFA Partner Keeper
 
-A searchable directory of locally-sourced food sources, sponsored by the
+A administrative tool for HDFFA staff members to manage their partners, sponsored by the
 [High Desert Food and Farm Alliance](https://www.hdffa.org).
 
 ## Expectations
 
-This is a Rails 5.x app with Ruby \~2.6, PostgreSQL, and AWS for storage.
+This is a Rails 5.x app with Ruby \~2.6, PostgreSQL, and postgres for storage.
 
+## Environment Setup
+#### Installing [RVM](https://rvm.io/rvm/install):
+For a Mac:
+1. Make sure that you have [brew](https://brew.sh/) installed by running:\
+    'brew --version' and it should return something like: 'Homebrew 2.5.6`
+1. Go the the Install [RVM](https://rvm.io/rvm/install) and follow step by step:
+  1. If the first command to install gnupg and gnupg2 do not work:
+    1. Try running 'gpg --version' and if it returns something like 'gpg (GnuPG) 2.2.23'\
+       Then everywhere you see gpg2, say gpg instead. For example:\
+       'gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+' 
 After cloning this repository and `cd`ing into it, get up and running with:
 
 `bundle install`
