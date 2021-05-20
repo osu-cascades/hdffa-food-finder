@@ -59,11 +59,16 @@ class PartnerTest < ActiveSupport::TestCase
   end
 
   test 'Partner has products' do
+    skip
     assert_respond_to(Partner.new, :products)
   end
 
   test 'Partner has logo' do
     assert_respond_to(Partner.new, :logo)
+  end
+
+  test 'Partner has values' do
+    assert_respond_to(Partner.new, :values)
   end
 
   test 'Partner without a name is invalid' do
