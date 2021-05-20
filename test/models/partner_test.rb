@@ -95,6 +95,10 @@ class PartnerTest < ActiveSupport::TestCase
     assert_respond_to(Partner.new, :twitter)
   end
 
+  test 'Partner has instagram' do
+    assert_respond_to(Partner.new, :instagram)
+  end
+
   test 'Partner without a name is invalid' do
     partner = partners(:one)
     assert partner.valid?
