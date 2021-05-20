@@ -59,11 +59,44 @@ class PartnerTest < ActiveSupport::TestCase
   end
 
   test 'Partner has products' do
+    skip
     assert_respond_to(Partner.new, :products)
   end
 
   test 'Partner has logo' do
     assert_respond_to(Partner.new, :logo)
+  end
+
+  test 'Partner has values' do
+    assert_respond_to(Partner.new, :values)
+  end
+
+  test 'Partner has dietaries' do
+    assert_respond_to(Partner.new, :dietaries)
+  end
+
+  test 'Partner has procurements' do
+    assert_respond_to(Partner.new, :procurements)
+  end
+
+  test 'Partner has featured listing id' do
+    assert_respond_to(Partner.new, :featured_listing_id)
+  end
+
+  test 'Partner has discount' do
+    assert_respond_to(Partner.new, :discount)
+  end
+
+  test 'Partner has facebook' do
+    assert_respond_to(Partner.new, :facebook)
+  end
+
+  test 'Partner has twitter' do
+    assert_respond_to(Partner.new, :twitter)
+  end
+
+  test 'Partner has instagram' do
+    assert_respond_to(Partner.new, :instagram)
   end
 
   test 'Partner without a name is invalid' do
