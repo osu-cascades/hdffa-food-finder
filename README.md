@@ -56,10 +56,6 @@ Configure env vars in staging and production:
 
 * `RECAPTCHA_SITE_KEY`
 * `RECAPTCHA_SECRET_KEY`
-* `AWS_S3_KEY`
-* `AWS_S3_SECRET`
-* `AWS_REGION`
-* `AWS_S3_BUCKET`
 
 <br>
 
