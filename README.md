@@ -5,7 +5,7 @@ A searchable directory of locally-sourced food sources, sponsored by the
 
 ## Expectations
 
-This is a Rails 5.x app with Ruby \~2.6, PostgreSQL, and AWS for storage.
+This is a Rails 5.x app with Ruby \~2.6 and PostgreSQL.
 
 After cloning this repository and `cd`ing into it, get up and running with:
 
