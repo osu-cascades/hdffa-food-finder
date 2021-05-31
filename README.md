@@ -20,16 +20,19 @@ For a Mac:
         1. Also if after you run:\
             `gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`\
           It returns: `gpg: keyserver receive failed: No name`\
+
           Then run:\
             `gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`\
           Followed by:\
-            `\curl -sSL https://get.rvm.io | bash -s stable`
+            `\curl -sSL https://get.rvm.io | bash -s stable`\
           You should see:\
-            `Thanks for installing RVM 🙏`
-          RVM is Now Installed
+            `Thanks for installing RVM 🙏`\
+
+          RVM is now Installed\
+
         1. Run: `source /Users/<your_username>/.rvm/scripts/rvm`
-        1. Then to confirm that rvm intalled where it should by running `which rvm` it should return:
-            `/Users/<your_username>/.rvm/bin/rvm`
+        1. To confirm that rvm intalled where it should run `which rvm`\
+           It should return: `/Users/<your_username>/.rvm/bin/rvm`\
         1. Run `rvm install 2.6.6` (This will take a while)
 
 
