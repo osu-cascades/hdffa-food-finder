@@ -17,26 +17,26 @@ For a Mac:
 
     1. If the first command to install gnupg and gnupg2 do not work:
         1. Run `gpg --version` if it returns something like `gpg (GnuPG) 2.2.23`\
-            Then everywhere you see `gpg2`, type `gpg` instead.\
+            Then everywhere you see `gpg2`, type `gpg` instead.
 
             For example: `gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`
-            
+
         1. If after you run:\
             `gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`\
           It returns: `gpg: keyserver receive failed: No name`\
 
-          Then run:\
-            `gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`\
-          Followed by:\
-            `\curl -sSL https://get.rvm.io | bash -s stable`\
-          You should see:\
-            `Thanks for installing RVM 🙏`\
+            1. Then run:\
+              `gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`\
+            1. Followed by:\
+              `\curl -sSL https://get.rvm.io | bash -s stable`\
+            1.  You should see:\
+              `Thanks for installing RVM 🙏`
 
-          RVM is now Installed\
+            RVM is now Installed
 
         1. Run: `source /Users/<your_username>/.rvm/scripts/rvm`
         1. To confirm that rvm intalled where it should run `which rvm`\
-           It should return: `/Users/<your_username>/.rvm/bin/rvm`\
+           It should return: `/Users/<your_username>/.rvm/bin/rvm`
         1. Run `rvm install 2.6.6` (This will take a while)
 
 
@@ -45,9 +45,9 @@ For a Mac:
 
 After cloning this repository and `cd`ing into it, get up and running with:
 
-`bundle install`
-`rails db:setup`
-`rails s`
+1. `bundle install`
+1. `rails db:setup`
+1. `rails s`
 
 ## Development
 
