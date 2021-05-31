@@ -8,12 +8,12 @@ A administrative tool for HDFFA staff members to manage their partners, sponsore
 This is a Rails 5.x app with Ruby \~2.6, PostgreSQL, and postgres for storage.
 
 ## Environment Setup
-#### Installing [RVM](https://rvm.io/rvm/install):
+### Installing [RVM](https://rvm.io/rvm/install):
 For a Mac:
 1. Make sure that you have [brew](https://brew.sh/) installed by running:\
     `brew --version` and it should return something like: `Homebrew 2.5.6`
 1. Go the the Install [RVM](https://rvm.io/rvm/install) and follow step by step:
-    # If you see Errors when walking through the steps follow instructions below:
+    ### If you see Errors when walking through the steps follow instructions below:
 
     1. If the first command to install gnupg and gnupg2 do not work:
         1. Run `gpg --version` if it returns something like `gpg (GnuPG) 2.2.23`\
@@ -31,7 +31,7 @@ For a Mac:
               1.  It should return:\
                 `Thanks for installing RVM 🙏`
 
-                # RVM is now Installed
+                ### RVM is now Installed
 
         1. Run: `source /Users/<your_username>/.rvm/scripts/rvm`
         1. Confirm RVM installed where it should run `which rvm`\
