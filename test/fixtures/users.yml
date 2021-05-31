@@ -5,6 +5,13 @@ admin:
   role: 'admin'
   active: true
 
+superadmin:
+  first_name: Fake
+  last_name: SuperAdmin
+  email: fake@example.com
+  role: 'superadmin'
+  active: true
+
 guest:
   first_name: Fake
   last_name: Host

@@ -1,6 +1,6 @@
-# HDFFA Directory
+# HDFFA Partner Keeper
 
-A searchable directory of locally-sourced food sources, sponsored by the
+A administrative tool for HDFFA staff members to manage their partners, sponsored by the
 [High Desert Food and Farm Alliance](https://www.hdffa.org).
 
 ## Expectations
@@ -9,9 +9,9 @@ This is a Rails 5.x app with Ruby \~2.6 and PostgreSQL.
 
 After cloning this repository and `cd`ing into it, get up and running with:
 
-`bundle install`
-`rails db:setup`
-`rails s`
+1. `bundle install`
+1. `rails db:setup`
+1. `rails s`
 
 ## Development
 
