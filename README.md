@@ -27,13 +27,13 @@ This is a Rails 5.x app with Ruby \~2.6 and PostgreSQL.
                 1. Followed by:\
                   `\curl -sSL https://get.rvm.io | bash -s stable`
                 1.  It should return:\
-                  `Thanks for installing RVM 🙏`
+                  `Thanks for installing RVM 🙏`\
                 RVM IS NOW INSTALLED
 
           1. Run: `source /Users/<your_username>/.rvm/scripts/rvm`
           1. Confirm RVM installed: `which rvm`\
             It should return: `/Users/<your_username>/.rvm/bin/rvm`
-          1. Run `rvm install 2.6.6` to install the correct version of Rails necessary for this project
+  1. Run `rvm install 2.6.6` to install the correct version of Rails necessary for this project
 
 
 After cloning this repository and `cd`ing into it, get up and running with:
