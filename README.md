@@ -35,9 +35,9 @@ This is a Rails 5.x app with Ruby \~2.6 and PostgreSQL.
 
   1. RVM IS NOW INSTALLED
 
-### Install [Postgres](https://postgresapp.com/)
+### Install [Postgres](https://postgresapp.com/) globally
 
-  1. Create a location for the project
+  4. Create a location for the project
   
   1. Clone this repository by Running:\ 
      `git clone https://github.com/osu-cascades/hdffa-directory.git`
