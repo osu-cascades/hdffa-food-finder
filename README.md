@@ -13,13 +13,13 @@ For a Mac:
 1. Make sure that you have [brew](https://brew.sh/) installed by running:\
     `brew --version` and it should return something like: `Homebrew 2.5.6`
 1. Go the the Install [RVM](https://rvm.io/rvm/install) and follow step by step:
-    ## If you see Errors when walking through the steps follow instructions below:
+    # If you see Errors when walking through the steps follow instructions below:
 
     1. If the first command to install gnupg and gnupg2 do not work:
         1. Run `gpg --version` if it returns something like `gpg (GnuPG) 2.2.23`\
             Then everywhere you see `gpg2`, type `gpg` instead.
 
-            For example: `gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`
+            Ex: `gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`
 
         1. If after you run: `gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`\
            It returns: `gpg: keyserver receive failed: No name`
@@ -28,15 +28,15 @@ For a Mac:
                 `gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`
               1. Followed by:\
                 `\curl -sSL https://get.rvm.io | bash -s stable`
-              1.  You should see:\
+              1.  It should return:\
                 `Thanks for installing RVM 🙏`
 
-              RVM is now Installed
+                # RVM is now Installed
 
         1. Run: `source /Users/<your_username>/.rvm/scripts/rvm`
-        1. To confirm that rvm intalled where it should run `which rvm`\
+        1. Confirm RVM installed where it should run `which rvm`\
            It should return: `/Users/<your_username>/.rvm/bin/rvm`
-        1. Run `rvm install 2.6.6` (This will take a while)
+        1. Run `rvm install 2.6.6`
 
 
 
