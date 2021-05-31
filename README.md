@@ -33,16 +33,16 @@ This is a Rails 5.x app with Ruby \~2.6 and PostgreSQL.
         1. Confirm RVM installed: `which rvm`\
           It should return: `/Users/<your_username>/.rvm/bin/rvm`
 
-  1. RVM IS NOW INSTALLED
+  1. RVM is now installed
 
 ### Install [Postgres](https://postgresapp.com/) globally
 
-  4. Create a location for the project
+  4. Create a location for the project on your machine
   
   1. Clone this repository by Running:
      `git clone https://github.com/osu-cascades/hdffa-directory.git`
 
-  1. Run `rvm install 2.6.6` to install the correct version of Rails necessary for this project
+  1. `cd` into the project directory and run `rvm install 2.6.6` to install the correct version of Rails required for this project
 
 
 After cloning this repository and `cd`ing into it, get up and running with:
