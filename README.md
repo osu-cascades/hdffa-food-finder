@@ -14,6 +14,7 @@ This is a Rails 5.x app with Ruby \~2.6 and PostgreSQL.
       `brew --version` and it should return something like: `Homebrew 2.5.6`
 
   1. Go to [RVM](https://rvm.io/rvm/install) and follow step by step:
+    
     1. If the first command to install gnupg and gnupg2 do not work:
           1. Run `gpg --version` 
              If it returns something like `gpg (GnuPG) 2.2.23`\
