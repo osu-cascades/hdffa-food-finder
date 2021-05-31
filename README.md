@@ -22,11 +22,11 @@ This is a Rails 5.x app with Ruby \~2.6 and PostgreSQL.
 
         1. If after you run: `gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`\
           It returns: `gpg: keyserver receive failed: No name`
-              * Run:\
+              * Run
                 `gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB`
-              * Followed by:\
+              * Followed by:
                 `\curl -sSL https://get.rvm.io | bash -s stable`
-              * It should return:\
+              * It should return:
                 `Thanks for installing RVM 🙏`\
               RVM IS NOW INSTALLED
 
