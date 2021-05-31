@@ -15,7 +15,7 @@ This is a Rails 5.x app with Ruby \~2.6 and PostgreSQL.
 
   1. Go to [RVM](https://rvm.io/rvm/install) and follow step by step:
     
-      1. If the first command to install gnupg and gnupg2 do not work:
+      * If the first command to install gnupg and gnupg2 do not work:
             1. Run `gpg --version` 
               If it returns something like `gpg (GnuPG) 2.2.23`\
                 Then everywhere you see `gpg2`, type `gpg` instead.
