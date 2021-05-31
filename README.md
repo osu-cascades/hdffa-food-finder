@@ -8,7 +8,7 @@ A administrative tool for HDFFA staff members to manage their partners, sponsore
 This is a Rails 5.x app with Ruby \~2.6 and PostgreSQL.
 
 ## Environment Setup
-### Install [RVM](https://rvm.io/rvm/install):
+### Install [RVM](https://rvm.io/rvm/install) globally:
   Mac:
   1. Confirm you have [brew](https://brew.sh/) installed by running:`brew --version`\
      It should return something like: `Homebrew 2.5.6`
@@ -28,14 +28,23 @@ This is a Rails 5.x app with Ruby \~2.6 and PostgreSQL.
                 `\curl -sSL https://get.rvm.io | bash -s stable`
               * It should return:
                 `Thanks for installing RVM 🙏`\
-              RVM IS NOW INSTALLED
 
         1. Run: `source /Users/<your_username>/.rvm/scripts/rvm`
         1. Confirm RVM installed: `which rvm`\
           It should return: `/Users/<your_username>/.rvm/bin/rvm`
+
+  1. RVM IS NOW INSTALLED
+
+### Install [Postgres](https://postgresapp.com/)
+
+  1. Create a location for the project
+  
+  1. Clone this repository by Running:\ 
+     `git clone https://github.com/osu-cascades/hdffa-directory.git`
+
   1. Run `rvm install 2.6.6` to install the correct version of Rails necessary for this project
 
-### Install [Postgres](https://postgresapp.com/):
+
 
 After cloning this repository and `cd`ing into it, get up and running with:
 
