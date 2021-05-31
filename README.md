@@ -6,12 +6,11 @@ A administrative tool for HDFFA staff members to manage their partners, sponsore
 ## Expectations
 
 This is a Rails 5.x app with Ruby \~2.6 and PostgreSQL.
-This is a Rails 5.x app with Ruby \~2.6 and PostgreSQL
 
 ## Environment Setup
-### Installing [RVM](https://rvm.io/rvm/install):
+### Install [RVM](https://rvm.io/rvm/install):
   Mac:
-  1. Make sure that you have [brew](https://brew.sh/) installed by running:\
+  1. Confirm you have [brew](https://brew.sh/) installed by running:\
       `brew --version` and it should return something like: `Homebrew 2.5.6`
   1. Go to [RVM](https://rvm.io/rvm/install) and follow step by step:
       ### If you get Errors when walking through the steps follow instructions below:
