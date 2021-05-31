@@ -39,11 +39,10 @@ This is a Rails 5.x app with Ruby \~2.6 and PostgreSQL.
 
   4. Create a location for the project
   
-  1. Clone this repository by Running:\ 
+  1. Clone this repository by Running:
      `git clone https://github.com/osu-cascades/hdffa-directory.git`
 
   1. Run `rvm install 2.6.6` to install the correct version of Rails necessary for this project
-
 
 
 After cloning this repository and `cd`ing into it, get up and running with:
@@ -62,8 +61,6 @@ There are a few steps to get up and running in development.
 * `RECAPTCHA_SECRET_KEY`
 
 See _.env.example_ for a complete list of expected environment variables.
-
-### TODO
 
 ## Testing
 
